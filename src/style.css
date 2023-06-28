@@ -1,0 +1,27 @@
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@350&display=swap');
+
+.homeImg {
+background-image: url(./assets/Banner.png);
+height: 350px;
+width: auto;
+background-position: center; /* Center the image */
+background-repeat: no-repeat; /* Do not repeat the image */
+background-size: cover;
+}
+
+#navBar{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFFFFF;
+    align-items: center;
+}
+#navBar h2{
+    text-align: center;
+}
+
+.underline {
+        color:  #FFFFFF;
+        height: 10px;
+        margin-bottom: 35px;
+        
+    }
+
