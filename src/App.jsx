@@ -1,3 +1,4 @@
+import { Destacados } from './components/Destacados'
 import { Footer } from './components/Footer'
 import { NavBar } from './components/NavBar'
 
@@ -7,8 +8,8 @@ export const App = () => {
     <div className="homeImg">
       <NavBar/>
     </div>    
-    <h1>DESTACADOS</h1>
-    <h1>OPINIONES</h1>
+    <Destacados/>
+   
     <Footer/>
     </>
   )
