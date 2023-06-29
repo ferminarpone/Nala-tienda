@@ -1,6 +1,6 @@
 import React from "react";
 import icono from "../assets/Icono.png";
-import { Grid, GridItem, Box, Flex, Center } from "@chakra-ui/react";
+import { Grid, GridItem, Box, Divider } from "@chakra-ui/react";
 
 export const NavBar = () => {
   return (
@@ -26,10 +26,10 @@ export const NavBar = () => {
           <h2>CONTÁCTANOS</h2>
         </GridItem>
         <GridItem colSpan={2}>
-          <hr className="underline" />
+          <Divider orientation="horizontal" className="underline" />
         </GridItem>
         <GridItem colStart={4} colSpan={2}>
-          <hr className="underline" />
+          <Divider orientation="horizontal" className="underline" />
         </GridItem>
       </Grid>
     </Box>

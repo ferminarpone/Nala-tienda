@@ -1,4 +1,5 @@
-import {NavBar} from './components/NavBar'
+import { Footer } from './components/Footer'
+import { NavBar } from './components/NavBar'
 
 export const App = () => {
   return (
@@ -8,6 +9,7 @@ export const App = () => {
     </div>    
     <h1>DESTACADOS</h1>
     <h1>OPINIONES</h1>
+    <Footer/>
     </>
   )
 }
