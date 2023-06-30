@@ -41,7 +41,19 @@
   position: relative;
 }
 
-.dividerTitle {
+.dividerDestacados {
   position: relative;
   right: 56px;
+}
+
+.dividerOpiniones {
+  position: relative;
+  right: 38px;
+}
+
+/* Footer */
+.footerText{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight:lighter;
 }

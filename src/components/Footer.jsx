@@ -12,16 +12,16 @@ import Tiktok from "../assets/tik-tok 1.png";
 
 export const Footer = () => {
   return (
-    <Container maxW="89%">
+    <Container maxW="89%" mt="100px">
       <Divider orientation="horizontal" color="#4A9A91" border="solid 1px" />
-      <Grid templateColumns="repeat(5, 1fr)" gap={1}>
+      <Grid templateColumns="repeat(5, 1fr)" gap={1} >
         <GridItem colSpan={2}>
-          <Center height="80px">
-            <Text>Más información</Text>
+          <Center height="120px">
+            <h4 className="footerText">Más información</h4>
           </Center>
         </GridItem>
         <GridItem colSpan={1}>
-          <Center height="80px">
+          <Center height="120px">
             <Divider
               orientation="vertical"
               h="24px"
@@ -31,8 +31,8 @@ export const Footer = () => {
           </Center>
         </GridItem>
         <GridItem colSpan={2}>
-          <Center height="80px">
-            <Text>Síguenos</Text>
+          <Center height="120px">
+            <h4 className="footerText">Síguenos</h4>
             <Image src={Instagram} ml="30px" boxSize="40px" />
             <Image src={Tiktok} ml="5px" boxSize="30px" />
           </Center>

@@ -14,7 +14,7 @@ export const Destacados = () => {
           color="#4A9A91"
           border="solid 1px"
           width="120px"
-          className="dividerTitle"
+          className="dividerDestacados"
         />
       </div>
       <Image src={DestacadosImg} alt="Destacados" mt="40px"/>
