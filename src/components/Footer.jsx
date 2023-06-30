@@ -9,11 +9,13 @@ import {
 } from "@chakra-ui/react";
 import Instagram from "../assets/Instagram.png";
 import Tiktok from "../assets/tik-tok 1.png";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
     <Container maxW="89%" mt="100px">
       <Divider orientation="horizontal" color="#4A9A91" border="solid 1px" />
+      
       <Grid templateColumns="repeat(5, 1fr)" gap={1} >
         <GridItem colSpan={2}>
           <Center height="120px">
@@ -33,8 +35,12 @@ export const Footer = () => {
         <GridItem colSpan={2}>
           <Center height="120px">
             <h4 className="footerText">Síguenos</h4>
+            <a href="https://instagram.com/nala_tiendaa?igshid=MzRlODBiNWFlZA==" target="_blank">              
             <Image src={Instagram} ml="30px" boxSize="40px" />
+            </a>
+            <a href="https://www.tiktok.com/@nalatienda" target="_blank">
             <Image src={Tiktok} ml="5px" boxSize="30px" />
+            </a>
           </Center>
         </GridItem>
       </Grid>

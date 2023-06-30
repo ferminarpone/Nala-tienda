@@ -1,4 +1,4 @@
-import { Container, Divider, Flex, Grid, GridItem, Image } from "@chakra-ui/react";
+import { Center, Container, Divider, Flex, Grid, GridItem, Image } from "@chakra-ui/react";
 import OpinionesImg from '../assets/Opiniones.png'
 
 export const Opiniones = () => {
@@ -14,7 +14,9 @@ export const Opiniones = () => {
         className="dividerOpiniones"
       />
     </div>
+    <Center>
     <Image src={OpinionesImg} alt="Opiniones" mt="40px"/> 
+    </Center>
     </Container>
   )
 }

@@ -1,4 +1,4 @@
-import { Container, Divider, Flex, Grid, GridItem, Image } from "@chakra-ui/react";
+import { Container, Divider, Center, Flex, Grid, GridItem, Image } from "@chakra-ui/react";
 import Scrunchie from '../assets/Scrunchie.png';
 import Anillos from '../assets/Anillos.png';
 import Llavero from '../assets/Llavero osos.png'
@@ -17,7 +17,9 @@ export const Destacados = () => {
           className="dividerDestacados"
         />
       </div>
+      <Center>
       <Image src={DestacadosImg} alt="Destacados" mt="40px"/>
+      </Center>
 
      {/* Para utilizar todas las imagenes por separado....
 
