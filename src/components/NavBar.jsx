@@ -1,5 +1,5 @@
 import React from "react";
-import icono from "../assets/Icono.png";
+import icono from "../assets/navBar/Icono.png";
 import { Grid, GridItem, Box, Divider } from "@chakra-ui/react";
 
 export const NavBar = () => {

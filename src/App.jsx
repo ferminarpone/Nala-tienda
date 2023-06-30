@@ -1,16 +1,12 @@
-import { Destacados } from './components/Destacados'
 import { Footer } from './components/Footer'
-import { NavBar } from './components/NavBar'
-import { Opiniones } from './components/Opiniones'
+import { Home } from './components/home/Home'
+import { Personalizados } from './components/personalizados/Personalizados'
 
 export const App = () => {
   return (
-    <>
-    <div className="homeImg">
-      <NavBar/>
-    </div>    
-    <Destacados/>
-    <Opiniones/>
+    <> 
+    {/*  <Home/>  */}
+    <Personalizados/>
     <Footer/>
     </>
   )

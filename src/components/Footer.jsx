@@ -7,8 +7,8 @@ import {
   GridItem,
   Image,
 } from "@chakra-ui/react";
-import Instagram from "../assets/Instagram.png";
-import Tiktok from "../assets/tik-tok 1.png";
+import Instagram from "../assets/footer/Instagram.png";
+import Tiktok from "../assets/footer/tik-tok 1.png";
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
@@ -18,12 +18,12 @@ export const Footer = () => {
       
       <Grid templateColumns="repeat(5, 1fr)" gap={1} >
         <GridItem colSpan={2}>
-          <Center height="120px">
+          <Center height="100px">
             <h4 className="footerText">Más información</h4>
           </Center>
         </GridItem>
         <GridItem colSpan={1}>
-          <Center height="120px">
+          <Center height="100px">
             <Divider
               orientation="vertical"
               h="24px"
@@ -33,7 +33,7 @@ export const Footer = () => {
           </Center>
         </GridItem>
         <GridItem colSpan={2}>
-          <Center height="120px">
+          <Center height="100px">
             <h4 className="footerText">Síguenos</h4>
             <a href="https://instagram.com/nala_tiendaa?igshid=MzRlODBiNWFlZA==" target="_blank">              
             <Image src={Instagram} ml="30px" boxSize="40px" />

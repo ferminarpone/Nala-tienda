@@ -1,14 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@350&display=swap");
 
-.homeImg {
-  background-image: url(./assets/Banner.png);
-  height: 480px;
-  width: auto;
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-size: cover;
-}
-
+/*NavBar*/
 #navBar {
   font-family: "Josefin Sans", sans-serif;
   color: #ffffff;
@@ -21,18 +13,18 @@
   width: 110px;
   height: 45px;
 }
-
 .underline {
   color: white;
   margin-bottom: 35px;
 }
-
-.divTitle {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
+/* Footer */
+.footerText{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight:lighter;
 }
+
+/*Componets*/
 .title {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
@@ -41,19 +33,39 @@
   position: relative;
 }
 
+.divTitle {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Home */
+.homeImg {
+  background-image: url(./assets/home/Banner.png);
+  height: 480px;
+  width: auto;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+/*Destacados*/
 .dividerDestacados {
   position: relative;
   right: 56px;
 }
 
+/*Opiniones*/
 .dividerOpiniones {
   position: relative;
   right: 38px;
 }
 
-/* Footer */
-.footerText{
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.6rem;
-  font-weight:lighter;
+/*Personalizados*/
+
+.bgPersonalizados{
+  background-color: #4A9A91;
+  height: 480px;
+  
 }
