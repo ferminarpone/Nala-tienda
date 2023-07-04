@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@350&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@250&display=swap");
 /*NavBar*/
 #navBar {
   font-family: "Josefin Sans", sans-serif;
   color: #ffffff;
   align-items: center;
+  font-size: 1.3rem;
 }
 #navBar h2 {
   text-align: center;
@@ -66,6 +67,20 @@
 
 .bgPersonalizados{
   background-color: #4A9A91;
-  height: 480px;
-  
+  height: 654px;
 }
+
+.personalizadosText{
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 250;
+  width: 80%;
+}
+
+ .personalizadosButton{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: solid 1px #ffffff;
+} 
