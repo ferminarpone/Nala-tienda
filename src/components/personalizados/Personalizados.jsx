@@ -32,12 +32,11 @@ export const Personalizados = () => {
               </h3>
             </GridItem>
             <GridItem colSpan={3}>
-              {/* <button className="personalizadosButton"> DEJA TUS DATOS </button> */}
               <Button
                 variant="outline"
                 _hover={{
-                  bg: '#4A9A91',
-                  transform: "scale(1.1)"
+                  bg: "#4A9A91",
+                  transform: "scale(1.1)",
                 }}
                 className="personalizadosButton"
                 bg="#4A9A91"
@@ -47,13 +46,18 @@ export const Personalizados = () => {
                 DEJA TUS DATOS
               </Button>
             </GridItem>
-            <GridItem rowStart={1} rowSpan={1} colSpan={3} display="flex" alignItems="center">
-              <Image src={AlgoMas} h="70%"/>
+            <GridItem
+              rowStart={1}
+              rowSpan={1}
+              colSpan={3}
+              display="flex"
+              alignItems="center"
+            >
+              <Image src={AlgoMas} h="70%" />
             </GridItem>
           </Grid>
         </Container>
       </div>
-
       <Formulario />
     </>
   );

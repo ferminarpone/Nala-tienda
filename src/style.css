@@ -84,3 +84,9 @@
   font-weight: 600;
   border: solid 1px #ffffff;
 } 
+
+/*Formulario*/
+.dividerForm{
+  position: relative;
+  right: 154px; 
+}
