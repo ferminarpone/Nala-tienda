@@ -3,10 +3,12 @@
 /*NavBar*/
 #navBar {
   font-family: "Josefin Sans", sans-serif;
-  color: #ffffff;
+  /* color: #ffffff; */
+  color: #4A9A91;
   align-items: center;
   font-size: 1.3rem;
 }
+
 #navBar h2 {
   text-align: center;
 }
@@ -15,8 +17,8 @@
   height: 45px;
 }
 .underline {
-  color: white;
   margin-bottom: 35px;
+  background-color: #4A9A91;
 }
 /* Footer */
 .footerText{
@@ -90,3 +92,11 @@
   position: relative;
   right: 154px; 
 }
+
+/*Nosotros*/
+#bgNosotros{
+  background-color: #EFF9ED;
+  height: 654px;
+  color: #4A9A91;
+}
+

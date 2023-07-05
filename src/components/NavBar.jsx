@@ -26,10 +26,10 @@ export const NavBar = () => {
           <h2>CONTÁCTANOS</h2>
         </GridItem>
         <GridItem colSpan={2}>
-          <Divider orientation="horizontal" className="underline" />
+          <Divider orientation="horizontal" border="1px solid" className="underline" />
         </GridItem>
         <GridItem colStart={4} colSpan={2}>
-          <Divider orientation="horizontal" className="underline" />
+          <Divider orientation="horizontal" border="1px solid" className="underline" />
         </GridItem>
       </Grid>
     </Box>
