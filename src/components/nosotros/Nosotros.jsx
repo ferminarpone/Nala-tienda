@@ -3,6 +3,9 @@ import { NavBar } from "../NavBar";
 import Circulo from "../../assets/nosotros/Rectangle 20.png";
 import FotoCirculo from "../../assets/nosotros/Mask group.png";
 import Titulo from "../../assets/nosotros/Que hacemos.png";
+import { Historia } from "./Historia";
+import { Terminos } from "./Terminos";
+import { Footer } from "../Footer";
 
 export const Nosotros = () => {
   return (
@@ -27,7 +30,13 @@ export const Nosotros = () => {
                 <Image src={FotoCirculo} position="absolute" />
               </Box>
             </GridItem>
-            <GridItem rowSpan={1} colSpan={3} display="flex" alignItems="end" ml="30px">
+            <GridItem
+              rowSpan={1}
+              colSpan={3}
+              display="flex"
+              alignItems="end"
+              ml="30px"
+            >
               <Image src={Titulo} />
             </GridItem>
             <GridItem rowSpan={1} colSpan={3} mb="100px" ml="30px">
@@ -40,6 +49,9 @@ export const Nosotros = () => {
           </Grid>
         </Container>
       </div>
+      <Historia />
+      <Terminos />
+      <Footer />
     </>
   );
 };

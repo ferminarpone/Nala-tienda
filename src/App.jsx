@@ -9,7 +9,7 @@ export const App = () => {
     {/*  <Home/>  */}
     {/* <Personalizados/> */}
     <Nosotros/>
-    <Footer/>
+    {/* <Footer/> */}
     </>
   )
 }

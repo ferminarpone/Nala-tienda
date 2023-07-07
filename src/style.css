@@ -25,8 +25,8 @@
 /* Footer */
 .footerText{
   font-family: "Josefin Sans", sans-serif;
-  font-size: 1.6rem;
-  font-weight:lighter;
+  font-size: 1.8rem;
+  font-weight:300;
 }
 
 /*Componets*/
@@ -98,13 +98,35 @@
 /*Nosotros*/
 #bgNosotros{
   background-color: #EFF9ED;
-  height: 654px;
+  height: 642px;
   color: #4A9A91;
 }
-
 .nosotrosParrafo{
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
   color: #969696;
   font-weight: 300;
+}
+
+/*Historia*/
+.historiaParrafo{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+/*Términos y condiciones*/
+
+.dividerTerminos{
+  position: relative;
+  right: 152px; 
+}
+.parrafoTerminos{
+  margin-top: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.8rem;
+  line-height: normal;
+  font-weight: 100;
+  color: #969696;
 }
