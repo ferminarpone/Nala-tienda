@@ -1,4 +1,4 @@
-import { Container, Grid, GridItem, Image, Text } from "@chakra-ui/react";
+import { Box, Container, Grid, GridItem, Image, Text } from "@chakra-ui/react";
 import { NavBar } from "../NavBar";
 import Circulo from "../../assets/nosotros/Rectangle 20.png";
 import FotoCirculo from "../../assets/nosotros/Mask group.png";
@@ -9,7 +9,7 @@ export const Nosotros = () => {
     <>
       <div id="bgNosotros">
         <NavBar />
-        <Container maxWidth="90%">
+        <Container maxWidth="80%">
           <Grid
             h="470px"
             templateRows="repeat(2, 1fr)"
@@ -17,24 +17,24 @@ export const Nosotros = () => {
             gap={4}
           >
             <GridItem rowSpan={2} colSpan={3}>
-              <Image
-                src={Circulo}
-                position="absolute"
-                left="60px"
-                top="130px"
-                h="50%"
-              />
-              <Image src={FotoCirculo} position="absolute" h="50%"/>
+              <Box position="relative" w="83%" mt="16px">
+                <Image
+                  src={Circulo}
+                  position="absolute"
+                  top="20px"
+                  left="-18px"
+                />
+                <Image src={FotoCirculo} position="absolute" />
+              </Box>
             </GridItem>
-            <GridItem rowSpan={1} colSpan={3} display="flex" alignItems="end">
+            <GridItem rowSpan={1} colSpan={3} display="flex" alignItems="end" ml="30px">
               <Image src={Titulo} />
             </GridItem>
-            <GridItem rowSpan={1} colSpan={3}>
-              <p>
+            <GridItem rowSpan={1} colSpan={3} mb="100px" ml="30px">
+              <p className="nosotrosParrafo">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                 sequi cumque voluptatum explicabo ipsa neque voluptatem esse
-                nisi magni! Repellat officia itaque accusantium dolores iste,
-                debitis maxime accusamus? Tenetur, dignissimos!
+                nisi magni!
               </p>
             </GridItem>
           </Grid>

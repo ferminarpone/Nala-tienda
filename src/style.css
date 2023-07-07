@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@350&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@250&display=swap");
+
 /*NavBar*/
 #navBar {
   font-family: "Josefin Sans", sans-serif;
@@ -7,6 +8,7 @@
   color: #4A9A91;
   align-items: center;
   font-size: 1.3rem;
+  font-weight: 600;
 }
 
 #navBar h2 {
@@ -100,3 +102,9 @@
   color: #4A9A91;
 }
 
+.nosotrosParrafo{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+  color: #969696;
+  font-weight: 300;
+}
