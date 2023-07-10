@@ -130,3 +130,52 @@
   font-weight: 100;
   color: #969696;
 }
+
+/*Contactanos*/
+
+#infoContactanos p{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+#infoContactanos button{
+background-color: #7CBFBA;
+color: #ffffff;
+font-family: "Josefin Sans", sans-serif;
+font-size: 1.3rem;
+font-weight: 600;
+margin-top: 40px;
+padding: 10px 75px 10px 75px;
+border-radius: 16px;
+}
+
+#formContactanos h3{
+font-family:  "Josefin Sans", sans-serif;
+font-size: 1.6rem;
+font-weight: 600;
+color: #676767;
+}
+
+#formContactanos input{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 200;
+}
+#formContactanos textarea{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 200;
+}
+
+#formContactanos button{
+  background-color: #7CBFBA;
+  color: #ffffff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 30px;
+  padding-top: 5px;
+  border-radius: 16px;
+  }
