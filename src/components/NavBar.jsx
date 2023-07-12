@@ -6,12 +6,23 @@ import { Link, useLocation } from "react-router-dom";
 
 export const NavBar = () => {
   const locationOne = useLocation();
-  console.log(locationOne.pathname);
+
+  let validacion;
+  const validation = ()=> {
+    if(locationOne.pathname == "/"){
+      return validacion = true;
+    }else if(locationOne.pathname == "/personalizados"){
+      return validacion = true;
+    }else{
+      return validacion = false;
+    }
+  }
 
   return (
     <Box mr="10" ml="10" pt="6">
       <Grid
         id="navBar"
+        className={ validation()? "navBar" : "navBar1"}
         templateRows="repeat(2, 1fr)"
         templateColumns="repeat(5, 1fr)"
       >
@@ -27,8 +38,7 @@ export const NavBar = () => {
         </GridItem>
         <GridItem display="flex" justifyContent="center">
           <Link to={"/"}>
-            <img src={icono} />
-            <img src={icono1} />
+            {validation() ? <img src={icono} /> :  <img src={icono1}/> }
           </Link>
         </GridItem>
         <GridItem>

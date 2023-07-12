@@ -9,7 +9,7 @@ import { ItemList } from "./ItemList";
 export const ItemListContainer = () => {
   const [producto, setProducto] = useState([]);
   const { category } = useParams();
-  const locationOne = useLocation();
+
 
   //Llamado a la DB.
   useEffect(() => {

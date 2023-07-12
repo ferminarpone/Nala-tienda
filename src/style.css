@@ -2,10 +2,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@250&display=swap");
 
 /*NavBar*/
-#navBar {
+.navBar {
   font-family: "Josefin Sans", sans-serif;
-  /* color: #ffffff; */
-  color: #4A9A91;
+  color: #ffffff;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.navBar1 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #4a9a91;
   align-items: center;
   font-size: 1.3rem;
   font-weight: 600;
@@ -20,13 +26,13 @@
 }
 .underline {
   margin-bottom: 35px;
-  background-color: #4A9A91;
+  background-color: #4a9a91;
 }
 /* Footer */
-.footerText{
+.footerText {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.8rem;
-  font-weight:300;
+  font-weight: 300;
 }
 
 /*Componets*/
@@ -50,8 +56,8 @@
   background-image: url(./assets/home/Banner.png);
   height: 480px;
   width: auto;
-  background-position: center; 
-  background-repeat: no-repeat; 
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -69,12 +75,12 @@
 
 /*Personalizados*/
 
-.bgPersonalizados{
-  background-color: #4A9A91;
+.bgPersonalizados {
+  background-color: #4a9a91;
   height: 654px;
 }
 
-.personalizadosText{
+.personalizadosText {
   font-family: "Josefin Sans", sans-serif;
   color: #ffffff;
   font-size: 1.5rem;
@@ -82,26 +88,26 @@
   width: 80%;
 }
 
- .personalizadosButton{
+.personalizadosButton {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
   border: solid 1px #ffffff;
-} 
+}
 
 /*Formulario*/
-.dividerForm{
+.dividerForm {
   position: relative;
-  right: 154px; 
+  right: 154px;
 }
 
 /*Nosotros*/
-#bgNosotros{
-  background-color: #EFF9ED;
+#bgNosotros {
+  background-color: #eff9ed;
   height: 642px;
-  color: #4A9A91;
+  color: #4a9a91;
 }
-.nosotrosParrafo{
+.nosotrosParrafo {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
   color: #969696;
@@ -109,7 +115,7 @@
 }
 
 /*Historia*/
-.historiaParrafo{
+.historiaParrafo {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
   color: #ffffff;
@@ -118,11 +124,11 @@
 
 /*Términos y condiciones*/
 
-.dividerTerminos{
+.dividerTerminos {
   position: relative;
-  right: 152px; 
+  right: 152px;
 }
-.parrafoTerminos{
+.parrafoTerminos {
   margin-top: 30px;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.8rem;
@@ -133,43 +139,43 @@
 
 /*Contactanos*/
 
-#infoContactanos p{
+#infoContactanos p {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
   font-weight: 100;
 }
 
-#infoContactanos button{
-background-color: #7CBFBA;
-color: #ffffff;
-font-family: "Josefin Sans", sans-serif;
-font-size: 1.3rem;
-font-weight: 600;
-margin-top: 40px;
-padding: 10px 75px 10px 75px;
-border-radius: 16px;
+#infoContactanos button {
+  background-color: #7cbfba;
+  color: #ffffff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 40px;
+  padding: 10px 75px 10px 75px;
+  border-radius: 16px;
 }
 
-#formContactanos h3{
-font-family:  "Josefin Sans", sans-serif;
-font-size: 1.6rem;
-font-weight: 600;
-color: #676767;
+#formContactanos h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #676767;
 }
 
-#formContactanos input{
+#formContactanos input {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.3rem;
   font-weight: 200;
 }
-#formContactanos textarea{
+#formContactanos textarea {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.3rem;
   font-weight: 200;
 }
 
-#formContactanos button{
-  background-color: #7CBFBA;
+#formContactanos button {
+  background-color: #7cbfba;
   color: #ffffff;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.3rem;
@@ -178,4 +184,4 @@ color: #676767;
   margin-top: 30px;
   padding-top: 5px;
   border-radius: 16px;
-  }
+}
