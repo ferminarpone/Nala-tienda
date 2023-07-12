@@ -1,9 +1,13 @@
 import React from "react";
 import icono from "../assets/navBar/Icono.png";
+import icono1 from "../assets/navBar/Icono1.png";
 import { Grid, GridItem, Box, Divider } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const NavBar = () => {
+  const locationOne = useLocation();
+  console.log(locationOne.pathname);
+
   return (
     <Box mr="10" ml="10" pt="6">
       <Grid
@@ -22,18 +26,19 @@ export const NavBar = () => {
           </Link>
         </GridItem>
         <GridItem display="flex" justifyContent="center">
-        <Link to={"/"}>
-          <img src={icono} />
+          <Link to={"/"}>
+            <img src={icono} />
+            <img src={icono1} />
           </Link>
         </GridItem>
         <GridItem>
-        <Link to={"/nosotros"}>
-          <h2>NOSOTROS</h2>
+          <Link to={"/nosotros"}>
+            <h2>NOSOTROS</h2>
           </Link>
         </GridItem>
         <GridItem>
-        <Link to={"/contactanos"}>
-          <h2>CONTÁCTANOS</h2>
+          <Link to={"/contactanos"}>
+            <h2>CONTÁCTANOS</h2>
           </Link>
         </GridItem>
         <GridItem colSpan={2}>

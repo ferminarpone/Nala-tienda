@@ -9,6 +9,7 @@ import { ItemList } from "./ItemList";
 export const ItemListContainer = () => {
   const [producto, setProducto] = useState([]);
   const { category } = useParams();
+  const locationOne = useLocation();
 
   //Llamado a la DB.
   useEffect(() => {
@@ -26,13 +27,13 @@ export const ItemListContainer = () => {
 
   return (
     <>
-      <NavBar/>
+      <NavBar />
       {category ? (
         <ItemList product={filterCart} categoria={category} />
       ) : (
         <ItemList product={producto} />
       )}
-      <Footer/>
+      <Footer />
     </>
   );
 };
