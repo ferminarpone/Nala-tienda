@@ -3,6 +3,7 @@ import { NavBar } from "../NavBar";
 import { Formulario } from "./Formulario";
 import BannerPersonalizado from "../../assets/personalizados/BannerPersonalizado.png";
 import AlgoMas from "../../assets/personalizados/Algo más.png";
+import { Footer } from "../Footer";
 export const Personalizados = () => {
   return (
     <>
@@ -59,6 +60,7 @@ export const Personalizados = () => {
         </Container>
       </div>
       <Formulario />
+      <Footer/>
     </>
   );
 };

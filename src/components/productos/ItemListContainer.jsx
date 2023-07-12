@@ -1,32 +1,38 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from "react";
 // para las categorias import { useParams } from "react-router-dom";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
-import { Image } from '@chakra-ui/react';
+import { useParams } from "react-router-dom";
+import { NavBar } from "../NavBar";
+import { Footer } from "../Footer";
+import { ItemList } from "./ItemList";
 
 export const ItemListContainer = () => {
+  const [producto, setProducto] = useState([]);
+  const { category } = useParams();
 
-    const [producto, setProducto] = useState([]);
+  //Llamado a la DB.
+  useEffect(() => {
+    const dataBase = getFirestore();
+    const itemsCollection = collection(dataBase, "productos Shein");
+    getDocs(itemsCollection).then((snapShot) => {
+      setProducto(
+        snapShot.docs.map((item) => ({ id: item.id, ...item.data() }))
+      );
+    });
+  }, []);
 
-    useEffect(() => {
-       const dataBase = getFirestore();
-       const itemsCollection = collection(dataBase, "productos Shein");
-       getDocs(itemsCollection).then((snapShot)=>{
-        setProducto(
-            snapShot.docs.map((item)=> ({id:item.id , ...item.data()}))
-        );
-       })      
-    }, [])
-    
-    console.log(producto);
+  //Filtro por categorias.
+  const filterCart = producto.filter((el) => el.categoria === category);
+
   return (
-    <div>
-        <h1>ItemListContainer</h1>
-        {producto.map((p)=>
-        <div>
-        <h3>{p.nombre}</h3>
-        <Image src={p.img} />
-        </div>
-        )} 
-    </div>
-  )
-}
+    <>
+      <NavBar/>
+      {category ? (
+        <ItemList product={filterCart} categoria={category} />
+      ) : (
+        <ItemList product={producto} />
+      )}
+      <Footer/>
+    </>
+  );
+};

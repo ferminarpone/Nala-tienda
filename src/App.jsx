@@ -1,19 +1,23 @@
-import { Footer } from './components/Footer'
-import { Contactanos } from './components/contáctanos/Contactanos'
-import { Home } from './components/home/Home'
-import { Nosotros } from './components/nosotros/Nosotros'
-import { Personalizados } from './components/personalizados/Personalizados'
-import { ItemListContainer } from './components/productos/ItemListContainer'
+import { Contactanos } from "./components/contáctanos/Contactanos";
+import { Home } from "./components/home/Home";
+import { Nosotros } from "./components/nosotros/Nosotros";
+import { Personalizados } from "./components/personalizados/Personalizados";
+import { ItemListContainer } from "./components/productos/ItemListContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export const App = () => {
   return (
-    <> 
-    {/*  <Home/>  */}
-    {/* <Personalizados/> */}
-    {/* <Nosotros/> */}
-   {/*  <Contactanos/> */}
-   <ItemListContainer/>
-    {/* <Footer/> */}
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/productos" element={<ItemListContainer />} />
+          {/* Ver rutas para las categorias */}
+          <Route exact path="/personalizados" element={<Personalizados />} />
+          <Route exact path="/nosotros" element={<Nosotros />} />
+          <Route exact path="/contactanos" element={<Contactanos />} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
-}
+  );
+};
