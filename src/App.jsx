@@ -12,6 +12,7 @@ export const App = () => {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/productos" element={<ItemListContainer />} />
+          <Route exact path="/productos/:category" element={<ItemListContainer />} />
           {/* Ver rutas para las categorias */}
           <Route exact path="/personalizados" element={<Personalizados />} />
           <Route exact path="/nosotros" element={<Nosotros />} />

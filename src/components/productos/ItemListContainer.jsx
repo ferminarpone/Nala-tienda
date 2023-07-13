@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { NavBar } from "../NavBar";
 import { Footer } from "../Footer";
 import { ItemList } from "./ItemList";
+import { Categorias } from "./Categorias";
 
 export const ItemListContainer = () => {
   const [producto, setProducto] = useState([]);
@@ -28,6 +29,7 @@ export const ItemListContainer = () => {
   return (
     <>
       <NavBar />
+      <Categorias/>
       {category ? (
         <ItemList product={filterCart} categoria={category} />
       ) : (

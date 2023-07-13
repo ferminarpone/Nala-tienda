@@ -185,3 +185,23 @@
   padding-top: 5px;
   border-radius: 16px;
 }
+
+/*Productos*/
+
+#categorias{
+  line-height: normal;
+}
+#categorias .heartIcon{
+  color: #4E958F;
+  font-size: larger;
+}
+
+#categorias h5{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.1rem;
+  color: #4E958F;
+}
+
+#categorias hr{
+  border-color:#4E958F ;
+}
