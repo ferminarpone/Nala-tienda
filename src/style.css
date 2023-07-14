@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@350&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@250&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@450&display=swap");
 
 /*NavBar*/
 .navBar {
@@ -188,20 +190,64 @@
 
 /*Productos*/
 
-#categorias{
+#categorias {
   line-height: normal;
 }
-#categorias .heartIcon{
-  color: #4E958F;
+#categorias .heartIcon {
+  color: #4e958f;
   font-size: larger;
 }
 
-#categorias h5{
+#categorias h5 {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.1rem;
-  color: #4E958F;
+  color: #4e958f;
 }
 
-#categorias hr{
-  border-color:#4E958F ;
+#categorias hr {
+  border-color: #4e958f;
+}
+
+#cardItem h4 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #969696;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+#cardItem h5 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #969696;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+#cardItem p{
+  font-family: "Josefin Sans", sans-serif;
+  color: #969696;
+  font-weight: 450;
+  font-size: 1.2rem;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+#cardItem .buttonCard{
+  background-color: #7cbfba;
+  width: 80%;
+  height: 45px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #ffffff;
+  border-radius: 14px;
+}
+
+#cardItem .buttonCardHeart{
+  background-color: #4a9a91;
+  height: 45px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #ffffff;
+  border-radius: 14px;
 }
