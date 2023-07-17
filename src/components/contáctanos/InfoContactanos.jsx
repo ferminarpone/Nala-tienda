@@ -18,19 +18,19 @@ export const InfoContactanos = () => {
         <GridItem colSpan={1} mt="10px">
           <Image src={tel} alt="icono teléfono" w="45%"/>
         </GridItem>
-        <GridItem colSpan={3} mt="15px">
+        <GridItem colSpan={3} mt="15px" ml="-10%">
           <p>+54 9 351 390-2114</p>
         </GridItem>
         <GridItem colSpan={1} mt="10px">
           <Image src={mail} alt="icono e-mail" w="45%"/>
         </GridItem>
-        <GridItem colSpan={3} mt="15px">
+        <GridItem colSpan={3} mt="15px" ml="-10%">
           <p>nala_tienda@gmail.com</p>
         </GridItem>
         <GridItem colSpan={1} mt="10px">
           <Image src={ig} alt="icono instagram" w="45%"/>
         </GridItem>
-        <GridItem colSpan={3} mt="15px"> 
+        <GridItem colSpan={3} mt="15px" ml="-10%"> 
           <p>@nala_tiendaa </p>
         </GridItem>
       </Grid>

@@ -98,9 +98,13 @@
 }
 
 /*Formulario*/
+#formPersonalizados input{
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 350;
+}
 .dividerForm {
   position: relative;
-  right: 154px;
+  right: 160px;
 }
 
 /*Nosotros*/
@@ -231,9 +235,10 @@
   margin-bottom: 16px;
 }
 
+
 #cardItem .buttonCard{
   background-color: #7cbfba;
-  width: 80%;
+  width: 95%;
   height: 45px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;

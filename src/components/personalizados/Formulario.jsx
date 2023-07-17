@@ -23,11 +23,12 @@ export const Formulario = () => {
           />
         </div>
 
-        <FormControl isRequired mt="50px">
+        <FormControl  isRequired mt="50px">
           <Grid
             templateRows="repeat(3, 1fr)"
             templateColumns="repeat(4, 1fr)"
             gap={4}
+            id="formPersonalizados"
           >
             <GridItem colSpan={2}>
               <Input
