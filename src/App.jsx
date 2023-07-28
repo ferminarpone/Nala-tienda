@@ -1,6 +1,7 @@
 import { Contactanos } from "./components/contáctanos/Contactanos";
 import { ItemDetailContainer } from "./components/detalles/ItemDetailContainer";
 import { Home } from "./components/home/Home";
+import { Informacion } from "./components/info/Informacion";
 import { Nosotros } from "./components/nosotros/Nosotros";
 import { Personalizados } from "./components/personalizados/Personalizados";
 import { ItemListContainer } from "./components/productos/ItemListContainer";
@@ -19,6 +20,7 @@ export const App = () => {
           <Route exact path="/personalizados" element={<Personalizados />} />
           <Route exact path="/nosotros" element={<Nosotros />} />
           <Route exact path="/contactanos" element={<Contactanos />} />
+          <Route exact path="/informacion" element={<Informacion/>}/>
         </Routes>
       </BrowserRouter>
     </>

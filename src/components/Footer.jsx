@@ -19,7 +19,9 @@ export const Footer = () => {
       <Grid templateColumns="repeat(5, 1fr)" gap={1} >
         <GridItem colSpan={2}>
           <Center height="100px">
+            <Link to={"/informacion"}>
             <h4 className="footerText">Más información</h4>
+            </Link>
           </Center>
         </GridItem>
         <GridItem colSpan={1}>

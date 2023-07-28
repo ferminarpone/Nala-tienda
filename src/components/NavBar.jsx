@@ -13,6 +13,8 @@ export const NavBar = () => {
       return validacion = true;
     }else if(locationOne.pathname == "/personalizados"){
       return validacion = true;
+    }else if(locationOne.pathname == "/informacion"){
+      return validacion = true;
     }else{
       return validacion = false;
     }
