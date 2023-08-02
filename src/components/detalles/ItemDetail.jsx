@@ -10,8 +10,37 @@ import {
 import { FaRegHeart } from "react-icons/fa";
 import { AiOutlineLeft } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { FavoritoContext } from "../../context/FavContext";
 
-export const ItemDetail = ({ product }) => {
+export const ItemDetail = ({ id, nombre, img }) => {
+
+/*   const id = product.id;
+  const nombre = product.nombre;
+  const img = product.img; */
+
+  const {fav, setFav} = useContext(FavoritoContext);
+
+  const addToFav = () => {
+    setFav((favItems) => {
+      const itemFound = favItems.find((item) => item.id === id);
+      if (itemFound) {
+        return favItems.map((item) => {
+          if (item.id === id) {
+            return { ...item, quantity: item.quantity + 1 };
+          } else {
+            return item;
+          }
+        });
+      } else {
+        return [
+          ...favItems,
+          { id, img, nombre, quantity: 1 },
+        ];
+      }
+    });
+  };
+
   return (
     <Container maxWidth="80%" id="itemDetail">
       <Link to={"/productos"}>
@@ -31,14 +60,16 @@ export const ItemDetail = ({ product }) => {
         mb="-100px"
       >
         <GridItem colSpan={1} rowSpan={3} >
-          <Image src={product.img} alt={product.nombre} height="80%" w="92%" objectFit="cover" borderRadius="10px"/>
+          <Image src={img} alt={nombre} height="80%" w="92%" objectFit="cover" borderRadius="10px"/>
         </GridItem>
         <GridItem colSpan={1} rowSpan={1}>
           <Flex justifyContent="space-between"> 
-            <h2>{product.nombre}</h2>
-            <Button variant="solid" className="buttonHeart">
+            <h2>{nombre}</h2>
+            <Link to={'/favoritos'}>
+            <Button variant="solid" className="buttonHeart" onClick={()=>addToFav()}>
               <FaRegHeart />
             </Button>
+            </Link>
           </Flex>
         </GridItem>
         <GridItem>

@@ -13,10 +13,34 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import { useContext } from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { FavoritoContext } from "../../context/FavContext";
 
 export const Item = ({ nombre, categoria, img, id }) => {
+  const { fav, setFav } = useContext(FavoritoContext);
+
+  const addToFav = () => {
+    setFav((favItems) => {
+      const itemFound = favItems.find((item) => item.id === id);
+      if (itemFound) {
+        return favItems.map((item) => {
+          if (item.id === id) {
+            return { ...item, quantity: item.quantity + 1 };
+          } else {
+            return item;
+          }
+        });
+      } else {
+        return [
+          ...favItems,
+          { id, img, nombre, quantity: 1 },
+        ];
+      }
+    });
+  };
+
   return (
     <GridItem id="cardItem">
       <Center>
@@ -43,8 +67,12 @@ export const Item = ({ nombre, categoria, img, id }) => {
               </Link>
             </Box>
             <Box>
-              <Link>
-                <Button variant="solid" className="buttonCardHeart">
+              <Link to={"/favoritos"}>
+                <Button
+                  variant="solid"
+                  className="buttonCardHeart"
+                  onClick={() => addToFav()}
+                >
                   <FaRegHeart />
                 </Button>
               </Link>

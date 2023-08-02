@@ -78,14 +78,9 @@ export const Categorias = () => {
             {hrFunction() == "gorras" ? <hr/> : ""}
             </Link>
             <Spacer/>
-            {/* 
-            Agregar componente "MG"
-            <Link to={'/productos/""'}> */}
+            <Link to={`/favoritos`}> 
             <FaRegHeart className="heartIcon"/>
-            {/* </Link> */}
-
-            {/* Agregar condicional con "click"
-            <FaHeart className="heartIcon"/> */}
+            </Link> 
         </Flex>
     </Container>
   )

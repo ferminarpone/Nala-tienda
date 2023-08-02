@@ -23,7 +23,7 @@ export const ItemDetailContainer = () => {
   return (
     <>
       <NavBar />
-      <ItemDetail product={product} />
+      <ItemDetail id={product.id} nombre={product.nombre} img={product.img} />
       <Footer />
     </>
   );
