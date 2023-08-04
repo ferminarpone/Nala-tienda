@@ -1,17 +1,11 @@
 import {
   Box,
   Button,
-  ButtonGroup,
-  Card,
-  CardBody,
-  CardFooter,
   Center,
   Flex,
   GridItem,
-  Heading,
   Image,
-  Stack,
-  Text,
+  Stack
 } from "@chakra-ui/react";
 import { useContext } from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
