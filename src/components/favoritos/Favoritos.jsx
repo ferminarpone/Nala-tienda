@@ -1,44 +1,54 @@
 import { Footer } from "../Footer";
 import { NavBar } from "../NavBar";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { FavoritoContext } from "../../context/FavContext";
-import { Container, Flex } from "@chakra-ui/react";
+import { Button, Center, Container, Flex } from "@chakra-ui/react";
 import { FavItem } from "./FavItem";
 import { Link } from "react-router-dom";
 import { AiOutlineLeft } from "react-icons/ai";
 export const Favoritos = () => {
   const { fav, setFav } = useContext(FavoritoContext);
 
+  //Función que devuelve true si hay productos en favoritos.
+  const itemFav = () => (fav.length > 0 ? true : false);
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <>
       <NavBar />
       <Container maxW="90%" minHeight="480px">
         <Link to={"/productos"}>
+          {itemFav()? 
           <Flex className="regresar">
             <div>
               <AiOutlineLeft />
             </div>
             <p>Seguir eligiendo</p>
           </Flex>
+          :""}
         </Link>
-        <div id="favoritos">
-          {fav.map((item) => (
-            <FavItem
-              key={item.id}
-              nombre={item.nombre}
-              img={item.img}
-              cantidad={item.quantity}
-            />
-          ))}
-        </div>
 
-        {/*    {fav.map((item) => (
-          <>
-            <h1>{item.nombre}</h1>
-            <img src={item.img} />
-            <p>Cantidad: {item.quantity}</p>
-          </>
-        ))} */}
+        {itemFav()? (
+          <div id="favoritos">
+            {fav.map((item) => (
+              <FavItem
+                key={item.id}
+                nombre={item.nombre}
+                img={item.img}
+                cantidad={item.quantity}
+                id={item.id}
+              />
+            ))}
+          </div>
+        ) : (
+          <Center minHeight="400px" display="flex" flexDirection="column" id="sinFav">
+          <h1>No tienes productos en tu lista de favoritos</h1>
+          <Link to={"/productos"}>
+          <Button> Ver productos </Button>
+          </Link>
+          </Center>
+        )}
       </Container>
       <Footer />
     </>

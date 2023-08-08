@@ -4,7 +4,7 @@ import { collection, getDocs, getFirestore } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import { NavBar } from "../NavBar";
 import { Footer } from "../Footer";
-import { ItemList } from "./ItemList";
+import  ItemList  from "./ItemList";
 import { Categorias } from "./Categorias";
 
 export const ItemListContainer = () => {
@@ -29,7 +29,6 @@ export const ItemListContainer = () => {
   return (
     <>
       <NavBar />
-      <Categorias/>
       {category ? (
         <ItemList product={filterCart} categoria={category} />
       ) : (

@@ -5,11 +5,14 @@ import { NavBar } from "../NavBar";
 import { Footer } from "../Footer";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "./ItemDetail";
+import { Center, CircularProgress } from "@chakra-ui/react";
 export const ItemDetailContainer = () => {
   const [product, setProduct] = useState([]);
   const { id } = useParams();
+
   //Llamado a la DB.
   useEffect(() => {
+    window.scroll(0, 0);
     const dataBase = getFirestore();
     const item = doc(dataBase, "productos Shein", `${id}`);
     getDoc(item).then((snapShot) => {
@@ -23,7 +26,13 @@ export const ItemDetailContainer = () => {
   return (
     <>
       <NavBar />
-      <ItemDetail id={product.id} nombre={product.nombre} img={product.img} />
+      {product == "" ? (
+        <Center minH="400px">
+          <CircularProgress isIndeterminate color="#7cbfba" />
+        </Center>
+      ) : (
+        <ItemDetail id={product.id} nombre={product.nombre} img={product.img} />
+      )}
       <Footer />
     </>
   );

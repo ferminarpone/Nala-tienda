@@ -470,3 +470,20 @@
   margin-left: 6px;
   margin-top: -8px;
 }
+
+#sinFav h1{
+  font-family: "Josefin Sans", sans-serif;
+  color: #676767;
+  font-size: 1.6rem;
+  font-weight: 350;
+  margin-bottom: 30px;
+}
+#sinFav button{
+  border-radius: 15px;
+  background-color: #7cbfba;
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 24px;
+}
