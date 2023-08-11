@@ -5,6 +5,10 @@ import BannerPersonalizado from "../../assets/personalizados/BannerPersonalizado
 import AlgoMas from "../../assets/personalizados/Algo más.png";
 import { Footer } from "../Footer";
 export const Personalizados = () => {
+
+  const sheinOpen = ()=>{
+    window.open( "https://es.shein.com/?url_from=esgooglebrandshein_srsa_Shein01_20221011&cid=18569136939&setid=143075703795&adid=627556790592&pf=GOOGLE&gclid=Cj0KCQjwuNemBhCBARIsADp74QRjiuUE0FiDAH3TdzzJAWYOTm_vsQM_SLXOkPFflv7FWTBydcHKdu4aAknZEALw_wcB","_blank")
+  }
   return (
     <>
       <div className="bgPersonalizados">
@@ -29,7 +33,7 @@ export const Personalizados = () => {
             <GridItem colSpan={3}>
               <h3 className="personalizadosText">
                 Estamos aquí para ayudarte con cualquier producto de Shein que
-                quieras y no este en nuestro catalogo.
+                quieras y no este en nuestro catálogo.
               </h3>
             </GridItem>
             <GridItem colSpan={3}>
@@ -43,6 +47,7 @@ export const Personalizados = () => {
                 bg="#4A9A91"
                 color="#ffffff"
                 size="lg"
+                onClick={()=>sheinOpen()}
               >
                 DEJA TUS DATOS
               </Button>

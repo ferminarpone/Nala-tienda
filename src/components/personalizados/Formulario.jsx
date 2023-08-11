@@ -32,15 +32,16 @@ export const Formulario = () => {
           >
             <GridItem colSpan={2}>
               <Input
+                type="text"
                 placeholder="Nombre"
                 border="solid 2px #4A9A91"
-                className="input"
                 borderRadius="14px"
                 h="70px"
               />
             </GridItem>
             <GridItem colSpan={2}>
               <Input
+                type="text"
                 placeholder="Apellido"
                 border="solid 2px #4A9A91"
                 borderRadius="14px"
@@ -67,6 +68,7 @@ export const Formulario = () => {
             </GridItem>
             <GridItem colSpan={3}>
               <Input
+                type="text"
                 placeholder="Url del producto Shein"
                 border="solid 2px #4A9A91"
                 borderRadius="14px"
