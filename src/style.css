@@ -4,6 +4,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@450&display=swap");
 
 /*NavBar*/
+
+
 .navBar {
   font-family: "Josefin Sans", sans-serif;
   color: #ffffff;
@@ -30,6 +32,8 @@
   margin-bottom: 35px;
   background-color: #4a9a91;
 }
+
+
 /* Footer */
 .footerText {
   font-family: "Josefin Sans", sans-serif;
