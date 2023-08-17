@@ -10,15 +10,19 @@ import {
 import { useForm } from "react-hook-form";
 
 export const Formulario = () => {
-  const {register, handleSubmit} = useForm();
+  const {register, handleSubmit, reset} = useForm();
 
+	
   //Funcion... recibe los datos del formulario(data)
   const onSubmit = (data)=>{
-    console.log(data)
+    console.log(data);
+    const url = `https://web.whatsapp.com/send?phone=34617429097&text=%0A%2ANala%20tienda%2A%0AConsulta%20producto%20de%20personalizado%3A%0A%0A%2AUrl%20del%20producto%3A%2A ${data.url}%0A%0A%2ADatos%20cliente%2A%0ANombre%3A%20${data.nombre} ${data.apellido}%0AEmail%3A%20${data.email}%0ATel%C3%A9fono%3A${data.telefono}`;
+    window.open(url,'_blank') 
+    reset();
   }
   return (
     <>
-      <Container maxWidth="90%" mt="90px">
+      <Container maxWidth="90%" mt="7 0px">
         <div className="divTitle">
           <h2 className="title">COMPLETA EL FORMULARIO</h2>
           <Divider
@@ -30,17 +34,17 @@ export const Formulario = () => {
           />
         </div>
         <form onSubmit={ handleSubmit(onSubmit) }>
-        {/*   <FormControl isRequired mt="50px"> */}
             <Grid
               templateRows="repeat(3, 1fr)"
               templateColumns="repeat(4, 1fr)"
               gap={4}
+              mt="50px"
               id="formPersonalizados"
             >
               <GridItem colSpan={2}>
                 <Input
                   type="text"
-                  placeholder="Nombre"
+                  placeholder="Nombre*"
                   {...register('nombre')}
                   isRequired
 
@@ -52,8 +56,9 @@ export const Formulario = () => {
               <GridItem colSpan={2}>
                 <Input
                   type="text"
-                  placeholder="Apellido"
-                  {...register('apellido',{required: true})}
+                  placeholder="Apellido*"
+                  {...register('apellido')}
+                  isRequired
 
                   border="solid 2px #4A9A91"
                   borderRadius="14px"
@@ -74,8 +79,9 @@ export const Formulario = () => {
               <GridItem colSpan={2}>
                 <Input
                   type="tel"
-                  placeholder="Teléfono"
+                  placeholder="Teléfono*"
                   {...register('telefono')}
+                  isRequired
 
                   border="solid 2px #4A9A91"
                   borderRadius="14px"
@@ -85,8 +91,9 @@ export const Formulario = () => {
               <GridItem colSpan={3}>
                 <Input
                   type="text"
-                  placeholder="Url del producto Shein"
+                  placeholder="Url del producto Shein*"
                   {...register('url')}
+                  isRequired 
 
                   border="solid 2px #4A9A91"
                   borderRadius="14px"
@@ -96,7 +103,6 @@ export const Formulario = () => {
               <GridItem display="flex" justifyContent="end">
                 <Button
                   type="submit"
-
                   colorScheme="teal"
                   borderRadius="14px"
                   fontFamily="Josefin Sans"
@@ -108,8 +114,8 @@ export const Formulario = () => {
                 </Button>
               </GridItem>
             </Grid>
-        {/*   </FormControl> */}
         </form>
+        <p className="requerido">* Campos requeridos</p>
       </Container>
     </>
   );

@@ -111,6 +111,13 @@
   right: 160px;
 }
 
+.requerido{
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 350;
+  margin-top: 15px;
+  color: #676767;
+}
+
 /*Nosotros*/
 #bgNosotros {
   background-color: #eff9ed;

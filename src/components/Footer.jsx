@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <Container maxW="89%" mt="100px">
+    <Container maxW="89%" mt="80px">
       <Divider orientation="horizontal" color="#4A9A91" border="solid 1px" />
       
       <Grid templateColumns="repeat(5, 1fr)" gap={1} >

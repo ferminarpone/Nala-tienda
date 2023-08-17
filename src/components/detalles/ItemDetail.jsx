@@ -86,7 +86,7 @@ export const ItemDetail = ({ id, nombre, img }) => {
           <p className="descripcion"> • Descripción:</p>
         </GridItem>
         <GridItem display="flex" justifyContent="center">
-          <Button className="pedidoWsp" onClick={()=>sendWsp()}>HACER PEDIDO POR WHATSAPP</Button>
+          <Button className="pedidoWsp" onClick={sendWsp}>HACER PEDIDO POR WHATSAPP</Button>
         </GridItem>
       </Grid>
     </Container>
