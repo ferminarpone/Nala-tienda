@@ -102,7 +102,7 @@
 }
 
 /*Formulario*/
-#formPersonalizados input{
+#formPersonalizados input, textarea{
   font-family: "Josefin Sans", sans-serif;
   font-weight: 350;
 }
@@ -127,6 +127,7 @@
 .nosotrosParrafo {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
+  line-height: 1.2;
   color: #969696;
   font-weight: 300;
 }
@@ -134,7 +135,9 @@
 /*Historia*/
 .historiaParrafo {
   font-family: "Josefin Sans", sans-serif;
+  padding-top: 10px;
   font-size: 1.6rem;
+  line-height: 1.1;
   color: #ffffff;
   font-weight: 300;
 }
@@ -149,7 +152,7 @@
   margin-top: 30px;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.8rem;
-  line-height: normal;
+  line-height:1.1;
   font-weight: 100;
   color: #969696;
 }
@@ -497,4 +500,26 @@
   font-size: 1.4rem;
   font-weight: 400;
   padding: 24px;
+}
+
+.divTitleFormFav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+.titleFormFav{
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #575757;
+  position: relative;
+}
+
+.dividerFormFav {
+  position: relative;
+  right: 246px;
+ 
 }

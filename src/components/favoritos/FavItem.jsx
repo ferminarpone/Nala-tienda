@@ -8,25 +8,20 @@ export const FavItem = ({ id, nombre, img, cantidad }) => {
 
   const {fav, setFav} = useContext(FavoritoContext);
 
+
   //Función que elimina un producto de favoritos.
   const removeItem = ()=>{
     const newFav = fav.filter((item)=> item.id !== id);
     setFav(newFav); 
   }
 
-/*   const productList = fav.map((e)=> JSON.stringify(e.nombre ,null, "\t"))  */
-/* console.log( JSON.stringify(fav.nombre , null , "\t"))  */
-
-  const lista = fav.map((e)=>e.nombre)
-  console.log( JSON.stringify(lista , null , "\t"));
-
+  // variable + función que genera el listado de productos elegidos.
+/*   const productList = fav.map((e)=> ` ${JSON.stringify(e.nombre, e.id)}`)  
   const sendWsp = ()=>{
-
-
     const url = `https://web.whatsapp.com/send?phone=34617429097&text=%0A%2ANala%20tienda%2A%0AConsulta%20disponibilidad%20de%20productos%3A%0A%0A%2AProductos%3A%2A ${productList}`;
     window.open(url,'_blank') 
     
-  }
+  } */
     return (
     <>
       <Grid templateColumns="repeat(10,1fr)" gap={6} mb="25px" id="favItem">
@@ -37,7 +32,7 @@ export const FavItem = ({ id, nombre, img, cantidad }) => {
           <h1>{nombre}</h1>
         </GridItem>
         <GridItem colSpan={4} display="flex" alignItems="center" >
-        <Button className="comprarWsp" onClick={sendWsp}>COMPRAR POR WHATSAPP</Button>
+        <Button className="comprarWsp">COMPRAR POR WHATSAPP</Button>
         </GridItem>
         <GridItem colSpan={1} display="flex" alignItems="center">
             <Button variant="solid"

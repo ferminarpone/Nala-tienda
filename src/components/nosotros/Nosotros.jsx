@@ -41,9 +41,13 @@ export const Nosotros = () => {
             </GridItem>
             <GridItem rowSpan={1} colSpan={3} mb="100px" ml="30px">
               <p className="nosotrosParrafo">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                sequi cumque voluptatum explicabo ipsa neque voluptatem esse
-                nisi magni!
+                Nala tienda es un emprendimiento que compra en la pagina
+                original de Shein, trayendo los productos de Brasil. Contamos
+                con dos tipos de venta, por un lado vendemos los productos en
+                tendencias y por otro tenemos un servicio personalizado de
+                traerte hasta tu casa lo que vos quieras dentro de las
+                categorías más accesibles por el tamaño (como maquillaje, fundas
+                de celular o auriculares, billetera, cartera, medias, etc).
               </p>
             </GridItem>
           </Grid>

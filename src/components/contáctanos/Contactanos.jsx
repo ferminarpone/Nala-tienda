@@ -11,7 +11,7 @@ export const Contactanos = () => {
   return (
     <>
       <NavBar />
-      <Container maxWidth="90%" mt="80px">
+      <Container maxWidth="90%" mt="50px" mb="120px">
         <Grid
           templateRows="repeat(2, 1fr)"
           templateColumns="repeat(6, 1fr)"

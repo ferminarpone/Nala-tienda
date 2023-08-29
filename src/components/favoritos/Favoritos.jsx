@@ -6,6 +6,7 @@ import { Button, Center, Container, Flex } from "@chakra-ui/react";
 import { FavItem } from "./FavItem";
 import { Link } from "react-router-dom";
 import { AiOutlineLeft } from "react-icons/ai";
+import { FormularioFav } from "./FormularioFav";
 export const Favoritos = () => {
   const { fav, setFav } = useContext(FavoritoContext);
 
@@ -40,6 +41,7 @@ export const Favoritos = () => {
                 id={item.id}
               />
             ))}
+            <FormularioFav/>
           </div>
         ) : (
           <Center minHeight="400px" display="flex" flexDirection="column" id="sinFav">
