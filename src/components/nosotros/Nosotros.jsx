@@ -1,5 +1,5 @@
 import { Box, Container, Grid, GridItem, Image, Text } from "@chakra-ui/react";
-import { NavBar } from "../NavBar";
+import { NavBar } from "../navbar/NavBar";
 import Circulo from "../../assets/nosotros/Rectangle 20.png";
 import FotoCirculo from "../../assets/nosotros/Mask group.png";
 import Titulo from "../../assets/nosotros/Que hacemos.png";
@@ -11,7 +11,7 @@ export const Nosotros = () => {
   return (
     <>
       <div id="bgNosotros">
-        <NavBar />
+        <NavBar/>
         <Container maxWidth="80%">
           <Grid
             h="470px"

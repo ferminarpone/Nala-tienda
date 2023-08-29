@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 // para las categorias import { useParams } from "react-router-dom";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 import { useParams } from "react-router-dom";
-import { NavBar } from "../NavBar";
+import { NavBar } from "../navbar/NavBar";
 import { Footer } from "../Footer";
 import  ItemList  from "./ItemList";
 import { Categorias } from "./Categorias";

@@ -5,6 +5,8 @@ import './style.css';
 import {ChakraProvider} from '@chakra-ui/react';
 import { initializeApp } from "firebase/app";
 
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyCS3vaTFcJSrQPvIK68MYPN9TaupkjmYc8",
   authDomain: "nala-tienda-4421c.firebaseapp.com",

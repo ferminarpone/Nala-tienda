@@ -1,5 +1,5 @@
 import { Footer } from "../Footer";
-import { NavBar } from "../NavBar";
+import { NavBar } from "../navbar/NavBar";
 import { useContext, useEffect } from "react";
 import { FavoritoContext } from "../../context/FavContext";
 import { Button, Center, Container, Flex } from "@chakra-ui/react";

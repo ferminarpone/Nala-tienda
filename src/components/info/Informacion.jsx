@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { NavBar } from "../NavBar"
 import { Envio } from "./Envio"
 import { Pagos } from "./Pagos"
+import { NavBar } from "../navbar/NavBar";
 
 export const Informacion = () => {
   useEffect(() => {

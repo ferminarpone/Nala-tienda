@@ -1,6 +1,6 @@
 import { Box, Container, Grid, GridItem, Image } from "@chakra-ui/react";
 import { Footer } from "../Footer";
-import { NavBar } from "../NavBar";
+import { NavBar } from "../navbar/NavBar";
 import { InfoContactanos } from "./InfoContactanos";
 import { FormContactanos } from "./FormContactanos";
 import Imagen1 from "../../assets/contactanos/Imagen 1.png";
@@ -10,7 +10,7 @@ import Cuadro from "../../assets/contactanos/Rectangle 16.png";
 export const Contactanos = () => {
   return (
     <>
-      <NavBar />
+      <NavBar/>
       <Container maxWidth="90%" mt="50px" mb="120px">
         <Grid
           templateRows="repeat(2, 1fr)"

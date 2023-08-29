@@ -1,5 +1,5 @@
-import { NavBar } from "../../components/NavBar";
 import { Footer } from "../Footer";
+import { NavBar } from "../navbar/NavBar";
 import { Destacados } from "./Destacados";
 import { Opiniones } from "./Opiniones";
 
