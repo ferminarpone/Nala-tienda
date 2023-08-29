@@ -60,7 +60,7 @@ export const NavBarMobile = () => {
             </Box>
           </AccordionButton>
         </Text>
-        <AccordionPanel pb={4} bgColor="#4a9a91" allowMultiple>
+        <AccordionPanel pb={4} bgColor="#4a9a91">
           <ul className="navList">
             <li> <Link to={"/productos"}>
               Productos
