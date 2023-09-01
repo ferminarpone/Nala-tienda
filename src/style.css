@@ -3,6 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@450&display=swap");
 
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 /*NavBar Desktop*/
 
 .navBar {
@@ -34,18 +40,29 @@
 
 /*NavBar Mobile*/
 
-#navMobile {
+#navMobile .navTop{
 height: 70px;
 width: 100%;
+padding: 0rem 1rem 0rem 1rem;
 background-color: #4a9a91;
 display: flex;
 justify-content: space-between;
+align-items: center;
 }
 
+#navMobile .menu{
+  color: #ffffff;
+  font-size: 1.5rem;
+
+}
+
+
 .navList{
-  display:flex;
+  background-color: #4a9a91;
+  display:none;
   flex-direction:column;
   align-items:center;
+  padding-top: 0.3rem;
   list-style: none;
   color:#ffffff ;
   font-family: "Josefin Sans", sans-serif;
@@ -53,6 +70,26 @@ justify-content: space-between;
   font-weight: 300;
 }
 
+.navList.open{
+  display: flex;
+  transition-delay: 2s;
+} 
+
+.navList li{
+  width: 100%;
+  text-align: center;
+  height: 100%;
+}
+
+.navList li hr{
+  opacity: 0.4;
+  margin: 0.3rem;
+  width: 100%;
+  }
+
+  .differentLi{
+    margin-bottom: 0.3rem;
+  }
 
 /* Footer */
 .footerText {

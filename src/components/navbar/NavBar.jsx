@@ -5,11 +5,11 @@ import { NavBarMobile } from "./NavBarMobile";
 export const NavBar = () => {
   return (
     <>
-      <MediaQuery minWidth={900}>
+      <MediaQuery minWidth={800}>
         <NavBarDesktop />
       </MediaQuery>
 
-      <MediaQuery maxWidth={900}>
+      <MediaQuery maxWidth={800}>
         <NavBarMobile/>
       </MediaQuery> 
     </>
