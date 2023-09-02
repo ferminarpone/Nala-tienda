@@ -9,13 +9,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FavContext } from "./context/FavContext";
 import { Favoritos } from "./components/favoritos/Favoritos";
 
+
 export const App = () => {
   return (
     <>
       <FavContext>
         <BrowserRouter>
           <Routes>
-            <Route exact path="/" element={<Home />} />
+              <Route exact path="/" element={<Home />} />
             <Route exact path="/productos" element={<ItemListContainer />} />
             <Route
               exact

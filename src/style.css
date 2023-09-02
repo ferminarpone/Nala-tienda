@@ -9,8 +9,9 @@
   padding: 0;
   margin: 0;
 }
-/*NavBar Desktop*/
 
+ /*NavBar Desktop*/
+/* 
 .navBar {
   font-family: "Josefin Sans", sans-serif;
   color: #ffffff;
@@ -38,7 +39,7 @@
   background-color: #4a9a91;
 }
 
-/*NavBar Mobile*/
+//NavBar Mobile//
 
 #navMobile .navTop{
 height: 70px;
@@ -56,6 +57,9 @@ align-items: center;
 
 }
 
+#navMobile .heartNavBar{
+  color: #ffffff;
+}
 
 .navList{
   background-color: #4a9a91;
@@ -83,20 +87,24 @@ align-items: center;
 
 .navList li hr{
   opacity: 0.4;
-  margin: 0.3rem;
+  margin: 0.3rem 0rem 0.3rem 0rem;
   width: 100%;
   }
 
   .differentLi{
     margin-bottom: 0.3rem;
-  }
+  } 
+  
+  */
 
 /* Footer */
+/*
 .footerText {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.8rem;
   font-weight: 300;
 }
+*/
 
 /*Componets*/
 .title {
@@ -115,14 +123,14 @@ align-items: center;
 }
 
 /* Home */
-.homeImg {
+/* .homeImg {
   background-image: url(./assets/home/Banner.png);
   height: 480px;
   width: auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 /*Destacados*/
 .dividerDestacados {

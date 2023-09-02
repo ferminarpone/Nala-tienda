@@ -3,7 +3,7 @@ import { NavBar } from "../navbar/NavBar";
 import { Formulario } from "./Formulario";
 import BannerPersonalizado from "../../assets/personalizados/BannerPersonalizado.png";
 import AlgoMas from "../../assets/personalizados/Algo más.png";
-import { Footer } from "../Footer";
+import { Footer } from "../../components/footer/Footer";
 export const Personalizados = () => {
 
   const sheinOpen = ()=>{

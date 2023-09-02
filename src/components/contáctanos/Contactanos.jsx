@@ -1,5 +1,5 @@
 import { Box, Container, Grid, GridItem, Image } from "@chakra-ui/react";
-import { Footer } from "../Footer";
+import { Footer } from "../../components/footer/Footer";
 import { NavBar } from "../navbar/NavBar";
 import { InfoContactanos } from "./InfoContactanos";
 import { FormContactanos } from "./FormContactanos";

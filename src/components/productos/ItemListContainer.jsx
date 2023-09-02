@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import { NavBar } from "../navbar/NavBar";
-import { Footer } from "../Footer";
+import { Footer } from "../../components/footer/Footer";
 import  ItemList  from "./ItemList";
 import { Categorias } from "./Categorias";
 

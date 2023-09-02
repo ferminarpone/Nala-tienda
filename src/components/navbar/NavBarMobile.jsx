@@ -1,115 +1,47 @@
 import icono from "../../assets/navBar/Icono.png";
-import icono1 from "../../assets/navBar/Icono1.png";
-import {
-  Grid,
-  GridItem,
-  Box,
-  Divider,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  IconButton,
-  Image,
-  Text,
-  Accordion,
-  AccordionItem,
-  AccordionIcon,
-  AccordionButton,
-  AccordionPanel,
-  UnorderedList,
-  ListItem,
-  Button,
-} from "@chakra-ui/react";
-import { Link, useLocation } from "react-router-dom";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { useState } from "react";
+import { Image } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
+import { FaRegHeart } from "react-icons/fa";
+import { useContext } from "react";
+import { FavoritoContext } from "../../context/FavContext";
 
 export const NavBarMobile = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+  const { isOpen, setIsOpen } = useContext(FavoritoContext);
 
   return (
     <nav id="navMobile">
       <div className="navTop">
         <button className="menu" onClick={() => setIsOpen(!isOpen)}>
-          <RxHamburgerMenu />
+          {isOpen ? <RxCross2 /> : <RxHamburgerMenu />}
         </button>
-        <Image src={icono} width="20%" h="50%" />
-        <RxHamburgerMenu /> {/* CAMBIAR */}
+        <Link to={`/`}>
+          <Image src={icono} alt="Logo Nala Tienda" w="80%" ml="6%" />
+        </Link>
+        <Link to={`/favoritos`}>
+          <FaRegHeart className="heartNavBar" />
+        </Link>
       </div>
-      <hr/>
-      <ul className={`navList ${isOpen? "open":""} `}>
-        <li>
-          <Link to={"/productos"}>Productos</Link>
-          <hr/>
-        </li>
-        <li>
-          <Link to={"/personalizados"}>Personalizados</Link>
-          <hr/>
-        </li>
-        <li>
-          <Link to={"/nosotros"}>Nosotros</Link>
-          <hr/>
-        </li>
-        <li className="differentLi">
-          <Link to={"/contactanos"}>Contactanos</Link>
-        </li>
-      </ul>
-
+      <hr />
+      <div className="transicion">
+        <ul className={`navList ${isOpen ? "open" : ""} `}>
+          <li>
+            <Link to={"/productos"}>Productos</Link>
+            <hr />
+          </li>
+          <li>
+            <Link to={"/personalizados"}>Personalizados</Link>
+            <hr />
+          </li>
+          <li>
+            <Link to={"/nosotros"}>Nosotros</Link>
+            <hr />
+          </li>
+          <li className="differentLi">
+            <Link to={"/contactanos"}>Contactanos</Link>
+          </li>
+        </ul>
+      </div>
     </nav>
-
-    /*  <Box id="navMobile">
-      <Menu>
-        <MenuButton ml="15px" bgColor="#4a9a91" color="white" fontSize="1.7rem">
-          {" "}
-          <RxHamburgerMenu />{" "}
-        </MenuButton>
-        <MenuList ml="-15px" w="100vh">
-            <MenuItem>
-              Productos
-            </MenuItem>
-            <MenuItem>
-              <p>Personalizados</p>
-            </MenuItem>
-            <MenuItem>Nosotros</MenuItem>
-            <MenuItem>Contactanos</MenuItem>
-        </MenuList>
-      </Menu>
-      <Image src={icono} /> 
-    </Box>  */
-
-    /*     <Accordion defaultIndex={[0]} allowMultiple bgColor="#4a9a91">
-      <AccordionItem>
-        <Text h="70px" display="flex">
-          <AccordionButton>
-            <Box
-              as="span"
-              flex="1"
-              textAlign="left"
-              fontSize="1.6rem"
-              color="white"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              <RxHamburgerMenu />
-            </Box>
-          </AccordionButton>
-        </Text>
-        <AccordionPanel
-          pb={4}
-          bgColor="#4a9a91"
-          className={`accordionPanel ${isOpen && "open"}`}
-        >
-          <ul className="navList">
-            <li onClick={() => setIsOpen(true)}>
-              <Link to={"/productos"}>Productos</Link>
-            </li>
-            <li>Personalizados</li>
-            <li>Nosotros</li>
-            <li>Contactanos</li>
-          </ul>
-        </AccordionPanel>
-      </AccordionItem>
-    </Accordion> */
   );
 };

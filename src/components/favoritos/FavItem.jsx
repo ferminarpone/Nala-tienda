@@ -8,10 +8,12 @@ export const FavItem = ({ id, nombre, img, cantidad }) => {
 
   const {fav, setFav} = useContext(FavoritoContext);
 
-
+  console.log(fav)
+  
   //Función que elimina un producto de favoritos.
   const removeItem = ()=>{
     const newFav = fav.filter((item)=> item.id !== id);
+    console.log(newFav)
     setFav(newFav); 
   }
 
@@ -24,7 +26,7 @@ export const FavItem = ({ id, nombre, img, cantidad }) => {
   } */
     return (
     <>
-      <Grid templateColumns="repeat(10,1fr)" gap={6} mb="25px" id="favItem">
+   <Grid templateColumns="repeat(10,1fr)" gap={6} mb="25px" id="favItem">
         <GridItem colSpan={2} >
           <Image src={img} w="130px" h="130px" borderRadius="10px" objectFit="cover" />
         </GridItem>
@@ -40,7 +42,7 @@ export const FavItem = ({ id, nombre, img, cantidad }) => {
           <FaHeart />
             </Button>
         </GridItem>
-      </Grid>
+      </Grid> *
     </>
   );
 };

@@ -37,9 +37,9 @@ export const NavBarDesktop = () => {
               <h2>PERSONALIZADOS</h2>
             </Link>
           </GridItem>
-          <GridItem display="flex" justifyContent="center">
+          <GridItem display="flex" justifyContent="center" className="logoSize">
             <Link to={"/"}>
-              {validation() ? <img src={icono} /> : <img src={icono1} />}
+              {validation() ? <img src={icono} alt="Logo Nala Tienda" className="logoSize"/> : <img src={icono1} alt="Logo Nala Tienda" className="logoSize"/>}
             </Link>
           </GridItem>
           <GridItem>

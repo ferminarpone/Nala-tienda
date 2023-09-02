@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@350&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@250&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@450&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.footerText {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.heightFooter {
+  height: 100px;
+}
+
+.igFooter {
+  margin-left: 10px;
+  width: 40px;
+}
+.tiktokFooter {
+  margin-left: 5px;
+  width: 30px;
+}
+@media (max-width: 500px) {
+  .heightFooter {
+    height: 75px;
+  }
+  .dividerVertical {
+    display: none;
+  }
+  .footerText {
+    font-size: 1rem;
+  }
+
+  .igFooter {
+    margin-left: 5px;
+    width: 32px;
+  }
+  .tiktokFooter {
+    margin-left: 3px;
+    width: 22px;
+  }
+}
+
+@media (min-width:500px) and (max-width: 610px){
+    .footerText {
+        font-size: 1.4rem;
+      }
+}

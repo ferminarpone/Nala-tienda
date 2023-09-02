@@ -5,7 +5,7 @@ import FotoCirculo from "../../assets/nosotros/Mask group.png";
 import Titulo from "../../assets/nosotros/Que hacemos.png";
 import { Historia } from "./Historia";
 import { Terminos } from "./Terminos";
-import { Footer } from "../Footer";
+import { Footer } from "../../components/footer/Footer";
 
 export const Nosotros = () => {
   return (

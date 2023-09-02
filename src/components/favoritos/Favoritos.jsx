@@ -1,4 +1,4 @@
-import { Footer } from "../Footer";
+import { Footer } from "../../components/footer/Footer";
 import { NavBar } from "../navbar/NavBar";
 import { useContext, useEffect } from "react";
 import { FavoritoContext } from "../../context/FavContext";

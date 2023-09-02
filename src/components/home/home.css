@@ -1,0 +1,26 @@
+
+.homeImg {
+    background-image: url(../../assets/home/Banner.png);
+    height: 480px;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #homeMobile{
+  height: 314px;  
+  display: none;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+  }
+
+  .open{
+    height: 157px !important;
+  }
+  @media (max-width:500px){
+    #homeMobile{
+        display: flex;
+    }
+  }
