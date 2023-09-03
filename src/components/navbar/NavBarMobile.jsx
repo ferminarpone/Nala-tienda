@@ -8,7 +8,7 @@ import { FavoritoContext } from "../../context/FavContext";
 
 export const NavBarMobile = () => {
   const { isOpen, setIsOpen } = useContext(FavoritoContext);
-
+console.log(isOpen);
   return (
     <nav id="navMobile">
       <div className="navTop">
@@ -22,26 +22,25 @@ export const NavBarMobile = () => {
           <FaRegHeart className="heartNavBar" />
         </Link>
       </div>
-      <hr />
-      <div className="transicion">
-        <ul className={`navList ${isOpen ? "open" : ""} `}>
-          <li>
-            <Link to={"/productos"}>Productos</Link>
-            <hr />
-          </li>
-          <li>
-            <Link to={"/personalizados"}>Personalizados</Link>
-            <hr />
-          </li>
-          <li>
-            <Link to={"/nosotros"}>Nosotros</Link>
-            <hr />
-          </li>
-          <li className="differentLi">
-            <Link to={"/contactanos"}>Contactanos</Link>
-          </li>
-        </ul>
-      </div>
+      <hr className="divider" />
+
+      <ul className={`navList ${isOpen ? "open" : ""} `}>
+        <li onClick={() => setIsOpen(!isOpen)}>
+          <Link to={"/productos"}>Productos</Link>
+          <hr />
+        </li>
+        <li onClick={() => setIsOpen(!isOpen)}>
+          <Link to={"/personalizados"}>Personalizados</Link>
+          <hr />
+        </li>
+        <li onClick={() => setIsOpen(!isOpen)}>
+          <Link to={"/nosotros"}>Nosotros</Link>
+          <hr />
+        </li>
+        <li className="differentLi" onClick={() => setIsOpen(!isOpen)}>
+          <Link to={"/contactanos"}>Contactanos</Link>
+        </li>
+      </ul>
     </nav>
   );
 };

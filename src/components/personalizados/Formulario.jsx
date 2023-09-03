@@ -7,12 +7,14 @@ import {
   GridItem,
   Input,
 } from "@chakra-ui/react";
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { FavoritoContext } from "../../context/FavContext";
 
 export const Formulario = () => {
   const {register, handleSubmit, reset} = useForm();
 
-	
+   const {isOpen} = useContext(FavoritoContext);
   //Funcion... recibe los datos del formulario(data)
   const onSubmit = (data)=>{
     console.log(data);
@@ -22,21 +24,21 @@ export const Formulario = () => {
   }
   return (
     <>
-      <Container maxWidth="90%" mt="50px">
+      <Container id="formulario" className={isOpen ? "openForm" : ""}>
         <div className="divTitle">
           <h2 className="title">COMPLETA EL FORMULARIO</h2>
           <Divider
             orientation="horizontal"
             color="#4A9A91"
             border="solid 1px"
-            width="188px"
+            
             className="dividerForm"
           />
         </div>
         <form onSubmit={ handleSubmit(onSubmit) }>
             <Grid
-              templateRows="repeat(3, 1fr)"
-              templateColumns="repeat(4, 1fr)"
+              templateRows={{base:"repeat(6, 1fr)" , sm:"repeat(3, 1fr)"}}
+              templateColumns={{base:"repeat(1, 1fr)" , sm:"repeat(4, 1fr)"}}
               gap={4}
               mt="50px"
               id="formPersonalizados"

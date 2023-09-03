@@ -1,7 +1,7 @@
 import MediaQuery from "react-responsive";
 import { NavBarDesktop } from "./NavBarDesktop";
 import { NavBarMobile } from "./NavBarMobile";
-import './navBar.css'
+import "./navBar.css";
 
 export const NavBar = () => {
   return (
@@ -10,8 +10,8 @@ export const NavBar = () => {
         <NavBarDesktop />
       </MediaQuery>
       <MediaQuery maxWidth={501}>
-        <NavBarMobile/>
-      </MediaQuery> 
+        <NavBarMobile />
+      </MediaQuery>
     </>
   );
 };

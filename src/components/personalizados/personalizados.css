@@ -1,43 +1,99 @@
+.bgPersonalizadosDesktop {
+  background-color: #4a9a91;
+}
 
-.bgPersonalizados {
-    background-color: #4a9a91;
-    height: 654px;
+.personalizadosText {
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 250;
+  width: 80%;
+}
+
+.personalizadosButton {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: solid 1px #ffffff;
+}
+
+#personalizadosMobile {
+  display: none;
+  height: 314px;
+  flex-direction: column;
+  text-align: center;
+  padding: 200px 5% 0 5%;
+}
+
+#personalizadosMobile p {
+  font-family: "Josefin Sans", sans-serif;
+  color: #efefef;
+  font-weight: 300;
+  font-size: 1rem;
+  padding-top: 4px;
+}
+
+/*Formulario*/
+#formPersonalizados input,
+textarea {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 350;
+}
+.dividerForm {
+  position: relative;
+  right: 160px;
+  width: 188px !important;
+}
+
+.requerido {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 350;
+  margin-top: 15px;
+  color: #676767;
+}
+
+#formulario {
+  max-width: 90%;
+  margin-top: 50px;
+}
+
+#formulario.openForm {
+  position: relative;
+  top: -157px;
+}
+
+@media (max-width: 501px) {
+  .bgPersonalizadosDesktop {
+    background-color: inherit;
   }
-  
-  .personalizadosText {
-    font-family: "Josefin Sans", sans-serif;
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: 250;
-    width: 80%;
+  #personalizados {
+    display: none;
   }
-  
-  .personalizadosButton {
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    border: solid 1px #ffffff;
+
+  #personalizadosMobile {
+    display: flex;
   }
-  
+  .bgPersonalizados {
+    background-image: url(../../assets/personalizados/BannerMobile.png);
+    height: 350px;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+  .bgPersonalizados.openP {
+    position: relative;
+    top: -157px;
+  }
+
   /*Formulario*/
-  #formPersonalizados input, textarea{
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 350;
+
+  #formulario .title {
+    font-size: 1.3rem;
   }
   .dividerForm {
-    position: relative;
-    right: 160px;
+    right: 92px;
+    width: 116px !important;
   }
-  
-  .requerido{
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 350;
-    margin-top: 15px;
-    color: #676767;
-  }
-  
-  @media (max-width: 501px){
-    #personalizados{
-        display: none;
-    }
-  }
+}

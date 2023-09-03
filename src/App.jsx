@@ -16,7 +16,7 @@ export const App = () => {
         <BrowserRouter>
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/productos" element={<ItemListContainer/>} />
+            <Route exact path="/productos" element={<ItemListContainer />} />
             <Route
               exact
               path="/productos/:category"
