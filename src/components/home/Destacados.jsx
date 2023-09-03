@@ -21,12 +21,11 @@ export const Destacados = () => {
           orientation="horizontal"
           color="#4A9A91"
           border="solid 1px"
-          width="120px"
           className="dividerDestacados"
         />
       </div>
       <Center>
-        <Image src={DestacadosImg} alt="Destacados" mt="40px" />
+        <Image src={DestacadosImg} alt="Destacados" className="destacadoImg"  />
       </Center>
 
       {/* Para utilizar todas las imagenes por separado....

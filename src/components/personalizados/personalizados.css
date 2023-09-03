@@ -1,0 +1,43 @@
+
+.bgPersonalizados {
+    background-color: #4a9a91;
+    height: 654px;
+  }
+  
+  .personalizadosText {
+    font-family: "Josefin Sans", sans-serif;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 250;
+    width: 80%;
+  }
+  
+  .personalizadosButton {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: solid 1px #ffffff;
+  }
+  
+  /*Formulario*/
+  #formPersonalizados input, textarea{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 350;
+  }
+  .dividerForm {
+    position: relative;
+    right: 160px;
+  }
+  
+  .requerido{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 350;
+    margin-top: 15px;
+    color: #676767;
+  }
+  
+  @media (max-width: 501px){
+    #personalizados{
+        display: none;
+    }
+  }

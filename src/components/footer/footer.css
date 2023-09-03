@@ -9,6 +9,10 @@
   margin: 0;
 }
 
+#footer{
+  max-width: 90%;
+  margin-top: 80px;
+}
 .footerText {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.8rem;
@@ -28,6 +32,11 @@
   width: 30px;
 }
 @media (max-width: 500px) {
+
+  #footer{
+    margin-top: 55px;
+  }
+
   .heightFooter {
     height: 75px;
   }

@@ -4,6 +4,8 @@ import { Formulario } from "./Formulario";
 import BannerPersonalizado from "../../assets/personalizados/BannerPersonalizado.png";
 import AlgoMas from "../../assets/personalizados/Algo más.png";
 import { Footer } from "../../components/footer/Footer";
+import './personalizados.css';
+
 export const Personalizados = () => {
 
   const sheinOpen = ()=>{
@@ -13,7 +15,7 @@ export const Personalizados = () => {
     <>
       <div className="bgPersonalizados">
         <NavBar />
-        <Container maxWidth="90%">
+        <Container maxWidth="90%" id="personalizados">
           <Grid
             h="auto"
             templateRows="repeat(3, 1fr)"

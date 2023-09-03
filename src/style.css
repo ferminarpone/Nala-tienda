@@ -122,6 +122,13 @@ align-items: center;
   width: 100%;
 }
 
+@media (max-width: 501px) {
+  .title{
+    font-size: 1.6rem;
+  }
+
+}
+
 /* Home */
 /* .homeImg {
   background-image: url(./assets/home/Banner.png);
@@ -133,19 +140,20 @@ align-items: center;
 } */
 
 /*Destacados*/
-.dividerDestacados {
+/* .dividerDestacados {
   position: relative;
   right: 56px;
-}
+} */
 
 /*Opiniones*/
-.dividerOpiniones {
+/* .dividerOpiniones {
   position: relative;
   right: 38px;
-}
+} */
 
 /*Personalizados*/
 
+/* 
 .bgPersonalizados {
   background-color: #4a9a91;
   height: 654px;
@@ -165,8 +173,9 @@ align-items: center;
   font-weight: 600;
   border: solid 1px #ffffff;
 }
-
+*/
 /*Formulario*/
+/*
 #formPersonalizados input, textarea{
   font-family: "Josefin Sans", sans-serif;
   font-weight: 350;
@@ -182,7 +191,7 @@ align-items: center;
   margin-top: 15px;
   color: #676767;
 }
-
+ */
 /*Nosotros*/
 #bgNosotros {
   background-color: #eff9ed;
