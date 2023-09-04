@@ -34,11 +34,23 @@
 }
 
 /*Formulario*/
-#formPersonalizados input,
-textarea {
+#formPersonalizados input{
   font-family: "Josefin Sans", sans-serif;
   font-weight: 350;
+  border: solid 2px #4A9A91;
+  border-radius:14px;
+  height:70px;
 }
+#formPersonalizados button{
+  background-color: #4A9A91 !important;
+  color: #ffffff;
+  border-radius: 14px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.4rem;
+  height: 70px;
+  width: 90%;
+}
+
 .dividerForm {
   position: relative;
   right: 160px;
@@ -95,5 +107,29 @@ textarea {
   .dividerForm {
     right: 92px;
     width: 116px !important;
+  }
+
+  #formPersonalizados{
+    margin-top: 35px;
+  }
+  #formPersonalizados input{
+    font-size: 1rem;
+    height: 45px;
+  }
+
+  #formPersonalizados button{
+    height: 45px;
+    width: 100%;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 374px) {
+  #formulario .title {
+    font-size: 1rem;
+  }
+  .dividerForm {
+    right: 71px;
+    width: 90px !important;
   }
 }
