@@ -193,7 +193,7 @@ align-items: center;
 }
  */
 /*Nosotros*/
-#bgNosotros {
+/* #bgNosotros {
   background-color: #eff9ed;
   height: 642px;
   color: #4a9a91;
@@ -205,8 +205,9 @@ align-items: center;
   color: #969696;
   font-weight: 300;
 }
-
+*/
 /*Historia*/
+/*
 .historiaParrafo {
   font-family: "Josefin Sans", sans-serif;
   padding-top: 10px;
@@ -215,9 +216,9 @@ align-items: center;
   color: #ffffff;
   font-weight: 300;
 }
-
+*/
 /*Términos y condiciones*/
-
+/*
 .dividerTerminos {
   position: relative;
   right: 152px;
@@ -230,6 +231,7 @@ align-items: center;
   font-weight: 100;
   color: #969696;
 }
+ */
 
 /*Contactanos*/
 

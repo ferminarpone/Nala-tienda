@@ -1,0 +1,75 @@
+#bgNosotros {
+  background-color: #eff9ed;
+  height: 100%;
+  color: #4a9a91;
+}
+
+.nosotrosParrafo {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #969696;
+  font-weight: 300;
+}
+
+#nosotrosMobile{
+    display: none;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 30px 0 30px 0;
+}
+
+#nosotrosMobile img{
+    width: 50%;
+}
+/*Historia*/
+.historiaParrafo {
+  font-family: "Josefin Sans", sans-serif;
+  padding-top: 10px;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+/*Términos y condiciones*/
+
+.dividerTerminos {
+  position: relative;
+  right: 152px;
+}
+.parrafoTerminos {
+  margin-top: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.1;
+  font-weight: 100;
+  color: #969696;
+}
+
+
+@media (max-width: 502px){
+    #bgNosotros{
+        background-color: blue;
+        
+    }
+    .mobile{
+        background-image: url(../../assets/nosotros/Banner.png) !important;
+        height: 350px;
+        width: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+
+    }
+    #nosotrosDesktop{
+        display: none;
+    }
+
+    #nosotrosMobile{
+        top:-100px;
+        display: flex;
+      
+    }
+}

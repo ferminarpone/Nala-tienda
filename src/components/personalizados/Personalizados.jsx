@@ -45,7 +45,7 @@ export const Personalizados = () => {
                 display="flex"
                 justifyContent="center"
               >
-                <Image src={BannerPersonalizado} h="410px" />
+                <Image src={BannerPersonalizado} className="bannerPersonalizado" />
               </GridItem>
               <GridItem colSpan={3}>
                 <h3 className="personalizadosText">
@@ -76,7 +76,7 @@ export const Personalizados = () => {
                 display="flex"
                 alignItems="center"
               >
-                <Image src={AlgoMas} h="70%" />
+                <Image src={AlgoMas} className="algoMasPersonalizado"/>
               </GridItem>
             </Grid>
           </Container>

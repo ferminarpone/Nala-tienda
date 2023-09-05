@@ -2,6 +2,13 @@
   background-color: #4a9a91;
 }
 
+.bannerPersonalizado{
+  height: 410px;
+}
+
+.algoMasPersonalizado{
+  height: 70%;
+}
 .personalizadosText {
   font-family: "Josefin Sans", sans-serif;
   color: #ffffff;
@@ -32,6 +39,7 @@
   font-size: 1rem;
   padding-top: 4px;
 }
+
 
 /*Formulario*/
 #formPersonalizados input{
@@ -72,6 +80,16 @@
 #formulario.openForm {
   position: relative;
   top: -157px;
+}
+
+@media (max-width: 374px) {
+  #formulario .title {
+    font-size: 1rem;
+  }
+  .dividerForm {
+    right: 71px;
+    width: 90px !important;
+  }
 }
 
 @media (max-width: 501px) {
@@ -124,12 +142,62 @@
   }
 }
 
-@media (max-width: 374px) {
-  #formulario .title {
-    font-size: 1rem;
+@media (min-width:504px) and (max-width: 775px){
+
+  .bgPersonalizados{
+    height: 350px;
   }
-  .dividerForm {
-    right: 71px;
-    width: 90px !important;
+  #personalizados{
+    margin-top: -50px;
+  }
+
+  .bannerPersonalizado{
+    height: 300px;
+   
+  }
+  
+  .algoMasPersonalizado{
+    height: 70%;
+    width: 80%;
+  }
+  .personalizadosText {
+    font-family: "Josefin Sans", sans-serif;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 250;
+    width: 80%;
+    margin-top: -20px;
+  }
+}
+
+@media (min-width:776px) and (max-width: 834px){
+
+  #personalizados{
+    margin-top: -35px;
+  }
+
+  .bannerPersonalizado{
+    height: 350px;
+   
+  }
+  
+  .algoMasPersonalizado{
+    height: 80%;
+    width: 90%;
+  }
+  .personalizadosText {
+    font-family: "Josefin Sans", sans-serif;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 250;
+    width: 80%;
+  }
+
+}
+
+@media (min-width: 1082px) {
+
+  #personalizados {
+    padding-bottom: 30px;
   }
 }
