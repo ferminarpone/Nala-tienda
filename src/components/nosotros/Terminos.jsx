@@ -2,8 +2,8 @@ import { Box, Container, Divider } from "@chakra-ui/react";
 
 export const Terminos = () => {
   return (
-    <Container maxWidth="85%">
-      <Box h="315px" pt="60px">
+    <Box id="terminos">
+      <Container maxWidth="85%">
         <div className="divTitle">
           <h2 className="title">TÉRMINOS Y CONDICIONES</h2>
           <Divider
@@ -22,7 +22,7 @@ export const Terminos = () => {
           El cambio o devolución de un producto va a variar según sea el mismo,
           ya que no todos entran en la condición de cambio y devolución.{" "}
         </p>
-      </Box>
-    </Container>
+      </Container>
+    </Box>
   );
 };

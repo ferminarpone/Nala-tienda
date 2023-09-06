@@ -12,18 +12,18 @@ export const Nosotros = () => {
   return (
     <>
       <div id="bgNosotros">
-        <NavBar />
-        <div className="mobile"></div>
+        <div className="mobile">
+          <NavBar />
+        </div>
         <div id="nosotrosDesktop">
-          <Container maxWidth="80%">
+          <Container maxWidth="90%">
             <Grid
-              h="470px"
-              templateRows="repeat(2, 1fr)"
+              templateRows="repeat(6, 1fr)"
               templateColumns="repeat(6, 1fr)"
               gap={4}
             >
-              <GridItem rowSpan={2} colSpan={3}>
-                <Box position="relative" w="83%" mt="16px">
+              <GridItem rowSpan={3} rowStart={2} colSpan={3}>
+                <Box position="relative" w="100%" m="-10% 0 0 5%">
                   <Image
                     src={Circulo}
                     position="absolute"
@@ -36,13 +36,14 @@ export const Nosotros = () => {
               <GridItem
                 rowSpan={1}
                 colSpan={3}
+                colStart={4}
                 display="flex"
                 alignItems="end"
                 ml="30px"
               >
                 <Image src={Titulo} alt="Que hacemos" />
               </GridItem>
-              <GridItem rowSpan={1} colSpan={3} mb="100px" ml="30px">
+              <GridItem rowSpan={5} colSpan={3} mb="100px" ml="30px">
                 <p className="nosotrosParrafo">
                   Nala tienda es un emprendimiento que compra en la pagina
                   original de Shein, trayendo los productos de Brasil. Contamos
@@ -76,9 +77,8 @@ export const Nosotros = () => {
             </p>
           </Container>
         </div>
-        {/*    <Historia />
-             <Terminos /> 
-             */}
+        <Historia />
+        <Terminos />
       </div>
       <Footer />
     </>
