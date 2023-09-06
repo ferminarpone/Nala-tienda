@@ -30,6 +30,7 @@ export const Personalizados = () => {
               quieras y no se encuentre en nuestro catálogo{" "}
             </p>
           </div>
+
           <Container maxWidth="90%" id="personalizados">
             <Grid
               h="auto"
@@ -80,6 +81,7 @@ export const Personalizados = () => {
               </GridItem>
             </Grid>
           </Container>
+          
         </div>
       </div>
       <Formulario />

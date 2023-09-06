@@ -3,7 +3,6 @@
   height: 100%;
   color: #4a9a91;
 }
-
 .nosotrosParrafo {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
@@ -11,18 +10,17 @@
   color: #969696;
   font-weight: 300;
 }
-
 #nosotrosMobile {
   display: none;
   height: 100%;
   background-color: #ffffff;
   padding: 30px 0 30px 0;
 }
-
 #nosotrosMobile img {
   width: 70%;
   margin-bottom: 20px;
 }
+
 /*Historia*/
 #historia {
   height: 100%;
@@ -37,7 +35,6 @@
   color: #ffffff;
   font-weight: 300;
 }
-
 .bannerHistoria {
   position: relative;
   width: 100%;
@@ -55,7 +52,6 @@
   background-color: #ffffff;
   padding-top: 60px;
 }
-
 .dividerTerminos {
   position: relative;
   right: 152px;
@@ -78,7 +74,6 @@
 
 @media (max-width: 502px) {
   /*Nosotros*/
-
   .mobile {
     background-image: url(../../assets/nosotros/Banner.png) !important;
     height: 350px;
@@ -90,7 +85,6 @@
   #nosotrosDesktop {
     display: none;
   }
-
   #nosotrosMobile {
     display: flex;
   }
