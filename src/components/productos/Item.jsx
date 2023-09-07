@@ -31,7 +31,8 @@ export const Item = ({ nombre, categoria, img, id }) => {
       }
     });
   };
-
+  
+  //Función que devuelve true si el elemento se enfuentra en Favoritos.
   const idFound = () => {
     const idFind = fav.find((item) => item.id === id);
     if (idFind) {

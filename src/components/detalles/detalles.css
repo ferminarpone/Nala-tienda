@@ -1,0 +1,91 @@
+#itemDetail .back {
+  font-family: "Josefin Sans", sans-serif;
+  color: #676767;
+  font-size: 1.4rem;
+}
+
+#itemDetail .back p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-left: 10px;
+  margin-top: -9px;
+}
+
+#itemDetail h2 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #4a9a91;
+  font-size: 3rem;
+}
+
+#itemDetail .buttonHeart {
+  background-color: #4a9a91;
+  color: #ffffff;
+  font-size: 1.4rem;
+  border-radius: 14px;
+  height: 45px;
+  margin-top: 12px;
+}
+
+#itemDetail .descripcion {
+  font-family: "Josefin Sans", sans-serif;
+  color: #969696;
+  font-size: 1.6rem;
+  font-weight: 350;
+}
+
+#itemDetail .pedidoWsp {
+  width: 100%;
+  margin-top: 10px;
+  height: 55px;
+  border-radius: 15px;
+  background-color: #7cbfba;
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+#detallesMobile {
+  display: none;
+  position: relative;
+}
+
+.favDetallesMobile {
+  display: none;
+  color: #ffffff;
+  position: absolute;
+   bottom: 93%;
+  left: 86%; 
+   width: 25px !important;
+   height: 25px !important; 
+}
+
+#infoDetallesCard h5 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #969696;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+#infoDetallesCard p {
+  font-family: "Josefin Sans", sans-serif;
+  color: #969696;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 502px) {
+  #detallesDesktop {
+    display: none;
+  }
+
+  #detallesMobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .favDetallesMobile {
+    display: flex;
+  }
+}
