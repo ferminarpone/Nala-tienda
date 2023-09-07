@@ -10,29 +10,40 @@ const ItemList = ({ product, categoria }) => {
 
   return (
     <>
-        {product == "" ? (
-          <Center minH="400px">
+      {product == "" ? (
+        <Center minH="400px">
           <CircularProgress isIndeterminate color="#7cbfba" />
-          </Center>
-        ) : (
-          <>
-          <Categorias/>
-          <Container maxWidth="90%" mt="30px">
-          <Grid templateColumns="repeat(3, 1fr)" gap={6}>
-            {product.map((item) => (
-              <Item
-              key={item.id}
-              nombre={item.nombre}
-              categoria={item.categoria}
-              img={item.img}
-              id={item.id}
-              />
+        </Center>
+      ) : (
+        <>
+          <Categorias />
+          <Container
+            maxWidth="90%"
+            mt="30px"
+            display="flex"
+            justifyContent="center"
+          >
+            <Grid
+              templateColumns={{
+                base: "repeat(2, 1fr)",
+                sm: "repeat(3, 1fr)",
+                xl: "repeat(4, 1fr)",
+              }}
+              gap={{base:4, sm:6}}
+            >
+              {product.map((item) => (
+                <Item
+                  key={item.id}
+                  nombre={item.nombre}
+                  categoria={item.categoria}
+                  img={item.img}
+                  id={item.id}
+                />
               ))}
-          </Grid>
+            </Grid>
           </Container>
-              </>
-        )}
-      
+        </>
+      )}
     </>
   );
 };

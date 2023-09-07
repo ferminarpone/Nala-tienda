@@ -1,0 +1,123 @@
+/*ItemListContainer*/
+#itemListMobile.openIM{
+    position: relative;
+    top: -157px;
+    z-index: -1;
+}
+
+#footerListMobile.openFM{
+    margin-top: -157px;
+}
+/*Categorias*/
+
+#categorias {
+  line-height: normal;
+}
+#categorias .heartIcon {
+  color: #4e958f;
+  font-size: larger;
+}
+#categorias h5 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.1rem;
+  color: #4e958f;
+}
+#categorias hr {
+  border-color: #4e958f;
+}
+
+@media (max-width: 502px) {
+  #categorias {
+    margin-top: 30px;
+    max-width: 90%;
+    overflow-x: scroll;
+  }
+  #categorias h5 {
+    padding-right: 10px;
+    font-size: 1rem;
+  }
+  #categorias hr {
+    width: 88%;
+  }
+}
+
+/*Item*/
+#cardItem .imgItem {
+  width: 330px;
+  height: 280px;
+  object-fit: cover;
+}
+#cardItem h4 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #969696;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+#cardItem h5 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #969696;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+#cardItem p {
+  font-family: "Josefin Sans", sans-serif;
+  color: #969696;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+#cardItem .buttonCard {
+  background-color: #7cbfba;
+  width: 95%;
+  height: 45px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #ffffff;
+  border-radius: 14px;
+}
+#cardItem .buttonCardHeart {
+  background-color: #4a9a91;
+  height: 45px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #ffffff;
+  border-radius: 14px;
+}
+.imgMobile {
+  position: relative;
+}
+.favMobile {
+  display: none; 
+  color: #ffffff;
+  position: absolute;
+  bottom: 86%;
+  left: 84%;
+}
+
+@media (max-width: 502px) {
+  #cardItem .imgItem {
+    width: 160px;
+    height: 160px;
+  }
+  #inforCard h4 {
+    display: none;
+  }
+  #inforCard h5 {
+    margin-top: -14px;
+    font-size: 1rem;
+  }
+  #inforCard p {
+    font-size: 1rem;
+    margin-top: -6px;
+  }
+  .favMobile {
+    display: flex; 
+  }
+  #doubleButton {
+    display: none;
+  }
+}

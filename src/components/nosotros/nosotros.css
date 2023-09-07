@@ -123,13 +123,17 @@
     text-align: center;
   }
 }
-@media (min-width: 502px) and (max-width: 1070px) {
+@media (min-width: 502px)  {
   .nosotrosParrafo {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
 
-@media (min-width: 830px) {
+@media (min-width: 830px)and (max-width: 1070px) {
+ 
+  .nosotrosParrafo {
+    font-size: 1.4rem;
+  }
   .bannerHistoria {
     margin-top: -24%;
   }

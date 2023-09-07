@@ -1,5 +1,31 @@
 /*Contactanos*/
 
+#contactanosDesktop .bannerBox {
+  position: relative;
+  width: 48%;
+  margin: -10% 0 0 10%;
+}
+.bannerBox .imagen2 {
+  position: absolute;
+  top: -80px;
+  left: 18px;
+}
+.bannerBox .cuadroImg2 {
+  position: absolute;
+  top: -62px;
+}
+
+.bannerBox .imagen1 {
+  position: absolute;
+  top: 280px;
+  left: 160px;
+}
+.bannerBox .cuadroImg1 {
+  position: absolute;
+  top: 298px;
+  left: 142px;
+}
+
 #contactanosMobile {
   background-image: url(../../assets/contactanos/Banner.png);
   height: 350px;
@@ -13,24 +39,25 @@
   align-items: center;
   z-index: -1;
 }
-
 #contactanosMobile img {
   text-align: center;
   width: 56%;
   margin-bottom: 10%;
 }
-
 .container {
   max-width: 100%;
 }
-
 #componentsMobile {
   display: none;
 }
 
 /*Info Contactanos*/
-.containerInfo {
-  max-width: 100%;
+
+#infoContactanos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #infoContactanos p {
@@ -38,17 +65,22 @@
   font-size: 1.5rem;
   font-weight: 100;
 }
-
-#infoContactanos button {
+#infoContactanos .enviarWsp {
   background-color: #7cbfba;
   color: #ffffff;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  margin-top: 40px;
-  padding: 10px 75px 10px 75px;
+  margin-top: 80px;
+  width: 80%;
+  padding: 10px 10% 10px 10%;
   border-radius: 16px;
 }
+
+#gridInfo img {
+  width: 45%;
+}
+
 /*Formulario Contactanos*/
 
 #formContactanos h3 {
@@ -57,13 +89,11 @@
   font-weight: 600;
   color: #676767;
 }
-
 .dividerFormContactanos {
   display: none;
   border: solid 1px #4a9a91 !important;
   width: 180px;
 }
-
 #formContactanos input {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.3rem;
@@ -87,7 +117,20 @@
   border-radius: 16px;
 }
 
-@media (max-width: 502px) {
+@media (max-width: 340px) {
+  #formContactanos input {
+    font-size: 1.1rem;
+  }
+  #formContactanos textarea {
+
+    font-size: 1.1rem;
+  }
+
+  #infoContactanos p {
+    font-size: 1.2rem !important;
+  }
+}
+@media  (max-width: 502px) {
   /*Contactanos*/
 
   #contactanosDesktop {
@@ -103,7 +146,6 @@
   }
 
   /*Formulario*/
-
   #formContactanos .container {
     display: flex;
     flex-direction: column;
@@ -111,12 +153,10 @@
     max-width: 90%;
     margin-top: 30px;
   }
-
   #formContactanos .container.open {
     position: relative;
     top: -127px;
   }
-
   #formContactanos h3 {
     font-family: "Josefin Sans", sans-serif;
     font-weight: 400;
@@ -127,21 +167,18 @@
   .capitalLetter {
     text-transform: uppercase;
   }
-
   .dividerFormContactanos {
     display: flex;
     width: 136px !important;
     position: relative;
     right: 84px;
   }
-
   #formContactanos .input {
     border: solid #4a9a91 1px;
   }
   #formContactanos textArea {
     border: solid #4a9a91 1px;
   }
-
   #formContactanos .buttonMobile {
     width: 100%;
     background-color: #4a9a91;
@@ -156,21 +193,40 @@
   .containerInfo {
     max-width: 90% !important;
   }
-
-  #infoContactanos{
+  #infoContactanos {
     margin-top: 40px;
   }
-
   #infoContactanos p {
     font-size: 1.4rem;
   }
-
-  #infoContactanos img{
+  #infoContactanos img {
     width: 40%;
     padding-top: 8px;
   }
-
-  #infoContactanos .tituloInfo, .enviarWsp{
+  #infoContactanos .tituloInfo,
+  .enviarWsp {
     display: none;
+  }
+  #infoContactanos.openInfo {
+    margin-top: 233px;
+  }
+}
+
+@media (min-width: 978px) and (max-width: 1182px) {
+  
+ .tituloInfo{
+  margin-bottom: 35px !important;
+ }
+  #gridInfo img {
+    margin-top: 6px;
+  }
+  #gridInfo p {
+    font-size: 1.2rem;
+  }
+  .enviarWsp{
+    margin-top: 45px !important;
+  }
+  #formContactanos{
+    margin-top: -50px;
   }
 }

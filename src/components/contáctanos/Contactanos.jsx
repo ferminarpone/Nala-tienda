@@ -20,41 +20,35 @@ export const Contactanos = () => {
       <div id="contactanosDesktop">
         <Container maxWidth="90%" mt="50px" mb="120px">
           <Grid
-            templateRows="repeat(2, 1fr)"
+            templateRows="repeat(4, 1fr)"
             templateColumns="repeat(6, 1fr)"
             gap={4}
-            h="auto"
+            
           >
-            <GridItem rowSpan={2} colSpan={4}>
-              <Box position="relative" w="58%">
+            <GridItem rowSpan={2} rowStart={2} colSpan={3} bgColor="red">
+              <div className="bannerBox">
                 <Image
                   src={Cuadro}
-                  alt=""
-                  position="absolute"
-                  top="20px"
-                  left="-18px"
+                  className="cuadroImg2"
                 />
-                <Image src={Imagen2} alt="Gorra" position="absolute" />
+                <Image src={Imagen2} alt="Gorra" 
+                className="imagen2" />
                 <Image
                   src={Cuadro}
                   alt=""
-                  position="absolute"
-                  top="434px"
-                  left="140px"
+                  className="cuadroImg1"
                 />
                 <Image
                   src={Imagen1}
                   alt="Gorra"
-                  position="absolute"
-                  top="408px"
-                  left="160px"
+                  className="imagen1"
                 />
-              </Box>
+              </div>
             </GridItem>
-            <GridItem rowSpan={1} colSpan={2}>
+            <GridItem rowSpan={2} colSpan={3} bgColor="red">
               <InfoContactanos />
             </GridItem>
-            <GridItem rowSpan={1} colSpan={2}>
+            <GridItem rowSpan={2} colSpan={3} bgColor="red">
               <FormContactanos />
             </GridItem>
           </Grid>

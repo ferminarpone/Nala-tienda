@@ -37,7 +37,7 @@ export const Categorias = () => {
 
   return (
     <Container id="categorias" maxWidth="80%">
-        <Flex>
+        <Flex >
             <Link to={`/productos/${'piercing'}`}>
             <h5>Piercing</h5>
             {hrFunction() == "piercing" ? <hr/> : ""}
@@ -64,7 +64,7 @@ export const Categorias = () => {
             </Link>
             <Spacer/>
             <Link to={`/productos/${'body chain'}`}>
-            <h5>Body Chain</h5>
+            <h5>BodyChain</h5>
             {hrFunction() == "body chain" ? <hr/> : ""}
             </Link>
             <Spacer/>

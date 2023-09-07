@@ -1,16 +1,17 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 // para las categorias import { useParams } from "react-router-dom";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import { NavBar } from "../navbar/NavBar";
 import { Footer } from "../../components/footer/Footer";
-import  ItemList  from "./ItemList";
-import { Categorias } from "./Categorias";
+import ItemList from "./ItemList";
+import "./productos.css";
+import { FavoritoContext } from "../../context/FavContext";
 
 export const ItemListContainer = () => {
   const [producto, setProducto] = useState([]);
   const { category } = useParams();
-
+  const { isOpen } = useContext(FavoritoContext);
 
   //Llamado a la DB.
   useEffect(() => {
@@ -29,12 +30,16 @@ export const ItemListContainer = () => {
   return (
     <>
       <NavBar />
-      {category ? (
-        <ItemList product={filterCart} categoria={category} />
-      ) : (
-        <ItemList product={producto} />
-      )}
-      <Footer />
+      <div id="itemListMobile" className={isOpen ? "openIM" : ""}>
+        {category ? (
+          <ItemList product={filterCart} categoria={category} />
+        ) : (
+          <ItemList product={producto} />
+        )}
+      </div>
+      <div id="footerListMobile" className={isOpen ? "openFM" : ""}>
+        <Footer />
+      </div>
     </>
   );
 };

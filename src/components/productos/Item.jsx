@@ -5,7 +5,7 @@ import {
   Flex,
   GridItem,
   Image,
-  Stack
+  Stack,
 } from "@chakra-ui/react";
 import { useContext } from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
@@ -27,32 +27,47 @@ export const Item = ({ nombre, categoria, img, id }) => {
           }
         });
       } else {
-        return [
-          ...favItems,
-          { id, img, nombre, quantity: 1 },
-        ];
+        return [...favItems, { id, img, nombre, quantity: 1 }];
       }
     });
+  };
+
+  const idFound = () => {
+    const idFind = fav.find((item) => item.id === id);
+    if (idFind) {
+      return true;
+    } else {
+      return false;
+    }
   };
 
   return (
     <GridItem id="cardItem">
       <Center>
         <Box w="auto">
-          <Image
-            src={img}
-            alt={nombre}
-            borderRadius="lg"
-            w="330px"
-            h="280px"
-            objectFit="cover"
-          />
-          <Stack mt="6" lineHeight="normal">
+          <div className="imgMobile">
+            <Link to={`/producto/${id}`}>
+              <Image
+                src={img}
+                alt={nombre}
+                borderRadius="lg"
+                className="imgItem"
+              />
+            </Link>
+            <Link to={"/favoritos"} onClick={() => addToFav()}>
+              {idFound() ? (
+                <FaHeart className="favMobile" />
+              ) : (
+                <FaRegHeart className="favMobile" />
+              )}
+            </Link>
+          </div>
+          <Stack mt="6" lineHeight="normal" id="inforCard">
             <h4>Shein</h4>
             <h5>{nombre}</h5>
             <p>$ 1.000</p>
           </Stack>
-          <Flex justifyContent="space-between">
+          <Flex justifyContent="space-between" id="doubleButton">
             <Box w="100%">
               <Link to={`/producto/${id}`}>
                 <Button variant="solid" className="buttonCard">

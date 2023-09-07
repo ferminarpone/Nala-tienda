@@ -23,7 +23,7 @@ export const Nosotros = () => {
               gap={4}
             >
               <GridItem rowSpan={3} rowStart={2} colSpan={3}>
-                <Box position="relative" w="100%" m="-10% 0 0 5%">
+                <Box position="relative" w="100%" m="-12% 0 0 5%">
                   <Image
                     src={Circulo}
                     position="absolute"
