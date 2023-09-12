@@ -34,7 +34,7 @@ export const Destacados = () => {
         <img src={BrocheTransparente} alt="BrocheTransparente" />
         <img src={Strap} alt="Strap" />
         <img src={BrochePastel} alt="BrochePastel" />
-        <img src={StrapNegro} alt="StrapNegro" />
+        <img className="sinMargin" src={StrapNegro} alt="StrapNegro" />
 
       </div>
      {/*  <Center>
