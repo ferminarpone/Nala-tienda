@@ -12,6 +12,11 @@ import Anillos from "../../assets/Anillos.png";
 import Llavero from "../../assets/Llavero osos.png"; */
 import DestacadosImg from "../../assets/home/Destacados.png";
 
+import BrochePastel from "../../assets/home/BrochePastel.png";
+import BrocheTransparente from "../../assets/home/BrocheTransparente.png";
+import Strap from "../../assets/home/Strap.png";
+import StrapNegro from "../../assets/home/StrapNegro.png";
+
 export const Destacados = () => {
   return (
     <Container maxWidth="90%" mt="90px">
@@ -24,10 +29,18 @@ export const Destacados = () => {
           className="dividerDestacados"
         />
       </div>
-      <Center>
+      <div id="destacados">
+
+        <img src={BrocheTransparente} alt="BrocheTransparente" />
+        <img src={Strap} alt="Strap" />
+        <img src={BrochePastel} alt="BrochePastel" />
+        <img src={StrapNegro} alt="StrapNegro" />
+
+      </div>
+     {/*  <Center>
         <Image src={DestacadosImg} alt="Destacados" className="destacadoImg"  />
       </Center>
-
+ */}
       {/* Para utilizar todas las imagenes por separado....
 
       <Grid mt="60px" templateRows="repeat(2, 1fr)" templateColumns="repeat(5, 1fr)" gap={2}>

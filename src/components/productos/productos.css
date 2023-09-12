@@ -12,6 +12,7 @@
 
 #categorias {
   line-height: normal;
+  padding-bottom: 6px;
 }
 #categorias .heartIcon {
   color: #4e958f;
