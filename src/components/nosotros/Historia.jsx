@@ -15,7 +15,7 @@ export const Historia = () => {
             mt="5%"
           >
             <GridItem rowSpan={1} colSpan={3} display="flex" alignItems="end">
-              <Image src={HistoriaText} alt="Historia" />
+              <h1 className="titleHistoria">Historia</h1>
             </GridItem>
             <GridItem rowSpan={3} rowStart={3} colSpan={3} colStart={4}>
               <Box className="bannerHistoria">
@@ -54,7 +54,7 @@ export const Historia = () => {
           flexDirection="column"
           alignItems="center"
         >
-          <Image src={HistoriaText} alt="Historia" />
+          <h1 className="titleHistoria">Historia</h1>
           <p className="historiaParrafo">
             Nala tienda nacio el año pasado después de terminar el colegio y con
             la incertidumbre de lo que iba a ser mi primer año de facultad.

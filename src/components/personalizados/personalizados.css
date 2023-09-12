@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@250;350;450;700&display=swap');
+
 .bgPersonalizadosDesktop {
   background-color: #4a9a91;
 }
@@ -6,9 +8,13 @@
   height: 410px;
 }
 
-.algoMasPersonalizado{
-  height: 70%;
+.bgPersonalizadosDesktop .titlePersonalizados{
+  font-family: 'DM Serif Display', serif;
+  color: #ffffff;
+  font-size: 4.6rem;
 }
+
+
 .personalizadosText {
   font-family: "Josefin Sans", sans-serif;
   color: #ffffff;
@@ -143,6 +149,10 @@
 }
 
 @media (min-width:504px) and (max-width: 775px){
+
+  .bgPersonalizadosDesktop .titlePersonalizados{
+    font-size: 3.4rem;
+  }
 
   .bgPersonalizados{
     height: 350px;

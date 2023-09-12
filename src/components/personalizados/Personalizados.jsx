@@ -3,7 +3,6 @@ import { NavBar } from "../navbar/NavBar";
 import { Formulario } from "./Formulario";
 import BannerPersonalizado from "../../assets/personalizados/BannerPersonalizado.png";
 import muchoMas from "../../assets/personalizados/Mucho más.png";
-import AlgoMas from "../../assets/personalizados/Algo más.png";
 import { Footer } from "../../components/footer/Footer";
 import "./personalizados.css";
 import { useContext } from "react";
@@ -77,7 +76,7 @@ export const Personalizados = () => {
                 display="flex"
                 alignItems="center"
               >
-                <Image src={AlgoMas} className="algoMasPersonalizado"/>
+                <h1 className="titlePersonalizados"> Algo Más </h1>
               </GridItem>
             </Grid>
           </Container>
