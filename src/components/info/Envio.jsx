@@ -1,5 +1,4 @@
 import { Box, Center, Divider, Image } from "@chakra-ui/react";
-import Envios from "../../assets/informacion/envio.png";
 import {
   MdPedalBike,
   MdOutlineMoped,
@@ -13,7 +12,7 @@ export const Envio = () => {
     <>
       <Box id="envio">
         <Center>
-          <img src={Envios} alt="Métodos de envío" />
+        <h1 className="titleEnvios">Métodos De Envío</h1>
         </Center>
         <Center>
           <h2>Modalidades de entrega dependiendo la zona</h2>

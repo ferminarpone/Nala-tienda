@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@250;350;450;700&display=swap');
 /*Contactanos*/
 
 #contactanosDesktop .bannerBox {
@@ -59,7 +60,11 @@
   justify-content: center;
   align-items: center;
 }
-
+#infoContactanos .titleInfo{
+  font-family: 'DM Serif Display', serif;
+  color: #4a9a91;
+  font-size: 3.2rem;
+}
 #infoContactanos p {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
@@ -203,7 +208,7 @@
     width: 40%;
     padding-top: 8px;
   }
-  #infoContactanos .tituloInfo,
+  #infoContactanos .titleInfo,
   .enviarWsp {
     display: none;
   }
@@ -213,10 +218,6 @@
 }
 
 @media (min-width: 978px) and (max-width: 1182px) {
-  
- .tituloInfo{
-  margin-bottom: 35px !important;
- }
   #gridInfo img {
     margin-top: 6px;
   }

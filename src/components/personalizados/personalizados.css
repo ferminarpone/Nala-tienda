@@ -35,9 +35,13 @@
   height: 314px;
   flex-direction: column;
   text-align: center;
-  padding: 200px 5% 0 5%;
+  padding: 160px 10% 0 10%;
 }
-
+#personalizadosMobile .titlePersMobile{
+  font-family: 'DM Serif Display', serif;
+  color: #ffffff;
+  font-size: 3rem;
+}
 #personalizadosMobile p {
   font-family: "Josefin Sans", sans-serif;
   color: #efefef;

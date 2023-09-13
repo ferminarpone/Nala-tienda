@@ -6,7 +6,6 @@ import {
   Center,
   Container,
 } from "@chakra-ui/react";
-import title from "../../assets/contactanos/Contactanos.png";
 import tel from "../../assets/contactanos/call.png";
 import mail from "../../assets/contactanos/email.png";
 import ig from "../../assets/contactanos/Instagram.png";
@@ -22,7 +21,7 @@ export const InfoContactanos = () => {
   return (
    <Container className="containerInfo" maxWidth="90%"> 
       <Box id="infoContactanos" className={isOpen? "openInfo" : ""}>
-        <Image src={title} className="tituloInfo" alt="titulo" w="70%" mb="40px" />
+       <h1 className="titleInfo">Contáctanos</h1>
         <Grid
           templateRows="repeat(3, 1fr)"
           templateColumns="repeat(4, 1fr)"

@@ -2,7 +2,6 @@ import { Container, Grid, GridItem, Image, Button } from "@chakra-ui/react";
 import { NavBar } from "../navbar/NavBar";
 import { Formulario } from "./Formulario";
 import BannerPersonalizado from "../../assets/personalizados/BannerPersonalizado.png";
-import muchoMas from "../../assets/personalizados/Mucho más.png";
 import { Footer } from "../../components/footer/Footer";
 import "./personalizados.css";
 import { useContext } from "react";
@@ -23,10 +22,10 @@ export const Personalizados = () => {
 
         <div className={`bgPersonalizados ${isOpen ? "openP" : ""}`}>
           <div id="personalizadosMobile">
-            <Image src={muchoMas} w="48%" ml="26%" />
+            <h1 className="titlePersMobile">Mucho Más</h1>
             <p>
               Estamos aquí para ayudarte con cualquier productode Shein que
-              quieras y no se encuentre en nuestro catálogo{" "}
+              quieras y no se encuentre en nuestro catálogo.{" "}
             </p>
           </div>
 

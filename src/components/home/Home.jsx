@@ -5,8 +5,6 @@ import { Destacados } from "./Destacados";
 import { Opiniones } from "./Opiniones";
 import { FavoritoContext } from "../../context/FavContext";
 import { useContext } from "react";
-import compra from "../../assets/home/Compra.png";
-import { Image } from "@chakra-ui/react";
 
 export const Home = () => {
   const { isOpen } = useContext(FavoritoContext);
@@ -16,7 +14,7 @@ export const Home = () => {
       <div className="homeImg">
         <NavBar />
         <div id="homeMobile" className={isOpen ? "open" : ""}>
-          <Image src={compra} w="35%" ml="32%" />
+          <h1 className="titleHome">Compra</h1>
           <p>Tus productos favoritos de Shein </p>
         </div>
       </div>

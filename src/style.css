@@ -398,7 +398,7 @@ align-items: center;
  */
 /*Mas información*/
 
-.informacionImg {
+/* .informacionImg {
   background-image: url(./assets/informacion/fondo.png);
   height: 480px;
   width: auto;
@@ -513,7 +513,7 @@ align-items: center;
 #envio a{
   color:  #ffffff;
   margin-left: 15px;
-}
+} */
 
 /*Favoritos*/
 #favoritos {
