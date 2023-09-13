@@ -19,7 +19,6 @@ export const Personalizados = () => {
     <>
       <div className="bgPersonalizadosDesktop">
         <NavBar />
-
         <div className={`bgPersonalizados ${isOpen ? "openP" : ""}`}>
           <div id="personalizadosMobile">
             <h1 className="titlePersMobile">Mucho Más</h1>
@@ -28,7 +27,6 @@ export const Personalizados = () => {
               quieras y no se encuentre en nuestro catálogo.{" "}
             </p>
           </div>
-
           <Container maxWidth="90%" id="personalizados">
             <Grid
               h="auto"
@@ -44,7 +42,10 @@ export const Personalizados = () => {
                 display="flex"
                 justifyContent="center"
               >
-                <Image src={BannerPersonalizado} className="bannerPersonalizado" />
+                <Image
+                  src={BannerPersonalizado}
+                  className="bannerPersonalizado"
+                />
               </GridItem>
               <GridItem colSpan={3}>
                 <h3 className="personalizadosText">
@@ -79,11 +80,12 @@ export const Personalizados = () => {
               </GridItem>
             </Grid>
           </Container>
-          
         </div>
       </div>
       <Formulario />
-      <Footer />
+      <div className={isOpen ? "openFooter" : ""}>
+        <Footer />
+      </div>
     </>
   );
 };

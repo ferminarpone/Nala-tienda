@@ -9,7 +9,6 @@ export const Pagos = () => {
       <Center>
         <h2>¿Caulés son los medios de pago?</h2>
       </Center>
-
       <div className="metodos">
         <div className="efectivo">
           <MdOutlineLocalAtm size="45px" />

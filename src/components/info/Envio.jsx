@@ -1,23 +1,22 @@
-import { Box, Center, Divider, Image } from "@chakra-ui/react";
+import { Box, Center, Divider } from "@chakra-ui/react";
 import {
   MdPedalBike,
   MdOutlineMoped,
   MdOutlineLocalShipping,
 } from "react-icons/md";
-import { BsInstagram} from "react-icons/bs";
-import { FaTiktok} from "react-icons/fa";
+import { BsInstagram } from "react-icons/bs";
+import { FaTiktok } from "react-icons/fa";
 
 export const Envio = () => {
   return (
     <>
       <Box id="envio">
         <Center>
-        <h1 className="titleEnvios">Métodos De Envío</h1>
+          <h1 className="titleEnvios">Métodos De Envío</h1>
         </Center>
         <Center>
           <h2>Modalidades de entrega dependiendo la zona</h2>
         </Center>
-
         <div className="envios">
           <div className="bicicleta">
             <MdPedalBike size="45px" />
@@ -36,9 +35,9 @@ export const Envio = () => {
         </Center>
         <Box>
           <Center>
-            <Divider width="80%" border="white solid 1px" mt="80px" />
+            <Divider className="dividerFooter" />
           </Center>
-          <Center height="100px">
+          <Center id="footerEnvio">
             <h4 className="footerInf">Síguenos</h4>
             <a
               href="https://instagram.com/nala_tiendaa?igshid=MzRlODBiNWFlZA=="
@@ -47,7 +46,7 @@ export const Envio = () => {
               <BsInstagram size="30px" />
             </a>
             <a href="https://www.tiktok.com/@nalatienda" target="_blank">
-            <FaTiktok size="30px"/>
+              <FaTiktok size="30px" />
             </a>
           </Center>
         </Box>

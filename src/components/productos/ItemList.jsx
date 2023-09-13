@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { Item } from "./Item";
 import { Categorias } from "./Categorias";
 
-const ItemList = ({ product, categoria }) => {
+const ItemList = ({ product }) => {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -11,7 +11,7 @@ const ItemList = ({ product, categoria }) => {
   return (
     <>
       {product == "" ? (
-        <Center minH="400px">
+        <Center height="500px">
           <CircularProgress isIndeterminate color="#7cbfba" />
         </Center>
       ) : (
@@ -29,7 +29,7 @@ const ItemList = ({ product, categoria }) => {
                 sm: "repeat(3, 1fr)",
                 xl: "repeat(4, 1fr)",
               }}
-              gap={{base:4, sm:6}}
+              gap={{ base: 4, sm: 6 }}
             >
               {product.map((item) => (
                 <Item

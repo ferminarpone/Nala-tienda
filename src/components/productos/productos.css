@@ -1,18 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@250;350;450;700&display=swap');
+
 /*ItemListContainer*/
 #itemListMobile.openIM{
     position: relative;
     top: -157px;
     z-index: -1;
 }
-
 #footerListMobile.openFM{
     margin-top: -157px;
 }
-/*Categorias*/
 
+/*Categorias*/
 #categorias {
   line-height: normal;
-  padding-bottom: 6px;
 }
 #categorias .heartIcon {
   color: #4e958f;
@@ -30,6 +30,7 @@
 @media (max-width: 502px) {
   #categorias {
     margin-top: 30px;
+    padding-bottom: 14px;
     max-width: 90%;
     overflow-x: scroll;
   }
@@ -60,7 +61,6 @@
   font-size: 1.1rem;
   font-weight: 500;
 }
-
 #cardItem p {
   font-family: "Josefin Sans", sans-serif;
   color: #969696;

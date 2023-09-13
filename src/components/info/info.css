@@ -9,11 +9,10 @@
   background-size: cover;
   filter: brightness(0.9);
 }
-
-#pagos{
-    height: 500px;
+#pagos {
+  height: 100%;
+  padding: 90px 0 90px 0;
 }
-
 .metodos {
   display: flex;
   justify-content: space-evenly;
@@ -23,7 +22,6 @@
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
 }
-
 .efectivo {
   display: flex;
 }
@@ -31,7 +29,6 @@
   padding-top: 5px;
   margin-left: 10px;
 }
-
 .transferencia {
   display: flex;
 }
@@ -39,12 +36,10 @@
   padding-top: 5px;
   margin-left: 10px;
 }
-
 #pagos .titlePagos {
   font-family: "DM Serif Display", serif;
   color: #4a9a91;
   font-size: 3rem;
-  margin-top: 110px;
 }
 
 #pagos h2 {
@@ -55,44 +50,41 @@
   font-weight: 350;
 }
 
-@media (max-width: 610px){
-.informacionImg {
+@media (max-width: 610px) {
+  .informacionImg {
     height: 350px;
-}    
-#pagos {
+  }
+  #pagos {
     height: 100%;
     padding: 60px 5% 60px 5%;
-}
-
-#pagos .titlePagos {
+  }
+  #pagos .titlePagos {
     margin-top: 0;
-font-size: 2.4rem;
-text-align: center;
-}
-#pagos h2 {
-  font-size: 1.3rem;
-  text-align: center;
-}
-
-.metodos{
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  #pagos h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .metodos {
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
-}
-
-.efectivo{
+  }
+  .efectivo {
     font-size: 1.4rem;
     margin-bottom: 10px;
-}
-.efectivo p{
+  }
+  .efectivo p {
     margin-top: 4px;
-}
-.transferencia{
+  }
+  .transferencia {
     font-size: 1.4rem;
-}
-.transferencia p{
+  }
+  .transferencia p {
     margin-top: 4px;
-}
+  }
 }
 
 /*Envio*/
@@ -100,7 +92,6 @@ text-align: center;
 #envio {
   background-color: #4a9a91;
 }
-
 .envios {
   display: flex;
   justify-content: space-evenly;
@@ -110,14 +101,12 @@ text-align: center;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
 }
-
 #envio .titleEnvios {
   font-family: "DM Serif Display", serif;
   color: #ffffff;
   font-size: 3rem;
-  margin-top: 110px;
+  margin-top: 90px;
 }
-
 #envio h2 {
   margin-top: 25px;
   color: #ffffff;
@@ -125,7 +114,6 @@ text-align: center;
   font-size: 1.6rem;
   font-weight: 350;
 }
-
 .bicicleta {
   display: flex;
 }
@@ -133,7 +121,6 @@ text-align: center;
   padding-top: 5px;
   margin-left: 10px;
 }
-
 .moto {
   display: flex;
 }
@@ -141,7 +128,6 @@ text-align: center;
   padding-top: 5px;
   margin-left: 10px;
 }
-
 .correo {
   display: flex;
   color: #ffffff;
@@ -154,7 +140,14 @@ text-align: center;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
 }
-
+.dividerFooter {
+  width: 80% !important;
+  border: #ffffff solid 1px !important ;
+  margin-top: 80px;
+}
+#footerEnvio {
+  height: 100px;
+}
 .footerInf {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.8rem;
@@ -162,8 +155,60 @@ text-align: center;
   color: #ffffff;
   margin-right: 30px;
 }
-
 #envio a {
   color: #ffffff;
   margin-left: 15px;
+}
+
+@media (max-width: 610px) {
+  #envio {
+    height: 100%;
+    padding: 60px 5% 15px 5%;
+  }
+  #envio .titleEnvios {
+    margin-top: 0;
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  #envio h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .envios {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .bicicleta {
+    font-size: 1.4rem;
+  }
+  .bicicleta p {
+    margin-top: 4px;
+  }
+  .moto {
+    font-size: 1.4rem;
+  }
+  .moto p {
+    margin-top: 4px;
+  }
+  .correo {
+    margin-top: 3px;
+  }
+  .correo p {
+    margin-top: 2px;
+    font-size: 1.4rem;
+  }
+  .dividerFooter {
+    margin-top: 40px;
+    width: 95% !important;
+  }
+  #footerEnvio {
+    height: 100%;
+    display: flex;
+    margin-top: 15px;
+  }
+  .footerInf {
+    font-size: 1.6rem;
+    font-weight: 350;
+  }
 }

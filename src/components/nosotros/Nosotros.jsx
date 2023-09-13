@@ -3,7 +3,6 @@ import { Box, Container, Grid, GridItem, Image } from "@chakra-ui/react";
 import { NavBar } from "../navbar/NavBar";
 import Circulo from "../../assets/nosotros/Rectangle 20.png";
 import FotoCirculo from "../../assets/nosotros/Mask group.png";
-import Titulo from "../../assets/nosotros/Que hacemos.png";
 import { Historia } from "./Historia";
 import { Terminos } from "./Terminos";
 import { Footer } from "../../components/footer/Footer";
@@ -60,7 +59,7 @@ export const Nosotros = () => {
         </div>
         <div id="nosotrosMobile">
           <Container
-            maxW="90%"
+            maxW="85%"
             display="flex"
             flexDirection="column"
             alignItems="center"

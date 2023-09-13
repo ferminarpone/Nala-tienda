@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import { Envio } from "./Envio"
-import { Pagos } from "./Pagos"
+import { Envio } from "./Envio";
+import { Pagos } from "./Pagos";
 import { NavBar } from "../navbar/NavBar";
-import './info.css'
+import "./info.css";
 
 export const Informacion = () => {
   useEffect(() => {
@@ -10,11 +10,11 @@ export const Informacion = () => {
   }, []);
   return (
     <>
-    <div className="informacionImg">
-      <NavBar/> 
-    </div>
-    <Pagos/>
-    <Envio/>
+      <div className="informacionImg">
+        <NavBar />
+      </div>
+      <Pagos />
+      <Envio />
     </>
-  )
-}
+  );
+};

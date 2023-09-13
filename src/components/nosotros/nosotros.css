@@ -21,7 +21,7 @@
   display: none;
   height: 100%;
   background-color: #ffffff;
-  padding: 30px 0 30px 0;
+  padding: 40px 0 30px 0;
 }
 #nosotrosMobile img {
   width: 70%;
@@ -35,7 +35,7 @@
   padding: 10px 0 60px 0;
 }
  .titleHistoria{
-    font-family: 'DM Serif Display', serif;
+  font-family: 'DM Serif Display', serif;
   color: #ffffff;
   font-size: 4rem;
 }
@@ -66,20 +66,23 @@
 }
 .dividerTerminos {
   position: relative;
-  right: 152px;
+  right: 158px;
 }
 .parrafoTerminos {
   margin-top: 30px;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.8rem;
   line-height: 1.1;
-  font-weight: 100;
+  font-weight: 300;
   color: #969696;
 }
 
 @media (max-width: 400px) {
+  .titleNosotros{
+    font-size: 2.5rem;
+  }
+
   #terminos .title {
-    font-size: 1.24rem;
     padding-bottom: 10px;
   }
 }
@@ -99,11 +102,18 @@
   }
   #nosotrosMobile {
     display: flex;
+    height: 100%;
+  }
+ 
+  #nosotrosMobile .nosotrosParrafo{
+      margin-top: 20px;
+      font-size: 1.5rem;
+      line-height: 1.1;
   }
 
   /*Historia*/
   #historia {
-    padding: 40px 0 40px;
+    padding: 30px 0 40px 0px;
   }
   #historiaDesktop {
     display: none;
@@ -111,19 +121,19 @@
   #historiaMobile {
     display: flex;
   }
-  #historiaMobile img {
-    width: 50%;
-  }
   #historiaMobile p {
-    margin-top: 15px;
-    text-indent: 20px;
+    margin-top:15px;
+    padding-top: 0px;
   }
 
   /*Terminos y condiciones*/
 
+  #terminos {
+    padding-top: 50px;
+  }
   .dividerTerminos {
     position: relative;
-    right: 2px;
+    right: 0px;
     width: 214px !important;
   }
 
@@ -138,6 +148,17 @@
 @media (min-width: 502px)  {
   .nosotrosParrafo {
     font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 502px) and (max-width:632px) {
+  #terminos .title {
+    font-size: 1.6rem;
+  }
+  .dividerTerminos {
+    position: relative;
+    right: 0px;
+    width: 214px !important;
   }
 }
 
