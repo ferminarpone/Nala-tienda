@@ -1,8 +1,7 @@
 import "./nosotros.css";
-import { Box, Container, Grid, GridItem, Image } from "@chakra-ui/react";
+import { Container, Grid, GridItem, Image } from "@chakra-ui/react";
 import { NavBar } from "../navbar/NavBar";
-import Circulo from "../../assets/nosotros/Rectangle 20.png";
-import FotoCirculo from "../../assets/nosotros/Mask group.png";
+import Banner from "../../assets/nosotros/ImgQueHacemos.png";
 import { Historia } from "./Historia";
 import { Terminos } from "./Terminos";
 import { Footer } from "../../components/footer/Footer";
@@ -22,15 +21,7 @@ export const Nosotros = () => {
               gap={4}
             >
               <GridItem rowSpan={3} rowStart={2} colSpan={3}>
-                <Box position="relative" w="100%" m="-12% 0 0 5%">
-                  <Image
-                    src={Circulo}
-                    position="absolute"
-                    top="20px"
-                    left="-18px"
-                  />
-                  <Image src={FotoCirculo} position="absolute" />
-                </Box>
+                  <Image src={Banner} className="bannerQueHacemos"  />
               </GridItem>
               <GridItem
                 rowSpan={1}

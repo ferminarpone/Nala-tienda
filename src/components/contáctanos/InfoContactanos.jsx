@@ -19,7 +19,7 @@ export const InfoContactanos = () => {
     window.open(url, "_blank");
   };
   return (
-   <Container className="containerInfo" maxWidth="90%"> 
+   <Container className="containerInfo"> 
       <Box id="infoContactanos" className={isOpen? "openInfo" : ""}>
        <h1 className="titleInfo">Contáctanos</h1>
         <Grid
@@ -31,25 +31,25 @@ export const InfoContactanos = () => {
           <GridItem colSpan={1} mt="10px">
             <Image src={tel} alt="icono teléfono"/>
           </GridItem>
-          <GridItem colSpan={3} mt="15px" ml="-10%">
+          <GridItem colSpan={3} mt="15px" ml="-16%">
             <p>+54 9 351 390-2114</p>
           </GridItem>
           <GridItem colSpan={1} mt="10px">
             <Image src={mail} alt="icono e-mail"/>
           </GridItem>
-          <GridItem colSpan={3} mt="15px" ml="-10%">
+          <GridItem colSpan={3} mt="15px" ml="-16%">
             <p>nala_tienda@gmail.com</p>
           </GridItem>
           <GridItem colSpan={1} mt="10px">
             <Image src={ig} alt="icono instagram"/>
           </GridItem>
-          <GridItem colSpan={3} mt="15px" ml="-10%">
+          <GridItem colSpan={3} mt="15px" ml="-16%">
             <p>@nala_tiendaa </p>
           </GridItem>
         </Grid>
-        <Center width="100%">
+{/*         <Center width="100%">
           <button className="enviarWsp" onClick={() => sendWsp()}>ENVIAR WHATSAPP</button>
-        </Center>
+        </Center> */}
       </Box>
     </Container> 
   );

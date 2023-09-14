@@ -4,10 +4,10 @@ import { Footer } from "../../components/footer/Footer";
 import { NavBar } from "../navbar/NavBar";
 import { InfoContactanos } from "./InfoContactanos";
 import { FormContactanos } from "./FormContactanos";
-import Imagen1 from "../../assets/contactanos/Imagen 1.png";
-import Imagen2 from "../../assets/contactanos/Imagen 2.png";
+import Banner from "../../assets/contactanos/Imagen Contactanos.png";
+/* import Imagen2 from "../../assets/contactanos/Imagen 2.png";
 import Cuadro from "../../assets/contactanos/Rectangle 16.png";
-import title from "../../assets/contactanos/ContáctanosMobile.png";
+import title from "../../assets/contactanos/ContáctanosMobile.png"; */
 import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
 
@@ -18,15 +18,14 @@ export const Contactanos = () => {
     <>
       <NavBar />
       <div id="contactanosDesktop">
-        <Container maxWidth="90%" mt="50px" mb="120px">
+        <Container maxWidth="90%" mt="25px" mb="80px">
           <Grid
             templateRows="repeat(4, 1fr)"
-            templateColumns="repeat(6, 1fr)"
-            gap={4}
-            
+            templateColumns="repeat(7, 1fr)"
+            gap={4}          
           >
-            <GridItem rowSpan={2} rowStart={2} colSpan={3} bgColor="red">
-              <div className="bannerBox">
+            <GridItem rowSpan={3}  colSpan={4}>
+         {/*      <div className="bannerBox">
                 <Image
                   src={Cuadro}
                   className="cuadroImg2"
@@ -43,19 +42,21 @@ export const Contactanos = () => {
                   alt="Gorra"
                   className="imagen1"
                 />
-              </div>
+              </div> */}
+              <Image src={Banner} className="bannerContactanos" alt="Gorras Shein"/>
             </GridItem>
-            <GridItem rowSpan={2} colSpan={3} bgColor="red">
+            <GridItem rowSpan={1} colSpan={3}>
               <InfoContactanos />
             </GridItem>
-            <GridItem rowSpan={2} colSpan={3} bgColor="red">
+            <GridItem rowSpan={3} colSpan={3}>
               <FormContactanos />
             </GridItem>
           </Grid>
         </Container>
       </div>
       <div id="contactanosMobile" className={isOpen ? "open" : ""}>
-        <Image src={title} alt="titulo" />
+        {/* <Image src={title} alt="titulo" /> */}
+        <h1 className="titleInfo">Contáctanos</h1>
       </div>
       <div id="componentsMobile">
         <FormContactanos />

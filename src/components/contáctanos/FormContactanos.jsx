@@ -26,7 +26,7 @@ export const FormContactanos = () => {
     <Box id="formContactanos">
       <Container className={`container ${isOpen ? "open" : ""}`}>
         <h3>
-          E<span className="capitalLetter">nvíanos un correo ???</span>
+          E<span className="capitalLetter">nvíanos un mensaje por WhatsApp</span>
         </h3>
         <Divider orientation="horizontal" className="dividerFormContactanos" />
         <form onSubmit={handleSubmit(onSubmit)}>
