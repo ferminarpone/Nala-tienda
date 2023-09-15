@@ -83,12 +83,12 @@
 }
 @media (min-height: 601px) and (max-height: 800px) {
   .containerFav {
-    min-height: 450px;
+    min-height: 550px;
   }
 }
 @media (min-height: 800px) {
   .containerFav {
-    min-height: 800px;
+    min-height: 900px;
   }
 }
 
