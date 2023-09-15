@@ -5,9 +5,9 @@ import {
   Grid,
   GridItem,
   Image,
-  Stack
+  Stack,
 } from "@chakra-ui/react";
-import './detalles.css';
+import "./detalles.css";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { AiOutlineLeft } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -104,10 +104,14 @@ export const ItemDetail = ({ id, nombre, img }) => {
           </GridItem>
         </Grid>
       </div>
-
       <div id="detallesMobile">
         <Link to={`/producto/${id}`}>
-          <Image src={img} alt={nombre} borderRadius="lg" className="imgItemDetail" />
+          <Image
+            src={img}
+            alt={nombre}
+            borderRadius="lg"
+            className="imgItemDetail"
+          />
         </Link>
         <Link to={"/favoritos"} onClick={() => addToFav()}>
           {idFound() ? (
@@ -116,15 +120,13 @@ export const ItemDetail = ({ id, nombre, img }) => {
             <FaRegHeart className="favDetallesMobile" />
           )}
         </Link>
-
         <Stack mt="6" lineHeight="normal" id="infoDetallesCard">
           <h5>{nombre}</h5>
           <p>$ 1.000</p>
         </Stack>
-
         <Button className="pedidoWsp" onClick={sendWsp}>
-              HACER PEDIDO POR WHATSAPP
-            </Button>
+          HACER PEDIDO POR WHATSAPP
+        </Button>
       </div>
     </Container>
   );
