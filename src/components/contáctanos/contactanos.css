@@ -1,34 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@250;350;450;550;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@250;350;450;550;700&display=swap");
+
 /*Contactanos*/
-#contactanosDesktop .bannerContactanos{
+#contactanosDesktop .bannerContactanos {
   margin-top: 35%;
 }
-/* #contactanosDesktop .bannerBox {
-  position: relative;
-  width: 48%;
-  margin: -10% 0 0 10%;
-}
-.bannerBox .imagen2 {
-  position: absolute;
-  top: -80px;
-  left: 18px;
-}
-.bannerBox .cuadroImg2 {
-  position: absolute;
-  top: -62px;
-}
-
-.bannerBox .imagen1 {
-  position: absolute;
-  top: 280px;
-  left: 160px;
-}
-.bannerBox .cuadroImg1 {
-  position: absolute;
-  top: 298px;
-  left: 142px;
-} */
-
 #contactanosMobile {
   background-image: url(../../assets/contactanos/Banner.png);
   height: 350px;
@@ -42,9 +17,8 @@
   align-items: center;
   z-index: -1;
 }
-
-#contactanosMobile .titleInfo{
-  font-family: 'DM Serif Display', serif;
+#contactanosMobile .titleInfo {
+  font-family: "DM Serif Display", serif;
   color: #ffffff;
   font-size: 3rem;
   margin-bottom: 8%;
@@ -58,14 +32,14 @@
 
 /*Info Contactanos*/
 
-#infoContactanos{
+#infoContactanos {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
 }
-#infoContactanos .titleInfo{
-  font-family: 'DM Serif Display', serif;
+#infoContactanos .titleInfo {
+  font-family: "DM Serif Display", serif;
   color: #4a9a91;
   font-size: 2.6rem;
 }
@@ -74,18 +48,6 @@
   font-size: 1.2rem;
   font-weight: 100;
 }
-/* #infoContactanos .enviarWsp {
-  background-color: #7cbfba;
-  color: #ffffff;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-top: 80px;
-  width: 80%;
-  padding: 10px 10% 10px 10%;
-  border-radius: 16px;
-} */
-
 #gridInfo img {
   width: 40% !important;
 }
@@ -113,7 +75,6 @@
   font-size: 1.3rem;
   font-weight: 200;
 }
-
 #formContactanos button {
   background-color: #7cbfba;
   color: #ffffff;
@@ -131,15 +92,15 @@
     font-size: 1.1rem;
   }
   #formContactanos textarea {
-
     font-size: 1.1rem;
   }
-
   #infoContactanos p {
     font-size: 1.2rem !important;
+    margin-top: 15px;
+    margin-left: -16%;
   }
 }
-@media  (max-width: 502px) {
+@media (max-width: 502px) {
   /*Contactanos*/
 
   #contactanosDesktop {
@@ -179,8 +140,8 @@
   .dividerFormContactanos {
     display: flex;
     width: 50% !important;
-    position: relative ;
-    right: 24%; 
+    position: relative;
+    right: 24%;
   }
   #formContactanos .input {
     border: solid #4a9a91 1px;
@@ -206,32 +167,36 @@
     margin-top: 40px;
   }
   #infoContactanos p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    margin-top: 12px;
+    margin-left: -14%;
   }
   #infoContactanos img {
     width: 40%;
     padding-top: 8px;
   }
-  #infoContactanos .titleInfo,
-  .enviarWsp {
+  #infoContactanos .titleInfo {
     display: none;
   }
   #infoContactanos.openInfo {
     margin-top: 233px;
   }
 }
-
-@media (min-width: 978px) and (max-width: 1182px) {
-  #gridInfo img {
-    margin-top: 6px;
+@media (min-width: 500px) {
+  .bannerContactanos {
+    margin-top: 5% !important;
   }
-  #gridInfo p {
+  #infoContactanos p {
     font-size: 1.2rem;
+    margin-top: 12px;
+    margin-left: -14%;
   }
-  .enviarWsp{
-    margin-top: 45px !important;
+}
+@media (min-width: 1040px) {
+  .bannerContactanos {
+    width: 70%;
   }
-  #formContactanos{
-    margin-top: -50px;
+  #infoContactanos .titleInfo {
+    font-size: 3.4rem !important;
   }
 }

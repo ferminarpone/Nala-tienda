@@ -14,8 +14,6 @@ import { useContext } from "react";
 export const FormContactanos = () => {
   const { register, handleSubmit, reset } = useForm();
   const { isOpen } = useContext(FavoritoContext);
-
-  //Funcion... recibe los datos del formulario(data)
   const onSubmit = (data) => {
     const url = `https://web.whatsapp.com/send?phone=34617429097&text=%0A%2ANala%20tienda%2A%0AConsulta%20personalizada%0A%0A%2ADatos%20cliente%2A%0ANombre%3A%20${data.nombre} %0AEmail%3A%20${data.email}%0ATel%C3%A9fono%3A${data.telefono}%0A%0A%2AConsulta%3A%2A%0A${data.consulta}`;
     window.open(url, "_blank");
@@ -26,7 +24,8 @@ export const FormContactanos = () => {
     <Box id="formContactanos">
       <Container className={`container ${isOpen ? "open" : ""}`}>
         <h3>
-          E<span className="capitalLetter">nvíanos un mensaje por WhatsApp</span>
+          E
+          <span className="capitalLetter">nvíanos un mensaje por WhatsApp</span>
         </h3>
         <Divider orientation="horizontal" className="dividerFormContactanos" />
         <form onSubmit={handleSubmit(onSubmit)}>

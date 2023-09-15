@@ -54,20 +54,18 @@ export const Personalizados = () => {
                 </h3>
               </GridItem>
               <GridItem colSpan={3}>
-                <Button
-                  variant="outline"
-                  _hover={{
-                    bg: "#4A9A91",
-                    transform: "scale(1.1)",
-                  }}
+                <button
                   className="personalizadosButton"
-                  bg="#4A9A91"
-                  color="#ffffff"
-                  size="lg"
                   onClick={() => sheinOpen()}
                 >
-                  DEJA TUS DATOS
-                </Button>
+                  IR A SHEIN
+                </button>
+                <button
+                  className="personalizadosButtonB"
+                  /* onClick={() => sheinOpen()} */
+                >
+                  <a href="#formularioPer">DEJA TUS DATOS</a>
+                </button>
               </GridItem>
               <GridItem
                 rowStart={1}
@@ -82,7 +80,9 @@ export const Personalizados = () => {
           </Container>
         </div>
       </div>
-      <Formulario />
+      <div id="formularioPer">
+        <Formulario />
+      </div>
       <div className={isOpen ? "openFooter" : ""}>
         <Footer />
       </div>
