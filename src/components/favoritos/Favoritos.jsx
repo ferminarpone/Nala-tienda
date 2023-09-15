@@ -1,14 +1,19 @@
 import { Footer } from "../../components/footer/Footer";
 import { NavBar } from "../navbar/NavBar";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FavoritoContext } from "../../context/FavContext";
 import { Button, Center, Container, Flex } from "@chakra-ui/react";
 import { FavItem } from "./FavItem";
 import { Link } from "react-router-dom";
 import { AiOutlineLeft } from "react-icons/ai";
 import { FormularioFav } from "./FormularioFav";
+import "./favoritos.css";
+
 export const Favoritos = () => {
-  const { fav, setFav } = useContext(FavoritoContext);
+  const { fav } = useContext(FavoritoContext);
+
+  //State para hacer aparecer el formulario
+  const [form, setform] = useState(false);
 
   //Función que devuelve true si hay productos en favoritos.
   const itemFav = () => (fav.length > 0 ? true : false);
@@ -18,37 +23,52 @@ export const Favoritos = () => {
   return (
     <>
       <NavBar />
-      <Container maxW="90%" minHeight="480px">
+      <Container className="containerFav">
         <Link to={"/productos"}>
-          {itemFav()? 
-          <Flex className="regresar">
-            <div>
-              <AiOutlineLeft />
-            </div>
-            <p>Seguir eligiendo</p>
-          </Flex>
-          :""}
+          {itemFav() ? (
+            <Flex className="regresar">
+              <div>
+                <AiOutlineLeft />
+              </div>
+              <p>Seguir eligiendo</p>
+            </Flex>
+          ) : (
+            ""
+          )}
         </Link>
-
-        {itemFav()? (
+        {itemFav() ? (
           <div id="favoritos">
             {fav.map((item) => (
-              <FavItem
-                key={item.id}
-                nombre={item.nombre}
-                img={item.img}
-                cantidad={item.quantity}
-                id={item.id}
-              />
+              <div key={item.id} className="item">
+                <FavItem
+                  nombre={item.nombre}
+                  img={item.img}
+                  cantidad={item.quantity}
+                  id={item.id}
+                />
+                <hr className="dividerFavoritos"/>
+              </div>
             ))}
-            <FormularioFav/>
+            {!form ? (
+              <Button onClick={() => setform(!form)} className="comprarWsp">
+                COMPRAR POR WHATSAPP
+              </Button>
+            ) : (
+              ""
+            )}
+            {form ? <FormularioFav /> : ""}
           </div>
         ) : (
-          <Center minHeight="400px" display="flex" flexDirection="column" id="sinFav">
-          <h1>No tienes productos en tu lista de favoritos</h1>
-          <Link to={"/productos"}>
-          <Button> Ver productos </Button>
-          </Link>
+          <Center
+            minHeight="400px"
+            display="flex"
+            flexDirection="column"
+            id="sinFav"
+          >
+            <h1>No tienes productos en tu lista de favoritos</h1>
+            <Link to={"/productos"}>
+              <Button> Ver productos </Button>
+            </Link>
           </Center>
         )}
       </Container>

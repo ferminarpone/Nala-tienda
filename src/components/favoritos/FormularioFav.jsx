@@ -31,21 +31,20 @@ export const FormularioFav = () => {
           <h2 className="titleFormFav">
             COMPLETA EL FORMULARIO PARA COMENZAR A COMPRAR
           </h2>
-          {/*    <Divider
+          <Divider
             orientation="horizontal"
             color="#4A9A91"
             border="solid 1px"
-            width="380px"
+            width="100%"
             className="dividerFormFav"
-          /> */}
+          />
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Grid
             templateRows="repeat(3, 1fr)"
-            templateColumns="repeat(4, 1fr)"
+            templateColumns={{ base: "repear(1,1fr)", sm: "repeat(4, 1fr)" }}
             gap={4}
             mt="30px"
-            id="formPersonalizados"
           >
             <GridItem colSpan={2}>
               <Input
@@ -90,7 +89,7 @@ export const FormularioFav = () => {
                 h="70px"
               />
             </GridItem>
-            <GridItem colSpan={3}>
+            <GridItem colSpan={{ base: 2, sm: 3 }}>
               <Textarea
                 placeholder="Mensaje"
                 border="solid 2px #4A9A91"
@@ -99,7 +98,7 @@ export const FormularioFav = () => {
                 {...register("consulta")}
               />
             </GridItem>
-            <GridItem display="flex" justifyContent="end">
+            <GridItem className="buttonFormFav" colSpan={{ base: 2, sm: 1 }}>
               <Button
                 type="submit"
                 colorScheme="teal"
