@@ -65,7 +65,7 @@ export const Favoritos = () => {
             flexDirection="column"
             id="sinFav"
           >
-            <h1>No tienes productos en tu lista de favoritos</h1>
+            <h1>No tienes productos en tu lista de favoritos.</h1>
             <Link to={"/productos"}>
               <Button> Ver productos </Button>
             </Link>

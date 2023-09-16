@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-// para las categorias import { useParams } from "react-router-dom";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import { NavBar } from "../navbar/NavBar";

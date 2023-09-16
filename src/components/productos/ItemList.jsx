@@ -17,16 +17,11 @@ const ItemList = ({ product }) => {
       ) : (
         <>
           <Categorias />
-          <Container
-            maxWidth="90%"
-            mt="30px"
-            display="flex"
-            justifyContent="center"
-          >
+          <Container id="containerItemList">
             <Grid
               templateColumns={{
                 base: "repeat(2, 1fr)",
-                sm: "repeat(3, 1fr)",
+                md: "repeat(3, 1fr)",
                 xl: "repeat(4, 1fr)",
               }}
               gap={{ base: 4, sm: 6 }}
