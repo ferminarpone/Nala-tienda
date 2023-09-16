@@ -26,10 +26,10 @@ export const FormularioFav = () => {
   };
   return (
     <>
-      <Container maxWidth="100%" mt="50px">
+      <div id="formularioFavorito" >
         <div className="divTitleFormFav">
           <h2 className="titleFormFav">
-            COMPLETA EL FORMULARIO PARA COMENZAR A COMPRAR
+            COMPLETA CON TUS DATOS
           </h2>
           <Divider
             orientation="horizontal"
@@ -42,7 +42,7 @@ export const FormularioFav = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <Grid
             templateRows="repeat(3, 1fr)"
-            templateColumns={{ base: "repear(1,1fr)", sm: "repeat(4, 1fr)" }}
+            templateColumns="repeat(1, 1fr)" 
             gap={4}
             mt="30px"
           >
@@ -54,7 +54,7 @@ export const FormularioFav = () => {
                 isRequired
                 border="solid 2px #4A9A91"
                 borderRadius="14px"
-                h="70px"
+                h="45px"
               />
             </GridItem>
             <GridItem colSpan={2}>
@@ -65,7 +65,7 @@ export const FormularioFav = () => {
                 isRequired
                 border="solid 2px #4A9A91"
                 borderRadius="14px"
-                h="70px"
+                h="45px"
               />
             </GridItem>
             <GridItem colSpan={2}>
@@ -75,7 +75,7 @@ export const FormularioFav = () => {
                 {...register("email")}
                 border="solid 2px #4A9A91"
                 borderRadius="14px"
-                h="70px"
+                h="45px"
               />
             </GridItem>
             <GridItem colSpan={2}>
@@ -86,27 +86,27 @@ export const FormularioFav = () => {
                 isRequired
                 border="solid 2px #4A9A91"
                 borderRadius="14px"
-                h="70px"
+                h="45px"
               />
             </GridItem>
-            <GridItem colSpan={{ base: 2, sm: 3 }}>
+            <GridItem colSpan={2}>
               <Textarea
                 placeholder="Mensaje"
                 border="solid 2px #4A9A91"
                 borderRadius="14px"
-                h="70px"
+                h="45px"
                 {...register("consulta")}
               />
             </GridItem>
-            <GridItem className="buttonFormFav" colSpan={{ base: 2, sm: 1 }}>
+            <GridItem className="buttonFormFav" colSpan={2}>
               <Button
                 type="submit"
                 colorScheme="teal"
                 borderRadius="14px"
                 fontFamily="Josefin Sans"
-                fontSize="1.4rem"
-                h="80px"
-                w="90%"
+                fontSize="1.2rem"
+                h="45px"
+                w="70%"
               >
                 Enviar
               </Button>
@@ -114,7 +114,7 @@ export const FormularioFav = () => {
           </Grid>
         </form>
         <p className="requerido">* Campos requeridos</p>
-      </Container>
+      </div>
     </>
   );
 };
