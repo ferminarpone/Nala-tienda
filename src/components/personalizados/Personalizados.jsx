@@ -1,4 +1,4 @@
-import { Container, Grid, GridItem, Image, Button } from "@chakra-ui/react";
+import { Container, Grid, GridItem, Image} from "@chakra-ui/react";
 import { NavBar } from "../navbar/NavBar";
 import { Formulario } from "./Formulario";
 import BannerPersonalizado from "../../assets/personalizados/BannerPersonalizado.png";
@@ -23,7 +23,7 @@ export const Personalizados = () => {
           <div id="personalizadosMobile">
             <h1 className="titlePersMobile">Mucho Más</h1>
             <p>
-              Estamos aquí para ayudarte con cualquier productode Shein que
+              Estamos aquí para ayudarte con cualquier producto de Shein que
               quieras y no se encuentre en nuestro catálogo.{" "}
             </p>
           </div>

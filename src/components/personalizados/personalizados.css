@@ -92,8 +92,9 @@
   margin-top: 50px;
 }
 #formulario.openForm {
-  position: relative;
-  top: -157px;
+ /*  position: relative;
+  top: -157px; */
+  margin-top: -107px;
 }
 
 @media (max-width: 374px) {
@@ -150,11 +151,6 @@
     height: 45px;
     width: 100%;
     font-size: 1.1rem;
-  }
-
-  /*Footer*/
-  .openFooter {
-    margin-top: -157px;
   }
 }
 

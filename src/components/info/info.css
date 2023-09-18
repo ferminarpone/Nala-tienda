@@ -159,16 +159,24 @@
   color: #ffffff;
   margin-left: 15px;
 }
-
-@media (max-width: 610px) {
-  #envio {
-    height: 100%;
-    padding: 60px 5% 15px 5%;
+@media (max-width:335px){
+   #envio .titleEnvios {
+    margin-top: 0;
+    font-size: 2.2rem;
+    text-align: center;
   }
+}
+@media (min-width:335px) and (max-width: 610px){
   #envio .titleEnvios {
     margin-top: 0;
     font-size: 2.4rem;
     text-align: center;
+  }
+}
+@media (max-width: 610px) {
+  #envio {
+    height: 100%;
+    padding: 60px 5% 15px 5%;
   }
   #envio h2 {
     font-size: 1.3rem;
