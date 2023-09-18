@@ -1,17 +1,17 @@
 import {
   Button,
-  Container,
   Divider,
   Textarea,
   Grid,
   GridItem,
   Input,
 } from "@chakra-ui/react";
+import { RxCross2 } from "react-icons/rx";
 import { useForm } from "react-hook-form";
 import { FavoritoContext } from "../../context/FavContext";
 import { useContext } from "react";
 
-export const FormularioFav = () => {
+export const FormularioFav = ({ modalClosed }) => {
   const { register, handleSubmit, reset } = useForm();
   const { fav, setFav } = useContext(FavoritoContext);
 
@@ -26,23 +26,18 @@ export const FormularioFav = () => {
   };
   return (
     <>
-      <div id="formularioFavorito" >
+      <div id="formularioFavorito">
+        <button className="closed" onClick={modalClosed}>
+          <RxCross2 />
+        </button>
         <div className="divTitleFormFav">
-          <h2 className="titleFormFav">
-            COMPLETA CON TUS DATOS
-          </h2>
-          <Divider
-            orientation="horizontal"
-            color="#4A9A91"
-            border="solid 1px"
-            width="100%"
-            className="dividerFormFav"
-          />
+          <h2 className="titleFormFav">COMPLETA CON TUS DATOS</h2>
+          <Divider orientation="horizontal" className="dividerFormFav" />
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Grid
             templateRows="repeat(3, 1fr)"
-            templateColumns="repeat(1, 1fr)" 
+            templateColumns="repeat(1, 1fr)"
             gap={4}
             mt="30px"
           >
@@ -52,9 +47,7 @@ export const FormularioFav = () => {
                 placeholder="Nombre*"
                 {...register("nombre")}
                 isRequired
-                border="solid 2px #4A9A91"
-                borderRadius="14px"
-                h="45px"
+                className="inputForm"
               />
             </GridItem>
             <GridItem colSpan={2}>
@@ -63,9 +56,7 @@ export const FormularioFav = () => {
                 placeholder="Apellido*"
                 {...register("apellido")}
                 isRequired
-                border="solid 2px #4A9A91"
-                borderRadius="14px"
-                h="45px"
+                className="inputForm"
               />
             </GridItem>
             <GridItem colSpan={2}>
@@ -73,9 +64,7 @@ export const FormularioFav = () => {
                 type="email"
                 placeholder="Email"
                 {...register("email")}
-                border="solid 2px #4A9A91"
-                borderRadius="14px"
-                h="45px"
+                className="inputForm"
               />
             </GridItem>
             <GridItem colSpan={2}>
@@ -84,18 +73,14 @@ export const FormularioFav = () => {
                 placeholder="Teléfono*"
                 {...register("telefono")}
                 isRequired
-                border="solid 2px #4A9A91"
-                borderRadius="14px"
-                h="45px"
+                className="inputForm"
               />
             </GridItem>
             <GridItem colSpan={2}>
               <Textarea
                 placeholder="Mensaje"
-                border="solid 2px #4A9A91"
-                borderRadius="14px"
-                h="45px"
                 {...register("consulta")}
+                className="inputForm"
               />
             </GridItem>
             <GridItem className="buttonFormFav" colSpan={2}>

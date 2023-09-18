@@ -1,6 +1,5 @@
 import { Button, Grid, GridItem, Image } from "@chakra-ui/react";
 import { useContext } from "react";
-import { FaHeart } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { FavoritoContext } from "../../context/FavContext";
 

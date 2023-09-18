@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@250;350;450;700&display=swap");
 /*Favortios*/
 
-
-
-.modal .open {
-  display: flex;
+.mediaOpen {
+  background-color: rgba(156, 163, 163, 0.4);
+  position: relative;
+  overflow: auto;
 }
 
 .containerFav {
@@ -52,6 +52,7 @@
   font-size: 1.6rem;
   font-weight: 350;
   margin-bottom: 30px;
+  text-align: center;
 }
 #sinFav button {
   border-radius: 15px;
@@ -92,12 +93,12 @@
     min-height: 465px;
   }
 }
-@media (min-height: 800px) and (max-height:930px){
+@media (min-height: 800px) and (max-height: 930px) {
   .containerFav {
     min-height: 720px;
   }
 }
-@media (min-height: 930px){
+@media (min-height: 930px) {
   .containerFav {
     min-height: 900px;
   }
@@ -155,61 +156,130 @@
 
 /*Formulario*/
 
-.mediaOpen{
-  background-color: rgba(156, 163, 163, 0.4);
-  position: relative;
-  overflow: auto;
-}
 #formularioFavorito {
   z-index: 1;
   position: absolute;
   top: 10%;
-  left: 25%;
+  left: 21%;
   background-color: #eff9ed;
-  width: 50%;
-  padding: 5%;
+  width: 60%;
+  padding: 4%;
   border-radius: 15px;
 }
-
+#formularioFavorito .closed {
+  position: relative;
+  left: 98%;
+}
 .divTitleFormFav {
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
+  position: relative;
 }
 .titleFormFav {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   font-size: 1.5rem;
   color: #575757;
-  /* position: relative; */
 }
-/* .dividerFormFav {
+#formularioFavorito .inputForm {
+  border: solid 2px #4a9a91;
+  border-radius: 14px;
+  height: 45px;
+}
+.dividerFormFav {
+  border: solid 1px #4a9a91 !important;
+  width: 140px !important;
   position: relative;
-  right: 246px;
-} */
+  right: 96px;
+}
 .buttonFormFav {
   display: flex;
   justify-content: center;
 }
-
+@media (max-width: 342px) {
+  .dividerFormFav {
+    width: 80% !important;
+    position: relative;
+    right: 0px;
+  }
+}
+@media (min-width: 342px) and (max-width: 502px) {
+  .dividerFormFav {
+    width: 98px !important;
+    position: relative;
+    right: 72px;
+  }
+}
 @media (max-width: 502px) {
+  #formularioFavorito {
+    width: 80%;
+    top: 12%;
+    left: 11%;
+  }
+  #formularioFavorito .closed {
+    position: relative;
+    left: 96%;
+    top: -5px;
+  }
   .titleFormFav {
     font-size: 1.1rem;
     text-align: center;
   }
-
+  #formularioFavorito .inputForm {
+    border: solid 2px #4a9a91;
+    border-radius: 14px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
   #buttonFormFav {
     display: flex;
     justify-content: center;
   }
   .buttonFormFav button {
     width: 100%;
-    height: 60px;
+    height: 30px;
+    font-size: 1.1rem;
   }
+  .requerido {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 502px) and (max-width: 646px) {
+  .titleFormFav {
+    font-size: 1.2rem;
+  }
+  .dividerFormFav {
+    width: 106px !important;
+    position: relative;
+    right: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
   #formularioFavorito {
-    width: 80%;
-    top: 12%;
-    left: 10%;
+    top: 10%;
+    left: 25%;
+    background-color: #eff9ed;
+    width: 50%;
+    padding: 4%;
+  }
+  #formularioFavorito .closed {
+    left: 102%;
+    bottom: 26px;
+  }
+}
+@media (min-width: 1500px) {
+  #formularioFavorito {
+    top: 10%;
+    left: 30%;
+    background-color: #eff9ed;
+    width: 40%;
+    padding: 3%;
+  }
+  #formularioFavorito .closed {
+    left: 100%;
+    bottom: 24px;
   }
 }
