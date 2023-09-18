@@ -18,7 +18,8 @@
   font-weight: 250;
   width: 80%;
 }
-.personalizadosButton, .personalizadosButtonB {
+.personalizadosButton,
+.personalizadosButtonB {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
@@ -28,12 +29,13 @@
   color: #ffffff;
   background-color: #4a9a91;
 }
-.personalizadosButton{
-    margin-top: 5%;
-    margin-right: 10%;
-    margin-bottom: 10px;
+.personalizadosButton {
+  margin-top: 5%;
+  margin-right: 10%;
+  margin-bottom: 10px;
 }
-.personalizadosButton:hover,.personalizadosButtonB:hover{
+.personalizadosButton:hover,
+.personalizadosButtonB:hover {
   background-color: #4a9a91 !important;
   transform: scale(1.1) !important;
 }
@@ -56,9 +58,9 @@
   font-size: 1rem;
   padding-top: 4px;
 }
-#formularioPer{
+#formularioPer {
   padding-top: 5px;
-} 
+}
 /*Formulario*/
 #formPersonalizados input {
   font-family: "Josefin Sans", sans-serif;
@@ -92,7 +94,7 @@
   margin-top: 50px;
 }
 #formulario.openForm {
- /*  position: relative;
+  /*  position: relative;
   top: -157px; */
   margin-top: -107px;
 }
@@ -180,13 +182,14 @@
     margin-top: -20px;
   }
 
- .personalizadosButton, .personalizadosButtonB{
-    font-size: 0.9rem ;
+  .personalizadosButton,
+  .personalizadosButtonB {
+    font-size: 0.9rem;
     padding: 6px 10px 1px 10px;
   }
-   .personalizadosButton{
+  .personalizadosButton {
     margin-right: 3%;
-  } 
+  }
 }
 
 @media (min-width: 776px) and (max-width: 834px) {
@@ -207,11 +210,13 @@
     font-weight: 250;
     width: 80%;
   }
-   .personalizadosButton, .personalizadosButtonB{
-    font-size: 1rem ;}
-   .personalizadosButton{
+  .personalizadosButton,
+  .personalizadosButtonB {
+    font-size: 1rem;
+  }
+  .personalizadosButton {
     margin-right: 5%;
-  } 
+  }
 }
 
 @media (min-width: 1082px) {

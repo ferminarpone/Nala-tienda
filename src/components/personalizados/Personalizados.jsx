@@ -1,4 +1,4 @@
-import { Container, Grid, GridItem, Image} from "@chakra-ui/react";
+import { Container, Grid, GridItem, Image } from "@chakra-ui/react";
 import { NavBar } from "../navbar/NavBar";
 import { Formulario } from "./Formulario";
 import BannerPersonalizado from "../../assets/personalizados/BannerPersonalizado.png";
