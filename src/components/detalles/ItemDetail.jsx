@@ -7,7 +7,6 @@ import {
   Image,
   Stack,
 } from "@chakra-ui/react";
-import "./detalles.css";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { AiOutlineLeft } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -51,7 +50,6 @@ export const ItemDetail = ({ id, nombre, img }) => {
       return false;
     }
   };
-
   return (
     <Container maxWidth="80%" id="itemDetail">
       <Link to={"/productos"}>
@@ -105,12 +103,11 @@ export const ItemDetail = ({ id, nombre, img }) => {
         </Grid>
       </div>
       <div id="detallesMobile">
-        <Link to={`/producto/${id}`}>
+        <Link to={`/producto/${id}`} className="imgItemDetail">
           <Image
             src={img}
             alt={nombre}
             borderRadius="lg"
-            className="imgItemDetail"
           />
         </Link>
         <Link to={"/favoritos"} onClick={() => addToFav()}>

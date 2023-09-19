@@ -42,7 +42,7 @@ export const Formulario = () => {
             id="formPersonalizados"
           >
             <GridItem colSpan={{ base: "1", sm: "2" }}>
-              <Input
+              <input
                 type="text"
                 placeholder="Nombre*"
                 {...register("nombre")}
@@ -50,7 +50,7 @@ export const Formulario = () => {
               />
             </GridItem>
             <GridItem colSpan={{ base: "1", sm: "2" }}>
-              <Input
+              <input
                 type="text"
                 placeholder="Apellido*"
                 {...register("apellido")}
@@ -58,10 +58,10 @@ export const Formulario = () => {
               />
             </GridItem>
             <GridItem colSpan={{ base: "1", sm: "2" }}>
-              <Input type="email" placeholder="Email" {...register("email")} />
+              <input type="email" placeholder="Email" {...register("email")} />
             </GridItem>
             <GridItem colSpan={{ base: "1", sm: "2" }}>
-              <Input
+              <input
                 type="tel"
                 placeholder="Teléfono*"
                 {...register("telefono")}
@@ -69,7 +69,7 @@ export const Formulario = () => {
               />
             </GridItem>
             <GridItem colSpan={{ base: "1", sm: "3" }}>
-              <Input
+              <input
                 type="text"
                 placeholder="Url del producto Shein*"
                 {...register("url")}

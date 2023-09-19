@@ -65,9 +65,14 @@
 #formPersonalizados input {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 350;
+  width: 100%;
   border: solid 2px #4a9a91;
   border-radius: 14px;
-  height: 70px;
+  height: 55px;
+  padding-left: 3%;
+}
+#formPersonalizados input:focus {
+border: #4a9a91;
 }
 #formPersonalizados button {
   background-color: #4a9a91 !important;
@@ -75,7 +80,7 @@
   border-radius: 14px;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.4rem;
-  height: 70px;
+  height: 55px;
   width: 90%;
 }
 .dividerForm {
