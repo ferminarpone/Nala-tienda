@@ -7,9 +7,13 @@ import { useParams } from "react-router-dom";
 import { ItemDetail } from "./ItemDetail";
 import { Center, CircularProgress } from "@chakra-ui/react";
 import "./detalles.css";
+import { useContext } from "react";
+import { FavoritoContext } from "../../context/FavContext";
+
 export const ItemDetailContainer = () => {
   const [product, setProduct] = useState([]);
   const { id } = useParams();
+  const { isOpen } = useContext(FavoritoContext);
 
   //Llamado a la DB.
   useEffect(() => {
@@ -34,7 +38,9 @@ export const ItemDetailContainer = () => {
       ) : (
         <ItemDetail id={product.id} nombre={product.nombre} img={product.img} />
       )}
-      <Footer />
+      <div className={isOpen ? "footerMobItemDetail" : ""}>
+        <Footer />
+      </div>
     </>
   );
 };

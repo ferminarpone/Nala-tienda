@@ -8,7 +8,7 @@
 #itemDetail .back p {
   font-size: 1.8rem;
   font-weight: 300;
-  margin-left: 10px;
+  margin-left: 4px;
   margin-top: -9px;
 }
 #itemDetail h2 {
@@ -43,14 +43,16 @@
 }
 #detallesMobile {
   display: none;
+}
+.imgItemDetail {
   position: relative;
 }
 .favDetallesMobile {
   display: none;
   color: #ffffff;
   position: absolute;
-  bottom: 93%;
-  left: 86%;
+  top: 3%;
+  right: 6%;
   width: 25px !important;
   height: 25px !important;
 }
@@ -68,6 +70,17 @@
   margin-top: 12px;
   margin-bottom: 16px;
 }
+
+@media (max-width: 500px) {
+  #itemDetail.openMobile {
+    position: relative;
+    top: -157px;
+    z-index: -1;
+  }
+  .footerMobItemDetail {
+    margin-top: -157px;
+  }
+}
 @media (max-width: 377px) {
   #itemDetail .pedidoWsp {
     font-size: 0.8rem;
@@ -80,22 +93,33 @@
 }
 @media (max-width: 502px) {
   #itemDetail .back {
-    margin: 20px 0 15px;
+    margin: 25px 0 15px;
     font-size: 1rem;
   }
   #itemDetail .back p {
     font-size: 1.2rem;
-    padding-top: 5px;
+    padding-top: 2px;
     margin-left: 2px;
   }
 }
 @media (max-width: 1200px) {
   #detallesDesktop {
-    display: none ;
+    display: none;
   }
   #detallesMobile {
     display: flex;
     flex-direction: column;
+  }
+  #itemDetail .back {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  #itemDetail .back p {
+    font-size: 1.6rem;
+  }
+  .imgItemDetail {
+    display: flex;
+    justify-content: center;
   }
   .favDetallesMobile {
     display: flex;
@@ -105,19 +129,42 @@
   #detallesMobile {
     align-items: center;
   }
-  .imgItemDetail{
+  .imgItemDetail {
     width: 70%;
   }
-  #infoDetallesCard{
-    width: 70%;
+  #infoDetallesCard {
     display: flex;
     justify-content: start;
   }
-  #itemDetail .pedidoWsp {
-width: 70%;
+  #butonWsp {
+    display: flex;
+    justify-content: start;
   }
 }
-
+@media (min-width: 500px) and (max-width: 763px) {
+  #infoDetallesCard {
+    width: 70%;
+  }
+  #butonWsp {
+    width: 70%;
+  }
+}
+@media (min-width: 763px) and (max-width: 1200px) {
+  .imgItemDetail img {
+    width: 440px;
+  }
+  #infoDetallesCard {
+    width: 440px;
+  }
+  #butonWsp {
+    width: 440px;
+  }
+}
+@media (min-width: 878px) and (max-width: 1200px) {
+  .imgItemDetail {
+    width: 440px;
+  }
+}
 @media (max-height: 600px) {
   #itemDetail {
     min-height: 340px;

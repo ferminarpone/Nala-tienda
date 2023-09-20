@@ -15,6 +15,7 @@ import { FavoritoContext } from "../../context/FavContext";
 
 export const ItemDetail = ({ id, nombre, img }) => {
   const { fav, setFav } = useContext(FavoritoContext);
+  const { isOpen } = useContext(FavoritoContext);
   const currentUrl = window.location.href;
 
   //Función que agrega item a Favoritos.
@@ -51,7 +52,11 @@ export const ItemDetail = ({ id, nombre, img }) => {
     }
   };
   return (
-    <Container maxWidth="80%" id="itemDetail">
+    <Container
+      maxWidth="80%"
+      id="itemDetail"
+      className={isOpen ? "openMobile" : ""}
+    >
       <Link to={"/productos"}>
         <Flex className="back">
           <div>
@@ -103,27 +108,27 @@ export const ItemDetail = ({ id, nombre, img }) => {
         </Grid>
       </div>
       <div id="detallesMobile">
-        <Link to={`/producto/${id}`} className="imgItemDetail">
-          <Image
-            src={img}
-            alt={nombre}
-            borderRadius="lg"
-          />
-        </Link>
-        <Link to={"/favoritos"} onClick={() => addToFav()}>
-          {idFound() ? (
-            <FaHeart className="favDetallesMobile" />
-          ) : (
-            <FaRegHeart className="favDetallesMobile" />
-          )}
-        </Link>
+        <div className="imgItemDetail">
+          <Link to={`/producto/${id}`}>
+            <Image src={img} alt={nombre} borderRadius="lg" />
+          </Link>
+          <Link to={"/favoritos"} onClick={() => addToFav()}>
+            {idFound() ? (
+              <FaHeart className="favDetallesMobile" />
+            ) : (
+              <FaRegHeart className="favDetallesMobile" />
+            )}
+          </Link>
+        </div>
         <Stack mt="6" lineHeight="normal" id="infoDetallesCard">
           <h5>{nombre}</h5>
           <p>$ 1.000</p>
         </Stack>
-        <Button className="pedidoWsp" onClick={sendWsp}>
-          HACER PEDIDO POR WHATSAPP
-        </Button>
+        <div id="butonWsp">
+          <Button className="pedidoWsp" onClick={sendWsp}>
+            HACER PEDIDO POR WHATSAPP
+          </Button>
+        </div>
       </div>
     </Container>
   );
