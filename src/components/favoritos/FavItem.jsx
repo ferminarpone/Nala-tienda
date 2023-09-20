@@ -2,10 +2,11 @@ import { Button, Grid, GridItem, Image } from "@chakra-ui/react";
 import { useContext } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { FavoritoContext } from "../../context/FavContext";
+import { Link } from "react-router-dom";
 
 export const FavItem = ({ id, nombre, img, cantidad }) => {
   const { fav, setFav, isOpen } = useContext(FavoritoContext);
-
+  console.log(id)
   //Función que elimina un producto de favoritos.
   const removeItem = () => {
     const newFav = fav.filter((item) => item.id !== id);
@@ -36,7 +37,9 @@ export const FavItem = ({ id, nombre, img, cantidad }) => {
           alignItems="center"
           className="gridItem"
         >
-          <h1>{nombre}</h1>
+          <Link to={`/producto/${id}`}>
+          <h1 className="nombre">{nombre}</h1>
+          </Link>
         </GridItem>
         <GridItem
           colSpan={{ base: 0, sm: 2 }}

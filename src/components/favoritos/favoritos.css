@@ -114,7 +114,6 @@
     min-height: 900px;
   }
 }
-
 /*FavItem*/
 
 #favItem {
@@ -126,10 +125,13 @@
   border-radius: 10px;
   object-fit: cover;
 }
-#favItem h1 {
+#favItem .nombre {
   font-family: "Josefin Sans", sans-serif;
   color: #4a9a91;
   font-size: 1.8rem;
+}
+#favItem .nombre:hover{
+  text-decoration: underline;
 }
 #favItem .favHeart {
   background-color: #4a9a91;

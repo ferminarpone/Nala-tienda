@@ -8,7 +8,7 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
-import { AiOutlineLeft } from "react-icons/ai";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
@@ -17,6 +17,7 @@ export const ItemDetail = ({ id, nombre, img }) => {
   const { fav, setFav, isOpen } = useContext(FavoritoContext);
   const currentUrl = window.location.href;
 
+  console.log(fav)
   //Función que agrega item a Favoritos.
   const addToFav = () => {
     setFav((favItems) => {
@@ -56,16 +57,30 @@ export const ItemDetail = ({ id, nombre, img }) => {
       id="itemDetail"
       className={isOpen ? "openMobile" : ""}
     >
+      <div id="linkItemDetail">
       <div className="linkBack">
       <Link to={"/productos"}>
-        <Flex className="back">
+        <div className="back"> 
           <div>
             <AiOutlineLeft />
           </div>
-          <p>Atrás</p>
-        </Flex>
+          <p>Productos</p>
+        </div>
       </Link>
       </div>
+
+      <div className="favoritosBack">
+      <Link to={"/favoritos"}>
+        <div className="back"> 
+          <p>Favoritos</p>
+          <div>
+            <AiOutlineRight />
+          </div>
+        </div>
+      </Link>
+      </div>
+      </div>
+
       <div id="detallesDesktop">
         <Grid
           templateRows="repeat(3, 1fr)"
