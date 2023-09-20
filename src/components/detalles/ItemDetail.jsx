@@ -14,8 +14,7 @@ import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
 
 export const ItemDetail = ({ id, nombre, img }) => {
-  const { fav, setFav } = useContext(FavoritoContext);
-  const { isOpen } = useContext(FavoritoContext);
+  const { fav, setFav, isOpen } = useContext(FavoritoContext);
   const currentUrl = window.location.href;
 
   //Función que agrega item a Favoritos.
@@ -57,6 +56,7 @@ export const ItemDetail = ({ id, nombre, img }) => {
       id="itemDetail"
       className={isOpen ? "openMobile" : ""}
     >
+      <div className="linkBack">
       <Link to={"/productos"}>
         <Flex className="back">
           <div>
@@ -65,6 +65,7 @@ export const ItemDetail = ({ id, nombre, img }) => {
           <p>Atrás</p>
         </Flex>
       </Link>
+      </div>
       <div id="detallesDesktop">
         <Grid
           templateRows="repeat(3, 1fr)"

@@ -6,7 +6,6 @@
   position: relative;
   overflow: auto;
 }
-
 .containerFav {
   max-width: 90% !important;
 }
@@ -18,11 +17,15 @@
 #favoritos .item {
   width: 100%;
 }
+.linkRegresar {
+  width: 210px;
+}
 .regresar {
   font-family: "Josefin Sans", sans-serif;
   color: #676767;
   font-size: 1.2rem;
   margin-bottom: 30px;
+  width: 210px;
 }
 .regresar p {
   font-size: 1.6rem;
@@ -67,6 +70,14 @@
 @media (max-width: 502px) {
   .containerFav {
     max-width: 95% !important;
+  }
+  .containerFav.openNavFavoritos {
+    position: relative;
+    top: -157px;
+    z-index: -1;
+  }
+  .footerOpenFav {
+    margin-top: -157px;
   }
   .regresar {
     margin-top: 30px;
@@ -159,7 +170,7 @@
 #formularioFavorito {
   z-index: 1;
   position: absolute;
-  top: 10%;
+  top: 84px;
   left: 21%;
   background-color: #eff9ed;
   width: 60%;
@@ -215,7 +226,7 @@
 @media (max-width: 502px) {
   #formularioFavorito {
     width: 80%;
-    top: 12%;
+    top: 84px;
     left: 11%;
   }
   #formularioFavorito .closed {
@@ -259,7 +270,7 @@
 
 @media (min-width: 1024px) {
   #formularioFavorito {
-    top: 10%;
+    top: 100px;
     left: 25%;
     background-color: #eff9ed;
     width: 50%;
@@ -272,7 +283,6 @@
 }
 @media (min-width: 1500px) {
   #formularioFavorito {
-    top: 10%;
     left: 30%;
     background-color: #eff9ed;
     width: 40%;

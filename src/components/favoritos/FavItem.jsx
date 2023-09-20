@@ -4,7 +4,7 @@ import { RxCross2 } from "react-icons/rx";
 import { FavoritoContext } from "../../context/FavContext";
 
 export const FavItem = ({ id, nombre, img, cantidad }) => {
-  const { fav, setFav } = useContext(FavoritoContext);
+  const { fav, setFav, isOpen } = useContext(FavoritoContext);
 
   //Función que elimina un producto de favoritos.
   const removeItem = () => {

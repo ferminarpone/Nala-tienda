@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@250;350;450;700&display=swap");
 
+#itemDetail .linkBack {
+  width: 100px;
+}
 #itemDetail .back {
   font-family: "Josefin Sans", sans-serif;
   color: #676767;

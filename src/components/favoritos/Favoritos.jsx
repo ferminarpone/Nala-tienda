@@ -10,7 +10,7 @@ import { FormularioFav } from "./FormularioFav";
 import "./favoritos.css";
 
 export const Favoritos = () => {
-  const { fav } = useContext(FavoritoContext);
+  const { fav, isOpen } = useContext(FavoritoContext);
 
   //State para hacer aparecer el formulario
   const [form, setform] = useState(false);
@@ -25,26 +25,30 @@ export const Favoritos = () => {
   const itemFav = () => (fav.length > 0 ? true : false);
   useEffect(() => {
     window.scroll(0, 0);
-  }, []);
+  }, [form]);
   return (
     <>
       <div className={form ? "mediaOpen" : ""}>
-        {form ? <FormularioFav modalClosed={modalClosed}/> : ""}
+        {form ? <FormularioFav modalClosed={modalClosed} /> : ""}
         <div onClick={modalClosed}>
           <NavBar />
-          <Container className="containerFav">
-            <Link to={"/productos"}>
-              {itemFav() ? (
-                <Flex className="regresar">
-                  <div>
-                    <AiOutlineLeft />
-                  </div>
-                  <p>Seguir eligiendo</p>
-                </Flex>
-              ) : (
-                ""
-              )}
-            </Link>
+          <Container
+            className={`containerFav ${isOpen ? "openNavFavoritos" : ""}`}
+          >
+            <div className="linkRegresar">
+              <Link to={"/productos"}>
+                {itemFav() ? (
+                  <Flex className="regresar">
+                    <div>
+                      <AiOutlineLeft />
+                    </div>
+                    <p>Seguir eligiendo</p>
+                  </Flex>
+                ) : (
+                  ""
+                )}
+              </Link>
+            </div>
             {itemFav() ? (
               <div id="favoritos">
                 {fav.map((item) => (
@@ -80,7 +84,9 @@ export const Favoritos = () => {
               </Center>
             )}
           </Container>
-          <Footer />
+          <div className={isOpen ? "footerOpenFav" : ""}>
+            <Footer />
+          </div>
         </div>
       </div>
     </>
