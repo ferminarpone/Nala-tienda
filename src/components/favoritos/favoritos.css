@@ -49,6 +49,8 @@
   font-weight: 400;
   margin-top: 30px;
 }
+#favoritos .comprarWsp:hover {
+background-color: #4fa19c;}
 #sinFav h1 {
   font-family: "Josefin Sans", sans-serif;
   color: #676767;
@@ -140,7 +142,9 @@
   border-radius: 14px;
   height: 50px;
 }
-
+#favItem .favHeart:hover {
+  background-color: #357870;
+}
 @media (max-width: 502px) {
   #favItem h1 {
     color: #606060;

@@ -14,10 +14,10 @@ import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
 
 export const ItemDetail = ({ id, nombre, img }) => {
-  const { fav, setFav, isOpen } = useContext(FavoritoContext);
+  const { fav, setFav, isOpen, idFound } = useContext(FavoritoContext);
   const currentUrl = window.location.href;
 
-  console.log(fav)
+  console.log(fav);
   //Función que agrega item a Favoritos.
   const addToFav = () => {
     setFav((favItems) => {
@@ -42,15 +42,15 @@ export const ItemDetail = ({ id, nombre, img }) => {
     window.open(url, "_blank");
   };
 
-  //Función que devuelve true si el elemento se enfuentra en Favoritos.
-  const idFound = () => {
+  //Función que devuelve true si el elemento se enfuentra en Favoritos. AGREGADA A CONTEXT
+/*   const idFound = () => {
     const idFind = fav.find((item) => item.id === id);
     if (idFind) {
       return true;
     } else {
       return false;
     }
-  };
+  }; */
   return (
     <Container
       maxWidth="80%"
@@ -58,27 +58,27 @@ export const ItemDetail = ({ id, nombre, img }) => {
       className={isOpen ? "openMobile" : ""}
     >
       <div id="linkItemDetail">
-      <div className="linkBack">
-      <Link to={"/productos"}>
-        <div className="back"> 
-          <div>
-            <AiOutlineLeft />
-          </div>
-          <p>Productos</p>
+        <div className="linkBack">
+          <Link to={"/productos"}>
+            <div className="back">
+              <div>
+                <AiOutlineLeft />
+              </div>
+              <p>Productos</p>
+            </div>
+          </Link>
         </div>
-      </Link>
-      </div>
 
-      <div className="favoritosBack">
-      <Link to={"/favoritos"}>
-        <div className="back"> 
-          <p>Favoritos</p>
-          <div>
-            <AiOutlineRight />
-          </div>
+        <div className="favoritosBack">
+          <Link to={"/favoritos"}>
+            <div className="back">
+              <p>Favoritos</p>
+              <div>
+                <AiOutlineRight />
+              </div>
+            </div>
+          </Link>
         </div>
-      </Link>
-      </div>
       </div>
 
       <div id="detallesDesktop">
@@ -108,7 +108,7 @@ export const ItemDetail = ({ id, nombre, img }) => {
                   className="buttonHeart"
                   onClick={() => addToFav()}
                 >
-                  <FaRegHeart />
+                  {idFound(id) ? <FaHeart className="heartDesktop" /> : <FaRegHeart className="heartDesktop"/>}
                 </Button>
               </Link>
             </Flex>
@@ -129,7 +129,7 @@ export const ItemDetail = ({ id, nombre, img }) => {
             <Image src={img} alt={nombre} borderRadius="lg" />
           </Link>
           <Link to={"/favoritos"} onClick={() => addToFav()}>
-            {idFound() ? (
+            {idFound(id) ? (
               <FaHeart className="favDetallesMobile" />
             ) : (
               <FaRegHeart className="favDetallesMobile" />
