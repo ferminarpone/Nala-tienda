@@ -85,7 +85,7 @@ border: #4a9a91;
 }
 .dividerForm {
   position: relative;
-  right: 160px;
+  right:160px ;
   width: 188px !important;
 }
 .requerido {
@@ -99,8 +99,6 @@ border: #4a9a91;
   margin-top: 50px;
 }
 #formulario.openForm {
-  /*  position: relative;
-  top: -157px; */
   margin-top: -107px;
 }
 
@@ -113,7 +111,15 @@ border: #4a9a91;
     width: 90px !important;
   }
 }
-
+@media (min-width:374px) and (max-width: 501px) {
+  #formulario .title {
+    font-size: 1.3rem;
+  }
+  .dividerForm {
+    right: 92px;
+    width: 116px !important;
+  }
+}
 @media (max-width: 501px) {
   .bgPersonalizadosDesktop {
     background-color: inherit;
@@ -139,14 +145,6 @@ border: #4a9a91;
   }
 
   /*Formulario*/
-
-  #formulario .title {
-    font-size: 1.3rem;
-  }
-  .dividerForm {
-    right: 92px;
-    width: 116px !important;
-  }
   #formPersonalizados {
     margin-top: 35px;
   }

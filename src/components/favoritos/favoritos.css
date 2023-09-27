@@ -4,8 +4,9 @@
 .mediaOpen {
   background-color: rgba(156, 163, 163, 0.4);
   position: relative;
-  overflow: auto;
 }
+ /*  overflow: auto;
+} */
 .containerFav {
   max-width: 90% !important;
 }
@@ -146,7 +147,7 @@ background-color: #4fa19c;}
   background-color: #357870;
 }
 @media (max-width: 502px) {
-  #favItem h1 {
+  #favItem .nombre {
     color: #606060;
     font-size: 1.1rem;
   }

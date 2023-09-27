@@ -14,10 +14,9 @@ import { FavoritoContext } from "../../context/FavContext";
 import { set } from "react-hook-form";
 
 export const Item = ({ nombre, categoria, img, id }) => {
-  const { fav, setFav, idFound } = useContext(FavoritoContext);
+  const { fav, setFav, idFound, addToFav } = useContext(FavoritoContext);
 
-
-/* 
+  /* 
 ORIGINAL
   const addToFav = () => {
     setFav((favItems) => {
@@ -38,17 +37,16 @@ ORIGINAL
 
   // Función que agrega o elimina un producto de favoritos.
 
-  const addToFav = () => {
-
-    const itemExist = fav.find((item)=> item.id ===id)
-    if(itemExist){
+/*   const addToFav = () => {
+    const itemExist = fav.find((item) => item.id === id);
+    if (itemExist) {
       const newFav = fav.filter((item) => item.id !== id);
       setFav(newFav);
-    }else{
-      const favItem = [...fav, {id, img, nombre}]
-      setFav(favItem)
+    } else {
+      const favItem = [...fav, { id, img, nombre }];
+      setFav(favItem);
     }
-  };
+  }; */
 
   return (
     <GridItem id="cardItem">
@@ -63,12 +61,14 @@ ORIGINAL
                 className="imgItem"
               />
             </Link>
-            <Link to={"/favoritos"} onClick={() => addToFav()}>
-              {idFound(id) ? (
-                <FaHeart className="favMobile" />
-              ) : (
-                <FaRegHeart className="favMobile" />
-              )}
+            <Link  to={idFound(id) ? "/productos" : "/favoritos"} onClick={()=>addToFav(id, img, nombre)}>
+              <div className="bgFavMobile">
+                {idFound(id) ? (
+                  <FaHeart className="favMobile" />
+                ) : (
+                  <FaRegHeart className="favMobile" />
+                )}
+              </div>
             </Link>
           </div>
           <Stack mt="6" lineHeight="normal" id="inforCard">
@@ -85,17 +85,17 @@ ORIGINAL
               </Link>
             </Box>
             <Box>
-              <Link to={idFound(id)? "/productos" : "/favoritos" }>
+              <Link to={idFound(id) ? "/productos" : "/favoritos"}>
                 <Button
                   variant="solid"
                   className="buttonCardHeart"
-                  onClick={() => addToFav()}
+                  onClick={() => addToFav(id)}
                 >
-              {idFound(id) ? (
-                <FaHeart className="heart"/>
-              ) : (
-                <FaRegHeart className="heart"/>
-              )}
+                  {idFound(id) ? (
+                    <FaHeart className="heart" />
+                  ) : (
+                    <FaRegHeart className="heart" />
+                  )}
                 </Button>
               </Link>
             </Box>

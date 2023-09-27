@@ -136,11 +136,22 @@
   position: relative;
 }
 .favMobile {
-  display: none;
-  color: #ffffff;
+ /*  color: #ffffff; */
+ color: #a5a5a5;
   position: absolute;
-  bottom: 86%;
-  left: 84%;
+}
+.bgFavMobile{
+  display: none;
+  background-color: #ffffff;
+  width: 22px;
+  height: 22px;
+  border-radius:15px ;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 84%;
+  left: 80%; 
+  
 }
 
 @media (max-width: 502px) {
@@ -154,10 +165,14 @@
   #inforCard h5 {
     margin-top: -14px;
     font-size: 1rem;
+    max-width:160px;
   }
   #inforCard p {
     font-size: 1rem;
     margin-top: -6px;
+  }
+  .bgFavMobile{
+    display: flex;
   }
   .favMobile {
     display: flex;
