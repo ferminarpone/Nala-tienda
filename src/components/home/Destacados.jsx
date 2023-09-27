@@ -19,7 +19,7 @@ import StrapNegro from "../../assets/home/StrapNegro.png";
 
 export const Destacados = () => {
   return (
-    <Container maxWidth="90%" mt="90px">
+    <Container maxWidth="90%" pt="90px">
       <div className="divTitle">
         <h2 className="title">DESTACADOS</h2>
         <Divider

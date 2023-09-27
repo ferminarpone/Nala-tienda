@@ -8,17 +8,17 @@ import { FavoritoContext } from "../../context/FavContext";
 
 export const NavBarMobile = () => {
   const { isOpen, setIsOpen } = useContext(FavoritoContext);
-console.log(isOpen);
+  console.log(isOpen);
   return (
     <nav id="navMobile">
       <div className="navTop">
         <button className="menu" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <RxCross2 /> : <RxHamburgerMenu />}
         </button>
-        <Link to={`/`}>
+        <Link to={`/`} onClick={() => isOpen && setIsOpen(!isOpen)}>
           <Image src={icono} alt="Logo Nala Tienda" w="80%" ml="6%" />
         </Link>
-        <Link to={`/favoritos`}>
+        <Link to={`/favoritos`} onClick={() => isOpen && setIsOpen(!isOpen)}>
           <FaRegHeart className="heartNavBar" />
         </Link>
       </div>
@@ -26,19 +26,27 @@ console.log(isOpen);
 
       <ul className={`navList ${isOpen ? "open" : ""} `}>
         <li onClick={() => setIsOpen(!isOpen)}>
-          <Link to={"/productos"}>Productos</Link>
+          <Link to={"/productos"}>
+            <h1>Productos</h1>
+          </Link>
           <hr />
         </li>
         <li onClick={() => setIsOpen(!isOpen)}>
-          <Link to={"/personalizados"}>Personalizados</Link>
+          <Link to={"/personalizados"}>
+            <h1>Personalizados</h1>
+          </Link>
           <hr />
         </li>
         <li onClick={() => setIsOpen(!isOpen)}>
-          <Link to={"/nosotros"}>Nosotros</Link>
+          <Link to={"/nosotros"}>
+            <h1>Nosotros</h1>
+          </Link>
           <hr />
         </li>
         <li className="differentLi" onClick={() => setIsOpen(!isOpen)}>
-          <Link to={"/contactanos"}>Contactanos</Link>
+          <Link to={"/contactanos"}>
+            <h1>Contactanos</h1>
+          </Link>
         </li>
       </ul>
     </nav>

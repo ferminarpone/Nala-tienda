@@ -27,6 +27,10 @@
   font-size: 1.1rem;
   color: #4e958f;
 }
+#categorias h5:hover, .heartIcon:hover {
+transform: scale(1.1);
+}
+
 #categorias .productosTitle {
   width: 156px;
 }
@@ -145,7 +149,7 @@
   background-color: #ffffff;
   width: 22px;
   height: 22px;
-  border-radius:15px ;
+  border-radius:100% ;
   justify-content: center;
   align-items: center;
   position: absolute;

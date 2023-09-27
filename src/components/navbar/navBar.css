@@ -78,15 +78,14 @@
  .navList.open {
   display: flex;
 } 
-
-
 .navList li {
   width: 100%;
   text-align: center;
   height: 100%;
-
 }
-
+.navList li h1{
+  width: 100%;
+}
 .navList li hr {
   opacity: 0.4;
   margin: 0.3rem 0rem 0.3rem 0rem;
