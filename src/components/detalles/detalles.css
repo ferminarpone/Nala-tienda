@@ -62,17 +62,26 @@ transform: scale(1.2);
 .imgItemDetail {
   position: relative;
 }
-.favDetallesMobile {
-  display: none;
-  color: #ffffff;
+.bgFavDetail{
   position: absolute;
   top: 3%;
   right: 6%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  width: 33px;
+  height: 33px;
+}
+.favDetallesMobile {
+  display: none;
+  color: #a5a5a5;
   width: 25px !important;
   height: 25px !important;
 }
 .favDetallesMobile:hover{
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 #infoDetallesCard h5 {

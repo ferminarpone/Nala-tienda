@@ -14,43 +14,14 @@ import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
 
 export const ItemDetail = ({ id, nombre, img }) => {
-  const { fav, setFav, isOpen, idFound } = useContext(FavoritoContext);
+  const { isOpen, idFound, addToFav } = useContext(FavoritoContext);
   const currentUrl = window.location.href;
-
-  console.log(fav);
-  //Función que agrega item a Favoritos.
-  const addToFav = () => {
-    setFav((favItems) => {
-      const itemFound = favItems.find((item) => item.id === id);
-      if (itemFound) {
-        return favItems.map((item) => {
-          if (item.id === id) {
-            return { ...item, quantity: item.quantity + 1 };
-          } else {
-            return item;
-          }
-        });
-      } else {
-        return [...favItems, { id, img, nombre, quantity: 1 }];
-      }
-    });
-  };
-
   //Función que envia el producto en cuestion por wsp.
   const sendWsp = () => {
     const url = `https://web.whatsapp.com/send?phone=34617429097&text=%0A%2ANala%20tienda%2A%0AConsulta%20disponibilidad%20de%20producto%0A%0A%2AProducto%3A%2A ${nombre}%0A%0A%2AId%3A%2A%${id}%0A%0A ${currentUrl}`;
     window.open(url, "_blank");
   };
 
-  //Función que devuelve true si el elemento se enfuentra en Favoritos. AGREGADA A CONTEXT
-/*   const idFound = () => {
-    const idFind = fav.find((item) => item.id === id);
-    if (idFind) {
-      return true;
-    } else {
-      return false;
-    }
-  }; */
   return (
     <Container
       maxWidth="80%"
@@ -102,13 +73,17 @@ export const ItemDetail = ({ id, nombre, img }) => {
           <GridItem colSpan={1} rowSpan={1}>
             <Flex justifyContent="space-between">
               <h2>{nombre}</h2>
-              <Link to={"/favoritos"}>
+              <Link to={idFound(id) ? `/producto/${id}` : "/favoritos"}>
                 <Button
                   variant="solid"
                   className="buttonHeart"
-                  onClick={() => addToFav()}
+                  onClick={() => addToFav(id, img, nombre)}
                 >
-                  {idFound(id) ? <FaHeart className="heartDesktop" /> : <FaRegHeart className="heartDesktop"/>}
+                  {idFound(id) ? (
+                    <FaHeart className="heartDesktop" />
+                  ) : (
+                    <FaRegHeart className="heartDesktop" />
+                  )}
                 </Button>
               </Link>
             </Flex>
@@ -128,12 +103,17 @@ export const ItemDetail = ({ id, nombre, img }) => {
           <Link to={`/producto/${id}`}>
             <Image src={img} alt={nombre} borderRadius="lg" />
           </Link>
-          <Link to={"/favoritos"} onClick={() => addToFav()}>
-            {idFound(id) ? (
-              <FaHeart className="favDetallesMobile" />
-            ) : (
-              <FaRegHeart className="favDetallesMobile" />
-            )}
+          <Link
+            to={idFound(id) ? `/producto/${id}` : "/favoritos"}
+            onClick={() => addToFav(id, img, nombre)}
+          >
+            <div className="bgFavDetail">
+              {idFound(id) ? (
+                <FaHeart className="favDetallesMobile" />
+              ) : (
+                <FaRegHeart className="favDetallesMobile" />
+              )}
+            </div>
           </Link>
         </div>
         <Stack mt="6" lineHeight="normal" id="infoDetallesCard">

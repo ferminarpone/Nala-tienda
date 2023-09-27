@@ -11,43 +11,9 @@ import { useContext } from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FavoritoContext } from "../../context/FavContext";
-import { set } from "react-hook-form";
 
 export const Item = ({ nombre, categoria, img, id }) => {
-  const { fav, setFav, idFound, addToFav } = useContext(FavoritoContext);
-
-  /* 
-ORIGINAL
-  const addToFav = () => {
-    setFav((favItems) => {
-      const itemFound = favItems.find((item) => item.id === id);
-      if (itemFound) {
-        return favItems.map((item) => {
-          if (item.id === id) {
-            return { ...item, quantity: item.quantity + 1 };
-          } else {
-            return item;
-          }
-        });
-      } else {
-        return [...favItems, { id, img, nombre, quantity: 1 }];
-      }
-    });
-  }; */
-
-  // Función que agrega o elimina un producto de favoritos.
-
-/*   const addToFav = () => {
-    const itemExist = fav.find((item) => item.id === id);
-    if (itemExist) {
-      const newFav = fav.filter((item) => item.id !== id);
-      setFav(newFav);
-    } else {
-      const favItem = [...fav, { id, img, nombre }];
-      setFav(favItem);
-    }
-  }; */
-
+  const { idFound, addToFav } = useContext(FavoritoContext);
   return (
     <GridItem id="cardItem">
       <Center>
