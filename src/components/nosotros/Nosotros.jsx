@@ -5,8 +5,11 @@ import Banner from "../../assets/nosotros/ImgQueHacemos.png";
 import { Historia } from "./Historia";
 import { Terminos } from "./Terminos";
 import { Footer } from "../../components/footer/Footer";
+import { useContext } from "react";
+import { FavoritoContext } from "../../context/FavContext";
 
 export const Nosotros = () => {
+  const { isOpen, setIsOpen } = useContext(FavoritoContext);
   return (
     <>
       <div id="bgNosotros">
@@ -21,7 +24,7 @@ export const Nosotros = () => {
               gap={4}
             >
               <GridItem rowSpan={3} rowStart={2} colSpan={3}>
-                  <Image src={Banner} className="bannerQueHacemos"  />
+                <Image src={Banner} className="bannerQueHacemos" />
               </GridItem>
               <GridItem
                 rowSpan={1}
@@ -48,27 +51,29 @@ export const Nosotros = () => {
             </Grid>
           </Container>
         </div>
-        <div id="nosotrosMobile">
-          <Container
-            maxW="85%"
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-          >
-            <h1 className="titleNosotros">Que Hacemos</h1>
-            <p className="nosotrosParrafo">
-              Nala tienda es un emprendimiento que compra en la pagina original
-              de Shein, trayendo los productos de Brasil. Contamos con dos tipos
-              de venta, por un lado vendemos los productos en tendencias y por
-              otro tenemos un servicio personalizado de traerte hasta tu casa lo
-              que vos quieras dentro de las categorías más accesibles por el
-              tamaño (como maquillaje, fundas de celular o auriculares,
-              billetera, cartera, medias, etc).
-            </p>
-          </Container>
+        <div onClick={() => isOpen && setIsOpen(!isOpen)}>
+          <div id="nosotrosMobile">
+            <Container
+              maxW="85%"
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+            >
+              <h1 className="titleNosotros">Que Hacemos</h1>
+              <p className="nosotrosParrafo">
+                Nala tienda es un emprendimiento que compra en la pagina
+                original de Shein, trayendo los productos de Brasil. Contamos
+                con dos tipos de venta, por un lado vendemos los productos en
+                tendencias y por otro tenemos un servicio personalizado de
+                traerte hasta tu casa lo que vos quieras dentro de las
+                categorías más accesibles por el tamaño (como maquillaje, fundas
+                de celular o auriculares, billetera, cartera, medias, etc).
+              </p>
+            </Container>
+          </div>
+          <Historia />
+          <Terminos />
         </div>
-        <Historia />
-        <Terminos />
       </div>
       <Footer />
     </>

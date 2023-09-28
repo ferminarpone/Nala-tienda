@@ -10,7 +10,7 @@ import { FavoritoContext } from "../../context/FavContext";
 export const ItemListContainer = () => {
   const [producto, setProducto] = useState([]);
   const { category } = useParams();
-  const { isOpen } = useContext(FavoritoContext);
+  const { isOpen, setIsOpen } = useContext(FavoritoContext);
 
   //Llamado a la DB.
   useEffect(() => {
@@ -29,15 +29,17 @@ export const ItemListContainer = () => {
   return (
     <>
       <NavBar />
-      <div id="itemListMobile" className={isOpen ? "openIM" : ""}>
-        {category ? (
-          <ItemList product={filterCart} categoria={category} />
-        ) : (
-          <ItemList product={producto} />
-        )}
-      </div>
-      <div id="footerListMobile" className={isOpen ? "openFM" : ""}>
-        <Footer />
+      <div onClick={() => isOpen && setIsOpen(!isOpen)}>
+        <div id="itemListMobile" className={isOpen ? "openIM" : ""}>
+          {category ? (
+            <ItemList product={filterCart} categoria={category} />
+          ) : (
+            <ItemList product={producto} />
+          )}
+        </div>
+        <div id="footerListMobile" className={isOpen ? "openFM" : ""}>
+          <Footer />
+        </div>
       </div>
     </>
   );

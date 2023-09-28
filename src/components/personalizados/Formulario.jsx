@@ -23,7 +23,7 @@ export const Formulario = () => {
   };
   return (
     <>
-      <Container id="formulario" className={isOpen ? "openForm" : ""}>
+      <Container id="formulario">
         <div className="divTitle">
           <h2 className="title">COMPLETA EL FORMULARIO</h2>
           <Divider
@@ -46,7 +46,7 @@ export const Formulario = () => {
                 type="text"
                 placeholder="Nombre*"
                 {...register("nombre")}
-                isRequired
+                /* isRequired */
               />
             </GridItem>
             <GridItem colSpan={{ base: "1", sm: "2" }}>
@@ -54,7 +54,7 @@ export const Formulario = () => {
                 type="text"
                 placeholder="Apellido*"
                 {...register("apellido")}
-                isRequired
+                /* isRequired */
               />
             </GridItem>
             <GridItem colSpan={{ base: "1", sm: "2" }}>
@@ -65,7 +65,7 @@ export const Formulario = () => {
                 type="tel"
                 placeholder="Teléfono*"
                 {...register("telefono")}
-                isRequired
+               /*  isRequired */
               />
             </GridItem>
             <GridItem colSpan={{ base: "1", sm: "3" }}>
@@ -73,7 +73,7 @@ export const Formulario = () => {
                 type="text"
                 placeholder="Url del producto Shein*"
                 {...register("url")}
-                isRequired
+               /*  isRequired */
               />
             </GridItem>
             <GridItem display="flex" justifyContent="end">

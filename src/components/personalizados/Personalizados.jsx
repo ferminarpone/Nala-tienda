@@ -8,7 +8,7 @@ import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
 
 export const Personalizados = () => {
-  const { isOpen } = useContext(FavoritoContext);
+  const { isOpen, setIsOpen } = useContext(FavoritoContext);
   const sheinOpen = () => {
     window.open(
       "https://es.shein.com/?url_from=esgooglebrandshein_srsa_Shein01_20221011&cid=18569136939&setid=143075703795&adid=627556790592&pf=GOOGLE&gclid=Cj0KCQjwuNemBhCBARIsADp74QRjiuUE0FiDAH3TdzzJAWYOTm_vsQM_SLXOkPFflv7FWTBydcHKdu4aAknZEALw_wcB",
@@ -27,6 +27,7 @@ export const Personalizados = () => {
               quieras y no se encuentre en nuestro catálogo.{" "}
             </p>
           </div>
+
           <Container maxWidth="90%" id="personalizados">
             <Grid
               h="auto"
@@ -80,10 +81,10 @@ export const Personalizados = () => {
           </Container>
         </div>
       </div>
-      <div id="formularioPer">
-        <Formulario />
-      </div>
-      <div className={isOpen ? "openFooter" : ""}>
+      <div onClick={() => isOpen && setIsOpen(!isOpen)}>
+        <div id="formularioPer" className={isOpen ? "openFormularioPer" : ""}>
+          <Formulario />
+        </div>
         <Footer />
       </div>
     </>

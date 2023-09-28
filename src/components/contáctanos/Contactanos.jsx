@@ -9,7 +9,7 @@ import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
 
 export const Contactanos = () => {
-  const { isOpen } = useContext(FavoritoContext);
+  const { isOpen, setIsOpen } = useContext(FavoritoContext);
 
   return (
     <>
@@ -19,11 +19,15 @@ export const Contactanos = () => {
           <Grid
             templateRows="repeat(3, 1fr)"
             templateColumns="repeat(7, 1fr)"
-            gap={4}  
-            className="gridContactanos"        
+            gap={4}
+            className="gridContactanos"
           >
-            <GridItem rowSpan={3}  colSpan={4} >
-              <Image src={Banner} className="bannerContactanos" alt="Gorras Shein"/>
+            <GridItem rowSpan={3} colSpan={4}>
+              <Image
+                src={Banner}
+                className="bannerContactanos"
+                alt="Gorras Shein"
+              />
             </GridItem>
             <GridItem rowSpan={1} colSpan={3}>
               <InfoContactanos />
@@ -34,14 +38,16 @@ export const Contactanos = () => {
           </Grid>
         </Container>
       </div>
-      <div id="contactanosMobile" className={isOpen ? "open" : ""}>
-        <h1 className="titleInfo">Contáctanos</h1>
+      <div onClick={() => isOpen && setIsOpen(!isOpen)}>
+        <div id="contactanosMobile" className={isOpen ? "open" : ""}>
+          <h1 className="titleInfo">Contáctanos</h1>
+        </div>
+        <div id="componentsMobile">
+          <FormContactanos />
+          <InfoContactanos />
+        </div>
+        <Footer />
       </div>
-      <div id="componentsMobile">
-        <FormContactanos />
-        <InfoContactanos />
-      </div>
-      <Footer />
     </>
   );
 };

@@ -13,7 +13,7 @@ import { FavoritoContext } from "../../context/FavContext";
 export const ItemDetailContainer = () => {
   const [product, setProduct] = useState([]);
   const { id } = useParams();
-  const { isOpen } = useContext(FavoritoContext);
+  const { isOpen, setIsOpen } = useContext(FavoritoContext);
 
   //Llamado a la DB.
   useEffect(() => {
@@ -31,15 +31,21 @@ export const ItemDetailContainer = () => {
   return (
     <>
       <NavBar />
-      {product == "" ? (
-        <Center minH="400px">
-          <CircularProgress isIndeterminate color="#7cbfba" />
-        </Center>
-      ) : (
-        <ItemDetail id={product.id} nombre={product.nombre} img={product.img} />
-      )}
-      <div className={isOpen ? "footerMobItemDetail" : ""}>
-        <Footer />
+      <div onClick={() => isOpen && setIsOpen(!isOpen)}>
+        {product == "" ? (
+          <Center minH="400px">
+            <CircularProgress isIndeterminate color="#7cbfba" />
+          </Center>
+        ) : (
+          <ItemDetail
+            id={product.id}
+            nombre={product.nombre}
+            img={product.img}
+          />
+        )}
+        <div className={isOpen ? "footerMobItemDetail" : ""}>
+          <Footer />
+        </div>
       </div>
     </>
   );
