@@ -55,7 +55,7 @@ export const Item = ({ nombre, categoria, img, id }) => {
                 <Button
                   variant="solid"
                   className="buttonCardHeart"
-                  onClick={() => addToFav(id)}
+                  onClick={() => addToFav(id, img, nombre)}
                 >
                   {idFound(id) ? (
                     <FaHeart className="heart" />
