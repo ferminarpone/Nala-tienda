@@ -22,40 +22,25 @@ export const Opiniones = () => {
         />
       </div>
       <div id="cards">
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, quia nisi architecto quam delectus reprehenderit?
-          </p>
-          <ul>
-            <li> Maria A.</li>
-          </ul>
-        </div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
-            sit?
-          </p>
-          <ul>
-            <li>Sofia R.</li>
-          </ul>
-        </div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
-            sit?
-          </p>
-          <ul>
-            <li>Juan S.</li>
-          </ul>
-        </div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
-            sit?
-          </p>
-          <ul>
-            <li>Luisa J.</li>
-          </ul>
+        <div className="gridCards">
+          <div>
+            <p>Súper lindo, me encanto.</p>
+            <ul>
+              <li> Sofia</li>
+            </ul>
+          </div>
+          <div>
+            <p>Me encantaron los productos!</p>
+            <ul>
+              <li>Candelaria</li>
+            </ul>
+          </div>
+          <div>
+            <p>Muy lindo todo!!</p>
+            <ul>
+              <li>Josefina</li>
+            </ul>
+          </div>
         </div>
       </div>
     </Container>

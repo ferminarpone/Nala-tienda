@@ -31,7 +31,7 @@ export const InfoContactanos = () => {
             <Image src={mail} alt="icono e-mail" />
           </GridItem>
           <GridItem colSpan={3}>
-            <p>nala_tienda@gmail.com</p>
+            <p>nalatiendaa35@gmail.com</p>
           </GridItem>
           <GridItem colSpan={1} mt="10px">
             <Image src={ig} alt="icono instagram" />

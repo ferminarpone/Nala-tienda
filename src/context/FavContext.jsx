@@ -1,10 +1,15 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const FavoritoContext = createContext(null);
 
 export const FavContext = ({ children }) => {
   // Array de productos en favoritos
-  const [fav, setFav] = useState([]);
+  const [fav, setFav] = useState(JSON.parse(localStorage.getItem('favoritos'))||[]);
+
+  useEffect(() => {
+    localStorage.setItem('favoritos', JSON.stringify(fav));
+  }, [fav])
+  
   //UseState para el manejo del NavBar
   const [isOpen, setIsOpen] = useState(false);
   //Función que devuelve true si el elemento se enfuentra en Favoritos.

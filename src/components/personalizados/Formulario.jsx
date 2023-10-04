@@ -5,6 +5,7 @@ import {
   Grid,
   GridItem,
   Input,
+  Tooltip,
 } from "@chakra-ui/react";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
@@ -42,38 +43,38 @@ export const Formulario = () => {
             id="formPersonalizados"
           >
             <GridItem colSpan={{ base: "1", sm: "2" }}>
-              <input
+              <Input
                 type="text"
                 placeholder="Nombre*"
                 {...register("nombre")}
-                /* isRequired */
+                isRequired
               />
             </GridItem>
             <GridItem colSpan={{ base: "1", sm: "2" }}>
-              <input
+              <Input
                 type="text"
                 placeholder="Apellido*"
                 {...register("apellido")}
-                /* isRequired */
+                isRequired
               />
             </GridItem>
             <GridItem colSpan={{ base: "1", sm: "2" }}>
-              <input type="email" placeholder="Email" {...register("email")} />
+              <Input type="email" placeholder="Email" {...register("email")} />
             </GridItem>
             <GridItem colSpan={{ base: "1", sm: "2" }}>
-              <input
+              <Input
                 type="tel"
                 placeholder="Teléfono*"
                 {...register("telefono")}
-               /*  isRequired */
+                isRequired
               />
             </GridItem>
             <GridItem colSpan={{ base: "1", sm: "3" }}>
-              <input
+              <Input
                 type="text"
                 placeholder="Url del producto Shein*"
                 {...register("url")}
-               /*  isRequired */
+                isRequired
               />
             </GridItem>
             <GridItem display="flex" justifyContent="end">
