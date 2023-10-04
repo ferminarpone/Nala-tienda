@@ -1,9 +1,9 @@
-import { useContext, useEffect, useState } from "react";
+import  { useContext, useEffect, useState } from "react";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import { NavBar } from "../navbar/NavBar";
 import { Footer } from "../../components/footer/Footer";
-import ItemList from "./ItemList";
+import { ItemList } from "./ItemList";
 import "./productos.css";
 import { FavoritoContext } from "../../context/FavContext";
 
@@ -43,4 +43,4 @@ export const ItemListContainer = () => {
       </div>
     </>
   );
-};
+} ;

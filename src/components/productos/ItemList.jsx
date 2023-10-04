@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { Item } from "./Item";
 import { Categorias } from "./Categorias";
 
-const ItemList = ({ product }) => {
+export const ItemList = React.memo(({ product }) => {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -41,6 +41,5 @@ const ItemList = ({ product }) => {
       )}
     </>
   );
-};
+});
 
-export default React.memo(ItemList);
