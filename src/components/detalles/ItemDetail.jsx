@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
 
-export const ItemDetail = ({ id, nombre, img }) => {
+export const ItemDetail = ({ id, nombre, img, precio }) => {
   const { isOpen, idFound, addToFav } = useContext(FavoritoContext);
   const currentUrl = window.location.href;
   //Función que envia el producto en cuestion por wsp.
@@ -118,7 +118,7 @@ export const ItemDetail = ({ id, nombre, img }) => {
         </div>
         <Stack mt="6" lineHeight="normal" id="infoDetallesCard">
           <h5>{nombre}</h5>
-          <p>$ 1.000</p>
+          <p>$ {precio}</p>
         </Stack>
         <div id="butonWsp">
           <Button className="pedidoWsp" onClick={sendWsp}>

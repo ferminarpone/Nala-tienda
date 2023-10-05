@@ -12,7 +12,7 @@ import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FavoritoContext } from "../../context/FavContext";
 
-export const Item = ({ nombre, categoria, img, id }) => {
+export const Item = ({ nombre, categoria, img, id, precio }) => {
   const { idFound, addToFav } = useContext(FavoritoContext);
   return (
     <GridItem id="cardItem">
@@ -40,7 +40,7 @@ export const Item = ({ nombre, categoria, img, id }) => {
           <Stack mt="6" lineHeight="normal" id="inforCard">
             <h4>Shein</h4>
             <h5>{nombre}</h5>
-            <p>$ 1.000</p>
+            <p>$ {precio}</p>
           </Stack>
           <Flex justifyContent="space-between" id="doubleButton">
             <Box w="100%">

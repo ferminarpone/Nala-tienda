@@ -33,6 +33,7 @@ export const ItemList = React.memo(({ product }) => {
                   categoria={item.categoria}
                   img={item.img}
                   id={item.id}
+                  precio={item.precio}
                 />
               ))}
             </Grid>
