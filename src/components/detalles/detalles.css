@@ -12,7 +12,6 @@
   color: #676767;
   font-size: 1.4rem;
   display: flex;
-
 }
 #linkItemDetail .back p {
   font-size: 1.8rem;
@@ -33,13 +32,13 @@
   height: 45px;
   margin-top: 12px;
 }
-.heartDesktop:hover{
-transform: scale(1.2);
-} 
+.heartDesktop:hover {
+  transform: scale(1.2);
+}
 #itemDetail .descripcion {
   font-family: "Josefin Sans", sans-serif;
   color: #969696;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 350;
 }
 #itemDetail .pedidoWsp {
@@ -62,32 +61,15 @@ transform: scale(1.2);
 .imgItemDetail {
   position: relative;
 }
-.bgFavDetail{
-  position: absolute;
-  top: 3%;
-  right: 6%;
-  background-color: #ffffff;
+#infoDetallesCard .cardGroup {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  border-radius: 100%;
-  width: 33px;
-  height: 33px;
 }
-.favDetallesMobile {
-  display: none;
-  color: #a5a5a5;
-  width: 25px !important;
-  height: 25px !important;
-}
-.favDetallesMobile:hover{
-  transform: scale(1.1);
-}
-
 #infoDetallesCard h5 {
   font-family: "Josefin Sans", sans-serif;
   color: #969696;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 #infoDetallesCard p {
@@ -96,6 +78,22 @@ transform: scale(1.2);
   font-weight: 600;
   font-size: 1.2rem;
   margin-top: 12px;
+}
+.favDetallesMobile {
+  display: none;
+  color: #a5a5a5;
+  width: 25px !important;
+  height: 25px !important;
+}
+.favDetallesMobile:hover {
+  transform: scale(1.1);
+}
+#infoDetallesCard .descripcionMobile {
+  font-family: "Josefin Sans", sans-serif;
+  color: #969696;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-top: 0px;
   margin-bottom: 16px;
 }
 
@@ -108,8 +106,12 @@ transform: scale(1.2);
   .footerMobItemDetail {
     margin-top: -157px;
   }
-  .favoritosBack{
+  .favoritosBack {
     display: none;
+  }
+  #infoDetallesCard {
+    margin-right: 6px;
+    margin-left: 6px;
   }
 }
 @media (max-width: 377px) {
@@ -175,7 +177,7 @@ transform: scale(1.2);
     justify-content: start;
   }
 }
-@media (min-width: 500px) and (max-width: 763px) {
+@media (min-width: 500px) and (max-width: 800px) {
   #infoDetallesCard {
     width: 70%;
   }
@@ -183,7 +185,7 @@ transform: scale(1.2);
     width: 70%;
   }
 }
-@media (min-width: 763px) and (max-width: 1200px) {
+@media (min-width: 800px) and (max-width: 1200px) {
   .imgItemDetail img {
     width: 440px;
   }
@@ -199,10 +201,10 @@ transform: scale(1.2);
     width: 440px;
   }
 }
-@media (min-width: 1200px){
-.favoritosBack{
-  display: none;
-}
+@media (min-width: 1200px) {
+  .favoritosBack {
+    display: none;
+  }
 }
 @media (max-height: 600px) {
   #itemDetail {

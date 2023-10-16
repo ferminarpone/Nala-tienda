@@ -139,24 +139,7 @@ transform: scale(1.1);
 .imgMobile {
   position: relative;
 }
-.favMobile {
- /*  color: #ffffff; */
- color: #a5a5a5;
-  position: absolute;
-}
-.bgFavMobile{
-  display: none;
-  background-color: #ffffff;
-  width: 22px;
-  height: 22px;
-  border-radius:100% ;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 84%;
-  left: 80%; 
-  
-}
+
 
 @media (max-width: 502px) {
   #cardItem .imgItem {
@@ -174,6 +157,7 @@ transform: scale(1.1);
   #inforCard p {
     font-size: 1rem;
     margin-top: -6px;
+    margin-top: 4px;
   }
   .bgFavMobile{
     display: flex;

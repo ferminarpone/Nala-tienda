@@ -42,6 +42,7 @@ export const ItemDetailContainer = () => {
             nombre={product.nombre}
             img={product.img}
             precio={product.precio}
+            descripcion={product.descripcion}
           />
         )}
         <div className={isOpen ? "footerMobItemDetail" : ""}>

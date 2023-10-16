@@ -27,15 +27,6 @@ export const Item = ({ nombre, categoria, img, id, precio }) => {
                 className="imgItem"
               />
             </Link>
-            <Link  to={idFound(id) ? "/productos" : "/favoritos"} onClick={()=>addToFav(id, img, nombre)}>
-              <div className="bgFavMobile">
-                {idFound(id) ? (
-                  <FaHeart className="favMobile" />
-                ) : (
-                  <FaRegHeart className="favMobile" />
-                )}
-              </div>
-            </Link>
           </div>
           <Stack mt="6" lineHeight="normal" id="inforCard">
             <h4>Shein</h4>

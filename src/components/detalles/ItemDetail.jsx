@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
 
-export const ItemDetail = ({ id, nombre, img, precio }) => {
+export const ItemDetail = ({ id, nombre, img, precio, descripcion }) => {
   const { isOpen, idFound, addToFav } = useContext(FavoritoContext);
   const currentUrl = window.location.href;
   //Función que envia el producto en cuestion por wsp.
@@ -54,13 +54,13 @@ export const ItemDetail = ({ id, nombre, img, precio }) => {
 
       <div id="detallesDesktop">
         <Grid
-          templateRows="repeat(3, 1fr)"
+          templateRows="repeat(7, 1fr)"
           templateColumns="repeat(2, 1fr)"
           gap={4}
           mt="20px"
           mb="-100px"
         >
-          <GridItem colSpan={1} rowSpan={3}>
+          <GridItem colSpan={1} rowSpan={6}>
             <Image
               src={img}
               alt={nombre}
@@ -88,10 +88,13 @@ export const ItemDetail = ({ id, nombre, img, precio }) => {
               </Link>
             </Flex>
           </GridItem>
-          <GridItem>
-            <p className="descripcion"> • Descripción:</p>
+{/*           <GridItem rowSpan={1}>
+            <p className="precio">$ {precio}</p>
+          </GridItem> */}
+          <GridItem rowSpan={3}>
+            <p className="descripcion">{descripcion}</p>
           </GridItem>
-          <GridItem display="flex" justifyContent="center">
+          <GridItem display="flex" justifyContent="center" rowSpan={1}>
             <Button className="pedidoWsp" onClick={sendWsp}>
               HACER PEDIDO POR WHATSAPP
             </Button>
@@ -100,25 +103,26 @@ export const ItemDetail = ({ id, nombre, img, precio }) => {
       </div>
       <div id="detallesMobile">
         <div className="imgItemDetail">
-          <Link to={`/producto/${id}`}>
-            <Image src={img} alt={nombre} borderRadius="lg" />
-          </Link>
-          <Link
-            to={idFound(id) ? `/producto/${id}` : "/favoritos"}
-            onClick={() => addToFav(id, img, nombre)}
-          >
-            <div className="bgFavDetail">
-              {idFound(id) ? (
-                <FaHeart className="favDetallesMobile" />
-              ) : (
-                <FaRegHeart className="favDetallesMobile" />
-              )}
-            </div>
-          </Link>
+          <Image src={img} alt={nombre} borderRadius="lg" />
         </div>
         <Stack mt="6" lineHeight="normal" id="infoDetallesCard">
-          <h5>{nombre}</h5>
+          <div className="cardGroup">
+            <h5>{nombre}</h5>
+            <Link
+              to={idFound(id) ? `/producto/${id}` : "/favoritos"}
+              onClick={() => addToFav(id, img, nombre)}
+            >
+              <div>
+                {idFound(id) ? (
+                  <FaHeart className="favDetallesMobile" />
+                ) : (
+                  <FaRegHeart className="favDetallesMobile" />
+                )}
+              </div>
+            </Link>
+          </div>
           <p>$ {precio}</p>
+          <p className="descripcionMobile">{descripcion}</p>
         </Stack>
         <div id="butonWsp">
           <Button className="pedidoWsp" onClick={sendWsp}>
