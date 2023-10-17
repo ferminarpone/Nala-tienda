@@ -59,7 +59,7 @@ export const Nosotros = () => {
               flexDirection="column"
               alignItems="center"
             >
-              <h1 className="titleNosotros">Que Hacemos</h1>
+              <h1 className="titleNosotros">Qué Hacemos</h1>
               <p className="nosotrosParrafo">
                 Nala tienda es un emprendimiento que compra en la pagina
                 original de Shein, trayendo los productos de Brasil. Contamos
