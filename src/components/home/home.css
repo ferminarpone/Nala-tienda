@@ -19,13 +19,15 @@
   font-family: 'DM Serif Display', serif;
   color: #ffffff;
   font-size: 3rem;
+  margin-top: -14px;
 }
 #homeMobile p {
   font-family: "Josefin Sans", sans-serif;
   color: #efefef;
   font-weight: 380;
   font-size: 1.1rem;
-  padding-top: 4px;
+  padding-top: 2px;
+
 }
 .open {
   height: 157px !important;
