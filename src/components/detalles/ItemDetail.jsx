@@ -1,5 +1,6 @@
 import {
   Button,
+  Collapse,
   Container,
   Flex,
   Grid,
@@ -8,17 +9,27 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import {
+  AiOutlineLeft,
+  AiOutlineRight,
+  AiOutlineDown,
+  AiOutlineUp,
+} from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FavoritoContext } from "../../context/FavContext";
 
 export const ItemDetail = ({ id, nombre, img, precio, descripcion }) => {
   const { isOpen, idFound, addToFav } = useContext(FavoritoContext);
   const currentUrl = window.location.href;
+
+  const [show, setShow] = useState(false);
+
+  const handleToggle = () => setShow(!show);
+
   //Función que envia el producto en cuestion por wsp.
   const sendWsp = () => {
-    const url = `https://web.whatsapp.com/send?phone=34617429097&text=%0A%2ANala%20tienda%2A%0AConsulta%20disponibilidad%20de%20producto%0A%0A%2AProducto%3A%2A ${nombre}%0A%0A%2AId%3A%2A%${id}%0A%0A ${currentUrl}`;
+    const url = `https://web.whatsapp.com/send?phone=543513902114&text=%0A%2ANala%20tienda%2A%0AConsulta%20disponibilidad%20de%20producto%0A%0A%2AProducto%3A%2A ${nombre}%0A%0A%2AId%3A%2A%${id}%0A%0A ${currentUrl}`;
     window.open(url, "_blank");
   };
 
@@ -54,18 +65,19 @@ export const ItemDetail = ({ id, nombre, img, precio, descripcion }) => {
 
       <div id="detallesDesktop">
         <Grid
-          templateRows="repeat(7, 1fr)"
+          templateRows="repeat(6, 1fr)"
           templateColumns="repeat(2, 1fr)"
           gap={4}
           mt="20px"
-          mb="-100px"
+          mb="100px"
+           maxHeight="450px" 
         >
           <GridItem colSpan={1} rowSpan={6}>
             <Image
               src={img}
               alt={nombre}
-              height="80%"
-              w="92%"
+              height="100%"
+              w="94%"
               objectFit="cover"
               borderRadius="10px"
             />
@@ -88,13 +100,13 @@ export const ItemDetail = ({ id, nombre, img, precio, descripcion }) => {
               </Link>
             </Flex>
           </GridItem>
-{/*           <GridItem rowSpan={1}>
+          <GridItem rowSpan={1} >
             <p className="precio">$ {precio}</p>
-          </GridItem> */}
-          <GridItem rowSpan={3}>
+          </GridItem>
+          <GridItem rowSpan={3} >
             <p className="descripcion">{descripcion}</p>
           </GridItem>
-          <GridItem display="flex" justifyContent="center" rowSpan={1}>
+          <GridItem display="flex" alignItems="end" rowSpan={1}>
             <Button className="pedidoWsp" onClick={sendWsp}>
               HACER PEDIDO POR WHATSAPP
             </Button>
@@ -122,7 +134,30 @@ export const ItemDetail = ({ id, nombre, img, precio, descripcion }) => {
             </Link>
           </div>
           <p>$ {precio}</p>
-          <p className="descripcionMobile">{descripcion}</p>
+          {descripcion.split(" ").length > 20 ? (
+            <div>
+              <Collapse
+                startingHeight={32}
+                in={show}
+                className="descripcionMobile"
+              >
+                {descripcion}
+              </Collapse>
+              <button onClick={handleToggle} className="show">
+                {show ? (
+                  <div>
+                    <AiOutlineUp /> Ver menos
+                  </div>
+                ) : (
+                  <div>
+                    <AiOutlineDown /> Ver más
+                  </div>
+                )}
+              </button>
+            </div>
+          ) : (
+            <p className="descripcionMobile">{descripcion}</p>
+          )}
         </Stack>
         <div id="butonWsp">
           <Button className="pedidoWsp" onClick={sendWsp}>

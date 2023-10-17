@@ -20,9 +20,11 @@ export const FormularioFav = ({ modalClosed }) => {
 
   //Funcion... recibe los datos del formulario(data)
   const onSubmit = (data) => {
-    const url = `https://web.whatsapp.com/send?phone=34617429097&text=%0A%2ANala%20tienda%2A%0AConsulta%20disponibilidad%20de%20productos%0A%0A%2AProductos%3A%2A ${productList}%0A%0A%2AMensaje%3A%2A%0A${data.consulta}%0A%0A%2ADatos%20cliente%2A%0ANombre%3A%20${data.nombre} ${data.apellido}%0AEmail%3A%20${data.email}%0ATel%C3%A9fono%3A${data.telefono}`;
+    const url = `https://web.whatsapp.com/send?phone=543513902114&text=%0A%2ANala%20tienda%2A%0AConsulta%20disponibilidad%20de%20productos%0A%0A%2AProductos%3A%2A ${productList}%0A%0A%2AMensaje%3A%2A%0A${data.consulta}%0A%0A%2ADatos%20cliente%2A%0ANombre%3A%20${data.nombre} ${data.apellido}%0AEmail%3A%20${data.email}%0ATel%C3%A9fono%3A${data.telefono}`;
     window.open(url, "_blank");
     reset();
+    modalClosed();
+    setFav([]);
   };
   return (
     <>

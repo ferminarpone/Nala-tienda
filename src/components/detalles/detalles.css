@@ -35,6 +35,11 @@
 .heartDesktop:hover {
   transform: scale(1.2);
 }
+#itemDetail .precio{
+  font-family: "Josefin Sans", sans-serif;
+  color: #4a9a91;
+  font-size: 2rem;
+}
 #itemDetail .descripcion {
   font-family: "Josefin Sans", sans-serif;
   color: #969696;
@@ -95,6 +100,20 @@
   font-size: 1rem;
   margin-top: 0px;
   margin-bottom: 16px;
+}
+#infoDetallesCard .show{
+  position: relative;
+  top: -8px;
+  margin-bottom: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  color: #969696;
+  font-weight: 400;
+  font-size: 1rem;
+  width: 100%;
+}
+#infoDetallesCard .show div{
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 500px) {
