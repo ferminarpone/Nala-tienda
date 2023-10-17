@@ -4,23 +4,15 @@ import { RxCross2 } from "react-icons/rx";
 import { FavoritoContext } from "../../context/FavContext";
 import { Link } from "react-router-dom";
 
-export const FavItem = ({ id, nombre, img, cantidad }) => {
-  const { fav, setFav, isOpen } = useContext(FavoritoContext);
-  console.log(id)
+export const FavItem = ({ id, nombre, img }) => {
+  const { fav, setFav } = useContext(FavoritoContext);
+  console.log(id);
   //Función que elimina un producto de favoritos.
   const removeItem = () => {
     const newFav = fav.filter((item) => item.id !== id);
     setFav(newFav);
   };
 
-
-  // variable + función que genera el listado de productos elegidos.
-  /*   const productList = fav.map((e)=> ` ${JSON.stringify(e.nombre, e.id)}`)  
-  const sendWsp = ()=>{
-    const url = `https://web.whatsapp.com/send?phone=34617429097&text=%0A%2ANala%20tienda%2A%0AConsulta%20disponibilidad%20de%20productos%3A%0A%0A%2AProductos%3A%2A ${productList}`;
-    window.open(url,'_blank') 
-    
-  } */
   return (
     <>
       <Grid
@@ -38,7 +30,7 @@ export const FavItem = ({ id, nombre, img, cantidad }) => {
           className="gridItem"
         >
           <Link to={`/producto/${id}`}>
-          <h1 className="nombre">{nombre}</h1>
+            <h1 className="nombre">{nombre}</h1>
           </Link>
         </GridItem>
         <GridItem
@@ -47,13 +39,9 @@ export const FavItem = ({ id, nombre, img, cantidad }) => {
           alignItems="center"
         ></GridItem>
         <GridItem colSpan={1} display="flex" alignItems="center">
-           <Button
-            variant="solid"
-            className="favHeart"
-            onClick={removeItem}
-          >
-              <RxCross2 className="cross" />
-          </Button> 
+          <Button variant="solid" className="favHeart" onClick={removeItem}>
+            <RxCross2 className="cross" />
+          </Button>
         </GridItem>
       </Grid>
     </>

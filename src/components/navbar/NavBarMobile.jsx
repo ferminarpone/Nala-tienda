@@ -8,7 +8,6 @@ import { FavoritoContext } from "../../context/FavContext";
 
 export const NavBarMobile = () => {
   const { isOpen, setIsOpen } = useContext(FavoritoContext);
-  console.log(isOpen);
   return (
     <nav id="navMobile">
       <div className="navTop">
@@ -23,7 +22,6 @@ export const NavBarMobile = () => {
         </Link>
       </div>
       <hr className="divider" />
-
       <ul className={`navList ${isOpen ? "open" : ""} `}>
         <li onClick={() => setIsOpen(!isOpen)}>
           <Link to={"/productos"}>

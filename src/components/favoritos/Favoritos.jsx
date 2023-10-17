@@ -11,10 +11,8 @@ import "./favoritos.css";
 
 export const Favoritos = () => {
   const { fav, isOpen, setIsOpen } = useContext(FavoritoContext);
-
   //State para hacer aparecer el formulario
   const [form, setform] = useState(false);
-
   //Función que ciera el modal
   const modalClosed = () => {
     if (form) {

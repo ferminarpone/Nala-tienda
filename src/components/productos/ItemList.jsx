@@ -7,7 +7,6 @@ export const ItemList = React.memo(({ product }) => {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
-
   return (
     <>
       {product == "" ? (
@@ -43,4 +42,3 @@ export const ItemList = React.memo(({ product }) => {
     </>
   );
 });
-

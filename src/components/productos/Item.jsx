@@ -12,7 +12,7 @@ import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FavoritoContext } from "../../context/FavContext";
 
-export const Item = ({ nombre, categoria, img, id, precio }) => {
+export const Item = ({ nombre, img, id, precio }) => {
   const { idFound, addToFav } = useContext(FavoritoContext);
   return (
     <GridItem id="cardItem">

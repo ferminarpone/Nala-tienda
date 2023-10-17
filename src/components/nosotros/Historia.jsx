@@ -1,7 +1,6 @@
 import { Box, Container, Grid, GridItem, Image } from "@chakra-ui/react";
 import Banner from "../../assets/nosotros/Imagen Historia.png";
 
-
 export const Historia = () => {
   return (
     <Box id="historia">
@@ -16,8 +15,15 @@ export const Historia = () => {
             <GridItem rowSpan={1} colSpan={3} display="flex" alignItems="end">
               <h1 className="titleHistoria">Historia</h1>
             </GridItem>
-            <GridItem rowSpan={3} rowStart={3} colSpan={3} colStart={4} display="flex" justifyContent="center">
-                <Image src={Banner} className="bannerHistoria" /> 
+            <GridItem
+              rowSpan={3}
+              rowStart={3}
+              colSpan={3}
+              colStart={4}
+              display="flex"
+              justifyContent="center"
+            >
+              <Image src={Banner} className="bannerHistoria" />
             </GridItem>
             <GridItem rowSpan={5} colSpan={3}>
               <p className="historiaParrafo">

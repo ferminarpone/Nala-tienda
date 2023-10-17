@@ -35,7 +35,7 @@
 .heartDesktop:hover {
   transform: scale(1.2);
 }
-#itemDetail .precio{
+#itemDetail .precio {
   font-family: "Josefin Sans", sans-serif;
   color: #4a9a91;
   font-size: 2rem;
@@ -101,7 +101,7 @@
   margin-top: 0px;
   margin-bottom: 16px;
 }
-#infoDetallesCard .show{
+#infoDetallesCard .show {
   position: relative;
   top: -8px;
   margin-bottom: 16px;
@@ -111,11 +111,10 @@
   font-size: 1rem;
   width: 100%;
 }
-#infoDetallesCard .show div{
+#infoDetallesCard .show div {
   display: flex;
   justify-content: center;
 }
-
 @media (max-width: 500px) {
   #itemDetail.openMobile {
     position: relative;

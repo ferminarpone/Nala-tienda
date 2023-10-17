@@ -10,7 +10,6 @@ import { FavoritoContext } from "../../context/FavContext";
 
 export const Contactanos = () => {
   const { isOpen, setIsOpen } = useContext(FavoritoContext);
-
   return (
     <>
       <NavBar />

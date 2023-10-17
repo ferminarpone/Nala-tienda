@@ -14,7 +14,6 @@ export const ItemDetailContainer = () => {
   const [product, setProduct] = useState([]);
   const { id } = useParams();
   const { isOpen, setIsOpen } = useContext(FavoritoContext);
-
   //Llamado a la DB.
   useEffect(() => {
     window.scroll(0, 0);

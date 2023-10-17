@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@450&display=swap");
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -22,7 +21,6 @@
   font-size: 1.3rem;
   font-weight: 400;
 }
-
 #navBar h2 {
   text-align: center;
 }
@@ -36,7 +34,6 @@
 }
 
 /*NavBar Mobile*/
-
 #navMobile .navTop {
   height: 70px;
   width: 100%;
@@ -46,7 +43,6 @@
   justify-content: space-between;
   align-items: center;
 }
-
 #navMobile .menu {
   color: #ffffff;
   font-size: 1.5rem;
@@ -54,13 +50,9 @@
 #navMobile .divider{
   background-color: white;
 }
-
-
 #navMobile .heartNavBar {
   color: #ffffff;
 }
-
-
 .navList {
   background-color: #4a9a91;
   display: none;
@@ -74,7 +66,6 @@
   font-weight: 300;
   height: 0px;
 }
-
  .navList.open {
   display: flex;
 } 
@@ -90,11 +81,9 @@
   margin: 0.3rem 0rem 0.3rem 0rem;
   width: 100%;
 }
-
 .differentLi {
   margin-bottom: 0.3rem;
 }
-
 @media (min-width: 800px) and (max-width: 1000px) {
   .navBar {
     font-size: 1.1rem;
@@ -103,22 +92,18 @@
     font-size: 1.1rem;
   }
 }
-
 @media (max-width: 800px) {
   .navBar {
     font-size: 1rem;
   }
-
   .navBar1 {
     font-size: 1rem;
   }
-
   .logoSize {
     width: 60%;
     margin-left: 14%;
   }
 }
-
 @media (min-width: 500px) and (max-width: 800px) {
   .navBar {
     font-size: 0.8rem;
@@ -126,7 +111,6 @@
   .navBar1 {
     font-size: 0.8rem;
   }
-
   .logoSize {
     width: 60%;
     height: 70%;

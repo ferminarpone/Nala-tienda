@@ -19,7 +19,6 @@ export const FormContactanos = () => {
     window.open(url, "_blank");
     reset();
   };
-
   return (
     <Box id="formContactanos">
       <Container className={`container ${isOpen ? "open" : ""}`}>

@@ -22,11 +22,8 @@ import { FavoritoContext } from "../../context/FavContext";
 export const ItemDetail = ({ id, nombre, img, precio, descripcion }) => {
   const { isOpen, idFound, addToFav } = useContext(FavoritoContext);
   const currentUrl = window.location.href;
-
   const [show, setShow] = useState(false);
-
   const handleToggle = () => setShow(!show);
-
   //Función que envia el producto en cuestion por wsp.
   const sendWsp = () => {
     const url = `https://web.whatsapp.com/send?phone=543513902114&text=%0A%2ANala%20tienda%2A%0AConsulta%20disponibilidad%20de%20producto%0A%0A%2AProducto%3A%2A ${nombre}%0A%0A%2AId%3A%2A%${id}%0A%0A ${currentUrl}`;
@@ -50,7 +47,6 @@ export const ItemDetail = ({ id, nombre, img, precio, descripcion }) => {
             </div>
           </Link>
         </div>
-
         <div className="favoritosBack">
           <Link to={"/favoritos"}>
             <div className="back">
@@ -62,7 +58,6 @@ export const ItemDetail = ({ id, nombre, img, precio, descripcion }) => {
           </Link>
         </div>
       </div>
-
       <div id="detallesDesktop">
         <Grid
           templateRows="repeat(6, 1fr)"

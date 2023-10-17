@@ -5,16 +5,11 @@ import {
   Grid,
   GridItem,
   Input,
-  Tooltip,
 } from "@chakra-ui/react";
-import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { FavoritoContext } from "../../context/FavContext";
 
 export const Formulario = () => {
   const { register, handleSubmit, reset } = useForm();
-
-  const { isOpen } = useContext(FavoritoContext);
   //Funcion... recibe los datos del formulario(data)
   const onSubmit = (data) => {
     console.log(data);

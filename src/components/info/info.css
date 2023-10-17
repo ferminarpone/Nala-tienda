@@ -41,7 +41,6 @@
   color: #4a9a91;
   font-size: 3rem;
 }
-
 #pagos h2 {
   margin-top: 20px;
   color: #969696;
@@ -49,7 +48,6 @@
   font-size: 1.6rem;
   font-weight: 350;
 }
-
 @media (max-width: 610px) {
   .informacionImg {
     height: 350px;
@@ -88,7 +86,6 @@
 }
 
 /*Envio*/
-
 #envio {
   background-color: #4a9a91;
 }
@@ -159,14 +156,14 @@
   color: #ffffff;
   margin-left: 15px;
 }
-@media (max-width:335px){
-   #envio .titleEnvios {
+@media (max-width: 335px) {
+  #envio .titleEnvios {
     margin-top: 0;
     font-size: 2.2rem;
     text-align: center;
   }
 }
-@media (min-width:335px) and (max-width: 610px){
+@media (min-width: 335px) and (max-width: 610px) {
   #envio .titleEnvios {
     margin-top: 0;
     font-size: 2.4rem;

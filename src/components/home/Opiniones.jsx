@@ -7,7 +7,6 @@ import {
   GridItem,
   Image,
 } from "@chakra-ui/react";
-import OpinionesImg from "../../assets/home/Opiniones.png";
 
 export const Opiniones = () => {
   return (

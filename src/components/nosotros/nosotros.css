@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@250;350;450;700&display=swap');
 
 /*Nosotros*/
-
 #bgNosotros {
   background-color: #eff9ed;
   height: 100%;
@@ -32,7 +31,6 @@ margin-bottom: -30%;
   width: 70%;
   margin-bottom: 20px;
 }
-
 @media (max-width: 400px) {
   .titleNosotros{
     font-size: 2.5rem;
@@ -120,7 +118,6 @@ margin-bottom: -30%;
 #historiaMobile {
   display: none;
 }
-
 @media (max-width: 502px) {
   /*Historia*/
   #historia {
@@ -178,7 +175,6 @@ margin-bottom: -30%;
 }
 
 /*Términos y condiciones*/
-
 #terminos {
   height: 100%;
   background-color: #ffffff;
@@ -196,7 +192,6 @@ margin-bottom: -30%;
   font-weight: 300;
   color: #969696;
 }
-
 @media (max-width: 502px) {
   #terminos {
     padding-top: 50px;
@@ -210,7 +205,6 @@ margin-bottom: -30%;
     text-align: center;
   }
 }
-
 @media (min-width: 502px) and (max-width:632px) {
   #terminos .title {
     font-size: 1.6rem;

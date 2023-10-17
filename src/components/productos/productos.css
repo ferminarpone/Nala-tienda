@@ -30,7 +30,6 @@
 #categorias h5:hover, .heartIcon:hover {
 transform: scale(1.1);
 }
-
 #categorias .productosTitle {
   width: 156px;
 }
@@ -40,7 +39,6 @@ transform: scale(1.1);
 #categorias hr {
   border-color: #4e958f;
 }
-
 @media (max-width: 502px) {
   #categorias {
     margin-top: 30px;
@@ -84,7 +82,6 @@ transform: scale(1.1);
     min-height: 900px;
   }
 }
-
 /*Item*/
 #cardItem .imgItem {
   width: 330px;
@@ -139,8 +136,6 @@ transform: scale(1.1);
 .imgMobile {
   position: relative;
 }
-
-
 @media (max-width: 502px) {
   #cardItem .imgItem {
     width: 160px;

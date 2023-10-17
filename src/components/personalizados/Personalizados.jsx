@@ -27,7 +27,6 @@ export const Personalizados = () => {
               quieras y no se encuentre en nuestro catálogo.{" "}
             </p>
           </div>
-
           <Container maxWidth="90%" id="personalizados">
             <Grid
               h="auto"
@@ -61,10 +60,7 @@ export const Personalizados = () => {
                 >
                   IR A SHEIN
                 </button>
-                <button
-                  className="personalizadosButtonB"
-                  /* onClick={() => sheinOpen()} */
-                >
+                <button className="personalizadosButtonB">
                   <a href="#formularioPer">DEJA TUS DATOS</a>
                 </button>
               </GridItem>

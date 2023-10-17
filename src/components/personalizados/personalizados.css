@@ -157,7 +157,6 @@ border: #4a9a91;
     font-size: 1.1rem;
   }
 }
-
 @media (min-width: 504px) and (max-width: 775px) {
   .bgPersonalizadosDesktop .titlePersonalizados {
     font-size: 3.4rem;
@@ -183,7 +182,6 @@ border: #4a9a91;
     width: 80%;
     margin-top: -20px;
   }
-
   .personalizadosButton,
   .personalizadosButtonB {
     font-size: 0.9rem;
@@ -193,7 +191,6 @@ border: #4a9a91;
     margin-right: 3%;
   }
 }
-
 @media (min-width: 776px) and (max-width: 834px) {
   #personalizados {
     margin-top: -35px;
@@ -220,7 +217,6 @@ border: #4a9a91;
     margin-right: 5%;
   }
 }
-
 @media (min-width: 1082px) {
   #personalizados {
     padding-bottom: 30px;

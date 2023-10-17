@@ -5,7 +5,6 @@ export const FavoritoContext = createContext(null);
 export const FavContext = ({ children }) => {
   // Array de productos en favoritos
   const [fav, setFav] = useState(JSON.parse(localStorage.getItem('favoritos'))||[]);
-
   useEffect(() => {
     localStorage.setItem('favoritos', JSON.stringify(fav));
   }, [fav])

@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@250;350;450;550;700&display=swap");
-
 /*Contactanos*/
 #contactanosDesktop .bannerContactanos {
   margin-top: 35%;
@@ -31,7 +30,6 @@
 }
 
 /*Info Contactanos*/
-
 #infoContactanos {
   display: flex;
   flex-direction: column;
@@ -53,7 +51,6 @@
 }
 
 /*Formulario Contactanos*/
-
 #formContactanos h3 {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.3rem;
@@ -86,7 +83,6 @@
   padding-top: 5px;
   border-radius: 16px;
 }
-
 @media (max-width: 340px) {
   #formContactanos input {
     font-size: 1.1rem;
@@ -102,7 +98,6 @@
 }
 @media (max-width: 502px) {
   /*Contactanos*/
-
   #contactanosDesktop {
     display: none;
   }
@@ -159,7 +154,6 @@
   }
 
   /*Info contactanos*/
-
   .containerInfo {
     max-width: 90% !important;
   }
@@ -197,7 +191,6 @@
   font-size: 2rem;
 }
 }
-
 @media (min-width: 1040px) {
   .bannerContactanos {
     width: 70%;
