@@ -65,7 +65,7 @@ export const ItemDetail = ({ id, nombre, img, precio, descripcion }) => {
           gap={4}
           mt="20px"
           mb="100px"
-           maxHeight="450px" 
+          maxHeight="450px"
         >
           <GridItem colSpan={1} rowSpan={6}>
             <Image
@@ -95,10 +95,10 @@ export const ItemDetail = ({ id, nombre, img, precio, descripcion }) => {
               </Link>
             </Flex>
           </GridItem>
-          <GridItem rowSpan={1} >
+          <GridItem rowSpan={1}>
             <p className="precio">$ {precio}</p>
           </GridItem>
-          <GridItem rowSpan={3} >
+          <GridItem rowSpan={3}>
             <p className="descripcion">{descripcion}</p>
           </GridItem>
           <GridItem display="flex" alignItems="end" rowSpan={1}>

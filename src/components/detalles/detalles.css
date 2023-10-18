@@ -46,7 +46,6 @@
   font-size: 1.2rem;
   font-weight: 350;
 }
-
 #itemDetail .pedidoWsp {
   width: 100%;
   margin-top: 10px;
@@ -88,13 +87,13 @@
   font-size: 1.2rem;
   margin-top: 12px;
 }
-#infoDetallesCard .favDetallesMobile {
+ .favDetallesMobile {
   display: none;
   color: #a5a5a5;
   width: 25px !important;
   height: 25px !important;
 }
-#infoDetallesCard .favDetallesMobile:hover {
+.favDetallesMobile:hover {
   transform: scale(1.1);
 }
 #infoDetallesCard .descripcionMobile {
