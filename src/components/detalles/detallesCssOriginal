@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@250;350;450;700&display=swap");
+
 #linkItemDetail {
   display: flex;
   justify-content: space-between;
@@ -18,13 +19,12 @@
   margin-left: 4px;
   margin-top: -9px;
 }
-
-#detallesDesktop h2 {
+#itemDetail h2 {
   font-family: "Josefin Sans", sans-serif;
   color: #4a9a91;
   font-size: 2.6rem;
 }
-#detallesDesktop .buttonHeart {
+#itemDetail .buttonHeart {
   background-color: #4a9a91;
   color: #ffffff;
   font-size: 1.4rem;
@@ -32,21 +32,20 @@
   height: 45px;
   margin-top: 12px;
 }
-#detallesDesktop .heartDesktop:hover {
+.heartDesktop:hover {
   transform: scale(1.2);
 }
-#detallesDesktop .precio {
+#itemDetail .precio {
   font-family: "Josefin Sans", sans-serif;
   color: #4a9a91;
   font-size: 2rem;
 }
-#detallesDesktop .descripcion {
+#itemDetail .descripcion {
   font-family: "Josefin Sans", sans-serif;
   color: #969696;
   font-size: 1.2rem;
   font-weight: 350;
 }
-
 #itemDetail .pedidoWsp {
   width: 100%;
   margin-top: 10px;
@@ -58,18 +57,15 @@
   font-size: 1.2rem;
   font-weight: 400;
 }
-
 #itemDetail .pedidoWsp:hover {
   background-color: #4fa19c;
 }
-
 #detallesMobile {
   display: none;
 }
-#detallesMobile .imgItemDetail {
+.imgItemDetail {
   position: relative;
 }
-
 #infoDetallesCard .cardGroup {
   display: flex;
   justify-content: space-between;
@@ -88,13 +84,13 @@
   font-size: 1.2rem;
   margin-top: 12px;
 }
-#infoDetallesCard .favDetallesMobile {
+.favDetallesMobile {
   display: none;
   color: #a5a5a5;
   width: 25px !important;
   height: 25px !important;
 }
-#infoDetallesCard .favDetallesMobile:hover {
+.favDetallesMobile:hover {
   transform: scale(1.1);
 }
 #infoDetallesCard .descripcionMobile {
@@ -119,7 +115,6 @@
   display: flex;
   justify-content: center;
 }
-
 @media (max-width: 500px) {
   #itemDetail.openMobile {
     position: relative;
@@ -153,7 +148,7 @@
     font-size: 0.9rem !important;
   }
   #linkItemDetail .back p {
-    font-size: 1.1rem !important;
+    font-size: 1.1rem !important ;
     padding-top: 4px;
     margin-left: 2px;
   }
@@ -249,5 +244,3 @@
     min-height: 900px;
   }
 }
-
-/*# sourceMappingURL=detalles.css.map */
