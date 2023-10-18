@@ -1,4 +1,4 @@
-import { Contactanos } from "./components/contáctanos/Contactanos";
+import { Contactanos } from "./components/contactanos/Contactanos";
 import { ItemDetailContainer } from "./components/detalles/ItemDetailContainer";
 import { Home } from "./components/home/Home";
 import { Informacion } from "./components/info/Informacion";

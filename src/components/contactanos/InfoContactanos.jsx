@@ -10,7 +10,7 @@ export const InfoContactanos = () => {
   return (
     <Container className="containerInfo">
       <Box id="infoContactanos" className={isOpen ? "openInfo" : ""}>
-        <h1 className="titleInfo">Contáctanos</h1>
+        <h1>Contáctanos</h1>
         <Grid
           templateRows="repeat(3, 1fr)"
           templateColumns="repeat(4, 1fr)"
