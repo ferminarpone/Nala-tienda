@@ -158,8 +158,8 @@
   .containerInfo {
     max-width: 90% !important;
   }
-  .containerInfo.openInfo {
-    margin-top: 233px;
+  #infoContactanos.openInfo {
+    margin-top: 253px;
   }
   #infoContactanos {
     margin-top: 40px;

@@ -168,12 +168,12 @@
   /*Info contactanos*/
   .containerInfo {
     max-width: 90% !important;
-    &.openInfo {
-      margin-top: 233px;
-    }
   }
   #infoContactanos {
     margin-top: 40px;
+    &.openInfo {
+      margin-top: 253px;
+    }
     h1 {
       display: none;
     }
