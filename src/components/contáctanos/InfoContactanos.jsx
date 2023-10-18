@@ -7,10 +7,6 @@ import { FavoritoContext } from "../../context/FavContext";
 
 export const InfoContactanos = () => {
   const { isOpen } = useContext(FavoritoContext);
-  const sendWsp = () => {
-    const url = `https://web.whatsapp.com/send?phone=34617429097&text=%0A%2ANala%20tienda%2A%0A%0AConsulta%3A%0A`;
-    window.open(url, "_blank");
-  };
   return (
     <Container className="containerInfo">
       <Box id="infoContactanos" className={isOpen ? "openInfo" : ""}>
