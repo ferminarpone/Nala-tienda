@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@250;300;350;380;450;700&display=swap");
-/*Home*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@250;300;350;380;450;700&display=swap');
+
 .homeImg {
   background-image: url(../../assets/home/Banner.png);
   height: 480px;
@@ -8,7 +8,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 #homeMobile {
   height: 314px;
   display: none;
@@ -16,8 +15,8 @@
   text-align: center;
   margin-top: 157px;
 }
-#homeMobile h1 {
-  font-family: "DM Serif Display", serif;
+#homeMobile .titleHome{
+  font-family: 'DM Serif Display', serif;
   color: #ffffff;
   font-size: 3rem;
   margin-top: -14px;
@@ -28,10 +27,14 @@
   font-weight: 380;
   font-size: 1.1rem;
   padding-top: 2px;
+
 }
 .open {
   height: 157px !important;
   margin-top: 0px !important;
+}
+.open img {
+  margin-top: 33px;
 }
 
 /*Destacados*/
@@ -40,11 +43,10 @@
   right: 56px;
   width: 120px !important;
 }
-
 #destacados {
   display: flex;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 60px; 
   overflow-x: scroll;
 }
 #destacados img {
@@ -53,33 +55,33 @@
   margin-right: 30px;
   margin-bottom: 10px;
 }
-#destacados .sinMargin {
+ #destacados .sinMargin{
   margin-right: 0px !important;
-}
+} 
 
 /*Opiniones*/
 #opiniones {
   max-width: 90%;
   margin-top: 90px;
 }
-#opiniones .dividerOpiniones {
+.dividerOpiniones {
   position: relative;
   right: 38px;
   width: 124px !important;
   margin-bottom: 50px;
 }
-
-#cards {
+#cards{
   display: flex;
   justify-content: center;
 }
-#cards .gridCards {
+.gridCards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
-  overflow-x: scroll;
+  overflow-x: scroll; 
+
 }
-#cards .gridCards div {
+.gridCards div {
   padding: 24px;
   border: solid 2px #4a9a91;
   opacity: 0.7;
@@ -92,12 +94,12 @@
   justify-content: space-between;
   margin-bottom: 10px;
 }
-#cards .gridCards div p {
+.gridCards div p {
   font-family: "Josefin Sans", sans-serif;
   color: #969696;
   font-weight: 350;
 }
-#cards .gridCards div ul {
+.gridCards div ul {
   display: flex;
   justify-content: end;
   font-family: "Josefin Sans", sans-serif;
@@ -105,19 +107,16 @@
   font-weight: bold;
   font-size: 1.1rem;
 }
-
 @media (max-width: 501px) {
-  /*home*/
   .homeImg {
     height: 350px;
   }
   #homeMobile {
     display: flex;
   }
-  /*Destacados*/
   #destacados {
-    margin-top: 30px;
-  }
+  margin-top: 30px;
+}
   #destacados img {
     width: 190px;
   }
@@ -125,11 +124,10 @@
     right: 44px;
     width: 80px !important;
   }
-  /*Opiniones*/
   #opiniones {
     margin-top: 45px;
   }
-  #opiniones .dividerOpiniones {
+  .dividerOpiniones {
     right: 30px;
     width: 84px !important;
     margin-bottom: 25px;
@@ -175,5 +173,3 @@
     height: 255px;
   }
 }
-
-/*# sourceMappingURL=home.css.map */

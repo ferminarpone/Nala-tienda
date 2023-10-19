@@ -18,7 +18,7 @@ export const Home = () => {
           className={isOpen ? "open" : ""}
           onClick={() => isOpen && setIsOpen(!isOpen)}
         >
-          <h1 className="titleHome">Compra</h1>
+          <h1>Compra</h1>
           <p>Tus productos favoritos de Shein </p>
         </div>
       </div>

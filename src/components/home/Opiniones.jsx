@@ -1,11 +1,6 @@
 import {
-  Center,
   Container,
   Divider,
-  Flex,
-  Grid,
-  GridItem,
-  Image,
 } from "@chakra-ui/react";
 
 export const Opiniones = () => {
