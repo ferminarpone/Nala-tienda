@@ -26,7 +26,7 @@ export const ItemDetail = ({ id, nombre, img, precio, descripcion }) => {
   const handleToggle = () => setShow(!show);
   //Función que envia el producto en cuestion por wsp.
   const sendWsp = () => {
-    const url = `https://web.whatsapp.com/send?phone=543513902114&text=%0A%2ANala%20tienda%2A%0AConsulta%20disponibilidad%20de%20producto%0A%0A%2AProducto%3A%2A ${nombre}%0A%0A%2AId%3A%2A%${id}%0A%0A ${currentUrl}`;
+    const url = `https://wa.me/543513902114?text=%0A%2ANala%20tienda%2A%0AConsulta%20disponibilidad%20de%20producto%0A%0A%2AProducto%3A%2A ${nombre}%0A%0A%2AId%3A%2A%${id}%0A%0A ${currentUrl}`;
     window.open(url, "_blank");
   };
 
