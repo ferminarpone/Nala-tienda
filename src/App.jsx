@@ -5,7 +5,7 @@ import { Informacion } from "./components/info/Informacion";
 import { Nosotros } from "./components/nosotros/Nosotros";
 import { Personalizados } from "./components/personalizados/Personalizados";
 import { ItemListContainer } from "./components/productos/ItemListContainer";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
 import { FavContext } from "./context/FavContext";
 import { Favoritos } from "./components/favoritos/Favoritos";
 
@@ -13,7 +13,8 @@ export const App = () => {
   return (
     <>
       <FavContext>
-        <BrowserRouter>
+        {/*         <BrowserRouter> */}
+        <HashRouter>
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/productos" element={<ItemListContainer />} />
@@ -33,7 +34,8 @@ export const App = () => {
             <Route exact path="/informacion" element={<Informacion />} />
             <Route exact path="/favoritos" element={<Favoritos />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
+        {/*         </BrowserRouter> */}
       </FavContext>
     </>
   );
