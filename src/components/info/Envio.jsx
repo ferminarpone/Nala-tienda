@@ -38,7 +38,7 @@ export const Envio = () => {
             <Divider className="dividerFooter" />
           </Center>
           <Center id="footerEnvio">
-            <h4 className="footerInf">Síguenos</h4>
+            <h4>Síguenos</h4>
             <a
               href="https://instagram.com/nala_tiendaa?igshid=MzRlODBiNWFlZA=="
               target="_blank"

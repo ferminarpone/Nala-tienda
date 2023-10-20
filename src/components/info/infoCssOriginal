@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@250;300;350;380;450;700&display=swap");
-/*Info*/
+
 .informacionImg {
   background-image: url(../../assets/informacion/fondo.png);
   height: 480px;
@@ -9,11 +9,32 @@
   background-size: cover;
   filter: brightness(0.9);
 }
-
-/*Pagos*/
 #pagos {
   height: 100%;
   padding: 90px 0 90px 0;
+}
+.metodos {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 60px;
+  color: #7cbfba;
+  font-size: 1.8rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+}
+.efectivo {
+  display: flex;
+}
+.efectivo p {
+  padding-top: 5px;
+  margin-left: 10px;
+}
+.transferencia {
+  display: flex;
+}
+.transferencia p {
+  padding-top: 5px;
+  margin-left: 10px;
 }
 #pagos .titlePagos {
   font-family: "DM Serif Display", serif;
@@ -27,36 +48,10 @@
   font-size: 1.6rem;
   font-weight: 350;
 }
-#pagos .metodos {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 60px;
-  color: #7cbfba;
-  font-size: 1.8rem;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
-}
-#pagos .metodos .efectivo {
-  display: flex;
-}
-#pagos .metodos .efectivo p {
-  padding-top: 5px;
-  margin-left: 10px;
-}
-#pagos .metodos .transferencia {
-  display: flex;
-}
-#pagos .metodos .transferencia p {
-  padding-top: 5px;
-  margin-left: 10px;
-}
-
 @media (max-width: 610px) {
-  /*Informacion*/
   .informacionImg {
     height: 350px;
   }
-  /*pagos*/
   #pagos {
     height: 100%;
     padding: 60px 5% 60px 5%;
@@ -70,28 +65,38 @@
     font-size: 1.3rem;
     text-align: center;
   }
-  #pagos .metodos {
+  .metodos {
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
   }
-  #pagos .metodos .efectivo {
+  .efectivo {
     font-size: 1.4rem;
     margin-bottom: 10px;
   }
-  #pagos .metodos .efectivo p {
+  .efectivo p {
     margin-top: 4px;
   }
-  #pagos .metodos .transferencia {
+  .transferencia {
     font-size: 1.4rem;
   }
-  #pagos .metodos .transferencia p {
+  .transferencia p {
     margin-top: 4px;
   }
 }
+
 /*Envio*/
 #envio {
   background-color: #4a9a91;
+}
+.envios {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 60px;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
 }
 #envio .titleEnvios {
   font-family: "DM Serif Display", serif;
@@ -106,31 +111,20 @@
   font-size: 1.6rem;
   font-weight: 350;
 }
-
-.envios {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 60px;
-  color: #ffffff;
-  font-size: 1.8rem;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
-}
-.envios .bicicleta {
+.bicicleta {
   display: flex;
 }
-.envios .bicicleta p {
+.bicicleta p {
   padding-top: 5px;
   margin-left: 10px;
 }
-.envios .moto {
+.moto {
   display: flex;
 }
-.envios .moto p {
+.moto p {
   padding-top: 5px;
   margin-left: 10px;
 }
-
 .correo {
   display: flex;
   color: #ffffff;
@@ -143,27 +137,25 @@
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
 }
-
 .dividerFooter {
   width: 80% !important;
-  border: #ffffff solid 1px !important;
+  border: #ffffff solid 1px !important ;
   margin-top: 80px;
 }
-
 #footerEnvio {
   height: 100px;
 }
-#footerEnvio h4 {
+.footerInf {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.8rem;
   font-weight: 300;
   color: #ffffff;
   margin-right: 30px;
 }
- #footerEnvio a {
+#envio a {
   color: #ffffff;
   margin-left: 15px;
-} 
+}
 @media (max-width: 335px) {
   #envio .titleEnvios {
     margin-top: 0;
@@ -187,39 +179,41 @@
     font-size: 1.3rem;
     text-align: center;
   }
-  #envio .envios {
+  .envios {
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
   }
-  #envio .envios .bicicleta {
+  .bicicleta {
     font-size: 1.4rem;
   }
-  #envio .envios .bicicleta p {
+  .bicicleta p {
     margin-top: 4px;
   }
-  #envio .envios .moto {
+  .moto {
     font-size: 1.4rem;
   }
-  #envio .envios .moto p {
+  .moto p {
     margin-top: 4px;
   }
-  #envio .correo {
+  .correo {
     margin-top: 3px;
   }
-  #envio .correo p {
+  .correo p {
     margin-top: 2px;
     font-size: 1.4rem;
   }
-  #envio .dividerFooter {
+  .dividerFooter {
     margin-top: 40px;
     width: 95% !important;
   }
-  #envio #footerEnvio {
+  #footerEnvio {
     height: 100%;
     display: flex;
     margin-top: 15px;
   }
+  .footerInf {
+    font-size: 1.6rem;
+    font-weight: 350;
+  }
 }
-
-/*# sourceMappingURL=info.css.map */

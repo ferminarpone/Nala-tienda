@@ -19,7 +19,7 @@ export const NavBarDesktop = () => {
     }
   };
   return (
-    <Box mr="10" ml="10" pt="6" className="navDesktop">
+    <Box mr="10" ml="10" pt="6">
       <Grid
         id="navBar"
         className={validation() ? "navBar" : "navBar1"}

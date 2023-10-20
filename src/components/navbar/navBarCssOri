@@ -6,7 +6,6 @@
   padding: 0;
   margin: 0;
 }
-
 /*NavBar Desktop*/
 .navBar {
   font-family: "Josefin Sans", sans-serif;
@@ -15,7 +14,6 @@
   font-size: 1.3rem;
   font-weight: 450;
 }
-
 .navBar1 {
   font-family: "Josefin Sans", sans-serif;
   color: #4a9a91;
@@ -23,16 +21,13 @@
   font-size: 1.3rem;
   font-weight: 400;
 }
-
 #navBar h2 {
   text-align: center;
 }
-
 #navBar img {
   width: 110px;
   height: 45px;
 }
-
 .underline {
   margin-bottom: 35px;
   background-color: #4a9a91;
@@ -48,20 +43,16 @@
   justify-content: space-between;
   align-items: center;
 }
-
 #navMobile .menu {
   color: #ffffff;
   font-size: 1.5rem;
 }
-
-#navMobile .divider {
+#navMobile .divider{
   background-color: white;
 }
-
 #navMobile .heartNavBar {
   color: #ffffff;
 }
-
 .navList {
   background-color: #4a9a91;
   display: none;
@@ -75,30 +66,24 @@
   font-weight: 300;
   height: 0px;
 }
-
-.navList.open {
+ .navList.open {
   display: flex;
-}
-
+} 
 .navList li {
   width: 100%;
   text-align: center;
 }
-
-.navList li h1 {
+.navList li h1{
   width: 100%;
 }
-
 .navList li hr {
   opacity: 0.4;
   margin: 0.3rem 0rem 0.3rem 0rem;
   width: 100%;
 }
-
 .differentLi {
   margin-bottom: 0.3rem;
 }
-
 @media (min-width: 800px) and (max-width: 1000px) {
   .navBar {
     font-size: 1.1rem;
@@ -132,5 +117,3 @@
     margin-left: 14%;
   }
 }
-
-/*# sourceMappingURL=navbar.css.map */
