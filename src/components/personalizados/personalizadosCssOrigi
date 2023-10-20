@@ -1,8 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@250;350;450;700&display=swap");
+
 .bgPersonalizadosDesktop {
   background-color: #4a9a91;
 }
-
+.bannerPersonalizado {
+  height: 410px;
+}
+.bgPersonalizadosDesktop .titlePersonalizados {
+  font-family: "DM Serif Display", serif;
+  color: #ffffff;
+  font-size: 4.6rem;
+}
+.personalizadosText {
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 250;
+  width: 80%;
+}
+.personalizadosButton,
+.personalizadosButtonB {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 6px 16px 1px 16px;
+  border-radius: 6px;
+  border: solid 1px #ffffff;
+  color: #ffffff;
+  background-color: #4a9a91;
+}
+.personalizadosButton {
+  margin-top: 5%;
+  margin-right: 10%;
+  margin-bottom: 10px;
+}
+.personalizadosButton:hover,
+.personalizadosButtonB:hover {
+  background-color: #4a9a91 !important;
+  transform: scale(1.1) !important;
+}
 #personalizadosMobile {
   display: none;
   height: 314px;
@@ -22,63 +58,13 @@
   font-size: 1rem;
   padding-top: 4px;
 }
-
-#personalizados .bannerPersonalizado {
-  height: 410px;
-}
-#personalizados .titlePersonalizados {
-  font-family: "DM Serif Display", serif;
-  color: #ffffff;
-  font-size: 4.6rem;
-}
-#personalizados .personalizadosText {
-  font-family: "Josefin Sans", sans-serif;
-  color: #ffffff;
-  font-size: 1.5rem;
-  font-weight: 250;
-  width: 80%;
-}
-#personalizados .personalizadosButton,
-#personalizados .personalizadosButtonB {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding: 6px 16px 1px 16px;
-  border-radius: 6px;
-  border: solid 1px #ffffff;
-  color: #ffffff;
-  background-color: #4a9a91;
-}
-#personalizados .personalizadosButton:hover,
-#personalizados .personalizadosButtonB:hover {
-  background-color: #4a9a91 !important;
-  transform: scale(1.1) !important;
-}
-#personalizados .personalizadosButton {
-  margin-top: 5%;
-  margin-right: 10%;
-  margin-bottom: 10px;
-}
-
 #formularioPer {
   padding-top: 5px;
 }
-#formularioPer.openFormularioPer {
-  margin-top: -157px;
+#formularioPer.openFormularioPer{
+margin-top: -157px;
 }
-
 /*Formulario*/
-#formulario {
-  max-width: 90%;
-  margin-top: 50px;
-}
-
-.dividerForm {
-  position: relative;
-  right: 160px;
-  width: 188px !important;
-}
-
 #formPersonalizados input {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 350;
@@ -88,8 +74,8 @@
   height: 55px;
   padding-left: 3%;
 }
-#formPersonalizados inputfocus {
-  border: #4a9a91;
+#formPersonalizados input:focus {
+border: #4a9a91;
 }
 #formPersonalizados button {
   background-color: #4a9a91 !important;
@@ -100,14 +86,21 @@
   height: 55px;
   width: 90%;
 }
-
+.dividerForm {
+  position: relative;
+  right:160px ;
+  width: 188px !important;
+}
 .requerido {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 350;
   margin-top: 15px;
   color: #676767;
 }
-
+#formulario {
+  max-width: 90%;
+  margin-top: 50px;
+}
 @media (max-width: 374px) {
   #formulario .title {
     font-size: 1rem;
@@ -117,7 +110,7 @@
     width: 90px !important;
   }
 }
-@media (min-width: 374px) and (max-width: 501px) {
+@media (min-width:374px) and (max-width: 501px) {
   #formulario .title {
     font-size: 1.3rem;
   }
@@ -148,7 +141,8 @@
   .bgPersonalizados.openP {
     position: relative;
     top: -157px;
-  }
+  } 
+
   /*Formulario*/
   #formPersonalizados {
     margin-top: 35px;
@@ -228,5 +222,3 @@
     padding-bottom: 30px;
   }
 }
-
-/*# sourceMappingURL=personalizados.css.map */
