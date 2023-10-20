@@ -14,7 +14,7 @@ export const Terminos = () => {
             className="dividerTerminos"
           />
         </div>
-        <p className="parrafoTerminos">
+        <p>
           Al realizar una compra en Nala tienda, la orden se tomara una vez
           abonada el producto y tendrá hasta 3 días de demora para recibir su
           producto. Una vez seleccionado el producto pero no abonado, habrá 2

@@ -1,36 +1,38 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@250;350;450;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@250;350;450;700&display=swap');
+
 /*Nosotros*/
 #bgNosotros {
   background-color: #eff9ed;
   height: 100%;
   color: #4a9a91;
 }
-
-.titleNosotros {
-  font-family: "DM Serif Display", serif;
+ .titleNosotros{
+  font-family: 'DM Serif Display', serif;
   color: #4a9a91;
   font-size: 3.2rem;
 }
- .nosotrosParrafo {
+.nosotrosParrafo {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
   line-height: 1.2;
   color: #969696;
   font-weight: 300;
 }
-.bannerQueHacemos {
-  margin-bottom: -30%;
+.bannerQueHacemos{
+margin-bottom: -30%;
 }
 #nosotrosMobile {
   display: none;
   height: 100%;
   background-color: #ffffff;
-  padding: 40px 0 30px 0; 
+  padding: 40px 0 30px 0;
 }
-
+#nosotrosMobile img {
+  width: 70%;
+  margin-bottom: 20px;
+}
 @media (max-width: 400px) {
-  .titleNosotros {
+  .titleNosotros{
     font-size: 2.5rem;
   }
 }
@@ -51,61 +53,60 @@
     display: flex;
     height: 100%;
   }
-  #nosotrosMobile .nosotrosParrafo {
-    margin-top: 20px;
-    font-size: 1.5rem;
-    line-height: 1.1;
+  #nosotrosMobile .nosotrosParrafo{
+      margin-top: 20px;
+      font-size: 1.5rem;
+      line-height: 1.1;
   }
 }
-@media (min-width: 502px) {
+@media (min-width: 502px)  {
   .nosotrosParrafo {
     font-size: 1.3rem;
   }
-  .titleNosotros {
-    font-size: 2.4rem;
-  }
+    .titleNosotros{
+  font-size: 2.4rem;
 }
-@media (min-width: 767px) {
-  .titleNosotros {
-    font-size: 3rem;
-  }
 }
-@media (min-width: 830px) and (max-width: 1070px) {
+@media (min-width: 767px)  {
+  .titleNosotros{
+  font-size: 3rem;
+}
+}
+@media (min-width: 830px)and (max-width: 1070px) {
   .nosotrosParrafo {
     font-size: 1.4rem;
   }
-  .bannerQueHacemos {
+  .bannerQueHacemos{
     position: relative;
     top: -8%;
-  }
+    }
 }
 @media (min-width: 1070px) {
   .nosotrosParrafo {
     font-size: 1.5rem;
   }
-  .bannerQueHacemos {
+  .bannerQueHacemos{
     position: relative;
     top: -18%;
-  }
+    }
 }
 @media (min-width: 1300px) {
-  .bannerQueHacemos {
+  .bannerQueHacemos{
     margin-bottom: -20%;
-  }
+    }
 }
+
 /*Historia*/
 #historia {
   height: 100%;
   background-color: #4a9a91;
   padding: 10px 0 60px 0;
 }
-
-.titleHistoria {
-  font-family: "DM Serif Display", serif;
+ .titleHistoria{
+  font-family: 'DM Serif Display', serif;
   color: #ffffff;
   font-size: 4rem;
 }
-
 .historiaParrafo {
   font-family: "Josefin Sans", sans-serif;
   padding-top: 10px;
@@ -114,17 +115,15 @@
   color: #ffffff;
   font-weight: 300;
 }
-
 #historiaMobile {
   display: none;
 }
-
 @media (max-width: 502px) {
   /*Historia*/
   #historia {
     padding: 30px 0 40px 0px;
   }
-  .titleHistoria {
+  .titleHistoria{
     font-size: 3.2rem;
   }
   #historiaDesktop {
@@ -134,23 +133,23 @@
     display: flex;
   }
   #historiaMobile p {
-    margin-top: 15px;
+    margin-top:15px;
     padding-top: 0px;
   }
 }
-@media (min-width: 502px) {
+@media (min-width: 502px)  {
   .historiaParrafo {
     font-size: 1.3rem;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 600px)  {
   .bannerHistoria {
     position: relative;
     top: -24%;
-    margin-bottom: -10%;
+   margin-bottom: -10%;
   }
 }
-@media (min-width: 840px) {
+@media (min-width: 840px)  {
   .bannerHistoria {
     position: relative;
     top: -36%;
@@ -174,17 +173,18 @@
     margin-top: 5%;
   }
 }
+
 /*Términos y condiciones*/
 #terminos {
   height: 100%;
   background-color: #ffffff;
   padding-top: 60px;
 }
-#terminos .dividerTerminos {
+.dividerTerminos {
   position: relative;
   right: 158px;
 }
-#terminos p {
+.parrafoTerminos {
   margin-top: 40px;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
@@ -192,12 +192,11 @@
   font-weight: 300;
   color: #969696;
 }
-
 @media (max-width: 502px) {
   #terminos {
     padding-top: 50px;
   }
-  #terminos .dividerTerminos {
+  .dividerTerminos {
     position: relative;
     right: 0px;
     width: 214px !important;
@@ -206,11 +205,11 @@
     text-align: center;
   }
 }
-@media (min-width: 502px) and (max-width: 632px) {
+@media (min-width: 502px) and (max-width:632px) {
   #terminos .title {
     font-size: 1.6rem;
   }
-  #terminos .dividerTerminos {
+  .dividerTerminos {
     position: relative;
     right: 0px;
     width: 214px !important;
@@ -227,5 +226,3 @@
     padding-bottom: 10px;
   }
 }
-
-/*# sourceMappingURL=nosotros.css.map */
