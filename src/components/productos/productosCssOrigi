@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@250;350;450;700&display=swap");
+
 /*ItemListContainer*/
 #itemListMobile.openIM {
   position: relative;
   top: -157px;
   z-index: -1;
 }
-
 #footerListMobile.openFM {
   margin-top: -157px;
 }
@@ -19,9 +19,6 @@
   color: #4e958f;
   font-size: larger;
 }
-#categorias .heartIcon:hover {
-  transform: scale(1.1);
-}
 #categorias .link {
   margin-right: 10px;
 }
@@ -30,7 +27,8 @@
   font-size: 1.1rem;
   color: #4e958f;
 }
-#categorias h5:hover {
+#categorias h5:hover,
+.heartIcon:hover {
   transform: scale(1.1);
 }
 #categorias .productosTitle {
@@ -42,7 +40,6 @@
 #categorias hr {
   border-color: #4e958f;
 }
-
 @media (max-width: 502px) {
   #categorias {
     margin-top: 30px;
@@ -71,7 +68,6 @@
   display: flex;
   justify-content: center;
 }
-
 @media (max-height: 600px) {
   #containerItemList {
     min-height: 340px;
@@ -93,21 +89,18 @@
   height: 280px;
   object-fit: cover;
 }
-
 #cardItem h4 {
   font-family: "Josefin Sans", sans-serif;
   color: #969696;
   font-weight: 700;
   font-size: 1.2rem;
 }
-
 #cardItem h5 {
   font-family: "Josefin Sans", sans-serif;
   color: #969696;
   font-size: 1.1rem;
   font-weight: 500;
 }
-
 #cardItem p {
   font-family: "Josefin Sans", sans-serif;
   color: #969696;
@@ -116,7 +109,6 @@
   margin-top: 12px;
   margin-bottom: 16px;
 }
-
 #cardItem .buttonCard {
   background-color: #7cbfba;
   width: 95%;
@@ -127,11 +119,9 @@
   color: #ffffff;
   border-radius: 14px;
 }
-
 #cardItem .buttonCard:hover {
   background-color: #4fa19c;
 }
-
 #cardItem .buttonCardHeart {
   background-color: #4a9a91;
   height: 45px;
@@ -141,36 +131,35 @@
   color: #ffffff;
   border-radius: 14px;
 }
-
 #cardItem .heart:hover {
   transform: scale(1.2);
 }
-
 .imgMobile {
   position: relative;
 }
-
 @media (max-width: 502px) {
-  #cardItem .imgItem {
-    width: 160px;
-    height: 160px;
+  #cardItem {
+    .imgItem {
+      width: 160px;
+      height: 160px;
+    }
   }
-  #inforCard h4 {
-    display: none;
-  }
-  #inforCard h5 {
-    margin-top: -14px;
-    font-size: 1rem;
-    max-width: 160px;
-  }
-  #inforCard p {
-    font-size: 1rem;
-    margin-top: -6px;
-    margin-top: 4px;
+  #inforCard {
+    h4{
+      display: none;
+    }
+    h5 {
+      margin-top: -14px;
+      font-size: 1rem;
+      max-width: 160px;
+    }
+    p {
+      font-size: 1rem;
+      margin-top: -6px;
+      margin-top: 4px;
+    }
   }
   #doubleButton {
     display: none;
   }
 }
-
-/*# sourceMappingURL=productos.css.map */

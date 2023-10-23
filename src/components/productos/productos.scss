@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@250;350;450;700&display=swap");
+
+/*ItemListContainer*/
+#itemListMobile {
+  &.openIM {
+    position: relative;
+    top: -157px;
+    z-index: -1;
+  }
+}
+#footerListMobile {
+  &.openFM {
+    margin-top: -157px;
+  }
+}
+
+/*Categorias*/
+#categorias {
+  line-height: normal;
+  display: flex;
+  .heartIcon {
+    color: #4e958f;
+    font-size: larger;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .link {
+    margin-right: 10px;
+  }
+  h5 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.1rem;
+    color: #4e958f;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .productosTitle {
+    width: 156px;
+  }
+  .bodyChain {
+    width: 92px;
+  }
+  hr {
+    border-color: #4e958f;
+  }
+}
+@media (max-width: 502px) {
+  #categorias {
+    margin-top: 30px;
+    h5 {
+      font-size: 1rem;
+    }
+    .productosTitle {
+      width: 141px;
+    }
+    .bodyChain {
+      width: 84px;
+    }
+  }
+}
+@media (max-width: 1050px) {
+  #categorias {
+    padding-bottom: 14px;
+    max-width: 90%;
+    overflow-x: scroll;
+  }
+}
+/*Item List*/
+#containerItemList {
+  max-width: 90%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+@media (max-height: 600px) {
+  #containerItemList {
+    min-height: 340px;
+  }
+}
+@media (min-height: 601px) and (max-height: 800px) {
+  #containerItemList {
+    min-height: 450px;
+  }
+}
+@media (min-height: 800px) {
+  #containerItemList {
+    min-height: 900px;
+  }
+}
+/*Item*/
+#cardItem {
+  .imgItem {
+    width: 330px;
+    height: 280px;
+    object-fit: cover;
+  }
+  h4 {
+    font-family: "Josefin Sans", sans-serif;
+    color: #969696;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  h5 {
+    font-family: "Josefin Sans", sans-serif;
+    color: #969696;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  p {
+    font-family: "Josefin Sans", sans-serif;
+    color: #969696;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 12px;
+    margin-bottom: 16px;
+  }
+  .buttonCard {
+    background-color: #7cbfba;
+    width: 95%;
+    height: 45px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #ffffff;
+    border-radius: 14px;
+    &:hover {
+      background-color: #4fa19c;
+    }
+  }
+  .buttonCardHeart {
+    background-color: #4a9a91;
+    height: 45px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #ffffff;
+    border-radius: 14px;
+  }
+  .heart:hover {
+    transform: scale(1.2);
+  }
+  .imgMobile {
+    position: relative;
+  }
+}
+
+@media (max-width: 502px) {
+  #cardItem .imgItem {
+    width: 160px;
+    height: 160px;
+  }
+  #inforCard h4 {
+    display: none;
+  }
+  #inforCard h5 {
+    margin-top: -14px;
+    font-size: 1rem;
+    max-width: 160px;
+  }
+  #inforCard p {
+    font-size: 1rem;
+    margin-top: -6px;
+    margin-top: 4px;
+  }
+  .bgFavMobile {
+    display: flex;
+  }
+  .favMobile {
+    display: flex;
+  }
+  #doubleButton {
+    display: none;
+  }
+}
