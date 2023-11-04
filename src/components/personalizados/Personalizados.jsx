@@ -6,6 +6,7 @@ import { Footer } from "../../components/footer/Footer";
 import "./personalizados.css";
 import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
+import { HashRouter, Link, Route, Routes } from "react-router-dom";
 
 export const Personalizados = () => {
   const { isOpen, setIsOpen } = useContext(FavoritoContext);
@@ -61,7 +62,9 @@ export const Personalizados = () => {
                   IR A SHEIN
                 </button>
                 <button className="personalizadosButtonB">
-                  <a href="#formularioPer">DEJA TUS DATOS</a>
+                
+                 <a href="#formularioPer">DEJA TUS DATOS</a> 
+       
                 </button>
               </GridItem>
               <GridItem
@@ -79,7 +82,7 @@ export const Personalizados = () => {
       </div>
       <div onClick={() => isOpen && setIsOpen(!isOpen)}>
         <div id="formularioPer" className={isOpen ? "openFormularioPer" : ""}>
-          <Formulario />
+          <Formulario/>
         </div>
         <Footer />
       </div>

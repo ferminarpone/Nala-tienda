@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 
 export const Categorias = () => {
   const catLocation = useLocation();
-  // Función par agrear subrayado a las categorias.
+  // Función par agrear subrayado a las categorias de productos.
   const hrFunction = () => {
     switch (catLocation.pathname) {
       case "/productos/piercing":
