@@ -61,10 +61,11 @@ export const Personalizados = () => {
                 >
                   IR A SHEIN
                 </button>
-                <button className="personalizadosButtonB">
-                
-                 <a href="#formularioPer">DEJA TUS DATOS</a> 
-       
+                <button
+                  className="personalizadosButtonB"
+                  onClick={() => window.scroll(0, 604)}
+                >
+                  DEJA TUS DATOS
                 </button>
               </GridItem>
               <GridItem
@@ -82,7 +83,7 @@ export const Personalizados = () => {
       </div>
       <div onClick={() => isOpen && setIsOpen(!isOpen)}>
         <div id="formularioPer" className={isOpen ? "openFormularioPer" : ""}>
-          <Formulario/>
+          <Formulario />
         </div>
         <Footer />
       </div>
