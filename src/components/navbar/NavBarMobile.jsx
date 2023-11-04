@@ -2,12 +2,12 @@ import icono from "../../assets/navBar/Icono.png";
 import { Image } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
-import { FaRegHeart } from "react-icons/fa";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
 
 export const NavBarMobile = () => {
-  const { isOpen, setIsOpen } = useContext(FavoritoContext);
+  const { isOpen, setIsOpen, fav } = useContext(FavoritoContext);
   return (
     <nav id="navMobile">
       <div className="navTop">
@@ -18,7 +18,12 @@ export const NavBarMobile = () => {
           <Image src={icono} alt="Logo Nala Tienda" w="80%" ml="6%" />
         </Link>
         <Link to={`/favoritos`} onClick={() => isOpen && setIsOpen(!isOpen)}>
+
+        {fav.length > 0 ? (
+          <FaHeart className="heartNavBar" />
+        ) : (
           <FaRegHeart className="heartNavBar" />
+        )}
         </Link>
       </div>
       <hr className="divider" />

@@ -1,9 +1,12 @@
 import { Container, Spacer } from "@chakra-ui/react";
-import { FaRegHeart } from "react-icons/fa";
+import { useContext } from "react";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import { FavoritoContext } from "../../context/FavContext";
 
 export const Categorias = () => {
   const catLocation = useLocation();
+  const { fav } = useContext(FavoritoContext);
   // Función par agrear subrayado a las categorias de productos.
   const hrFunction = () => {
     switch (catLocation.pathname) {
@@ -85,7 +88,11 @@ export const Categorias = () => {
       </Link>
       <Spacer />
       <Link to={`/favoritos`}>
-        <FaRegHeart className="heartIcon" />
+        {fav.length > 0 ? (
+          <FaHeart className="heartIcon" />
+        ) : (
+          <FaRegHeart className="heartIcon" />
+        )}
       </Link>
     </Container>
   );

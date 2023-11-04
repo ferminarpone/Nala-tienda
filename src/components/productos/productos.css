@@ -29,7 +29,6 @@
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.1rem;
   color: #4e958f;
-  padding-top: 2px;
 }
 #categorias h5:hover {
   transform: scale(1.1);
@@ -42,9 +41,6 @@
 }
 #categorias hr {
   border-color: #4e958f;
-  width: 110%;
-  position: relative;
-  left: -4%;
 }
 
 @media (max-width: 502px) {
@@ -59,6 +55,9 @@
   }
   #categorias .bodyChain {
     width: 84px;
+  }
+  #categorias .heartIcon {
+    display: none;
   }
 }
 @media (max-width: 1050px) {
@@ -97,21 +96,18 @@
   height: 280px;
   object-fit: cover;
 }
-
 #cardItem h4 {
   font-family: "Josefin Sans", sans-serif;
   color: #969696;
   font-weight: 700;
   font-size: 1.2rem;
 }
-
 #cardItem h5 {
   font-family: "Josefin Sans", sans-serif;
   color: #969696;
   font-size: 1.1rem;
   font-weight: 500;
 }
-
 #cardItem p {
   font-family: "Josefin Sans", sans-serif;
   color: #969696;
@@ -120,7 +116,6 @@
   margin-top: 12px;
   margin-bottom: 16px;
 }
-
 #cardItem .buttonCard {
   background-color: #7cbfba;
   width: 95%;
@@ -131,11 +126,9 @@
   color: #ffffff;
   border-radius: 14px;
 }
-
 #cardItem .buttonCard:hover {
   background-color: #4fa19c;
 }
-
 #cardItem .buttonCardHeart {
   background-color: #4a9a91;
   height: 45px;
@@ -145,12 +138,10 @@
   color: #ffffff;
   border-radius: 14px;
 }
-
 #cardItem .heart:hover {
   transform: scale(1.2);
 }
-
-.imgMobile {
+#cardItem .imgMobile {
   position: relative;
 }
 
@@ -171,6 +162,12 @@
     font-size: 1rem;
     margin-top: -6px;
     margin-top: 4px;
+  }
+  .bgFavMobile {
+    display: flex;
+  }
+  .favMobile {
+    display: flex;
   }
   #doubleButton {
     display: none;
