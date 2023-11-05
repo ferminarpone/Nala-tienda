@@ -1,8 +1,9 @@
-import { Container, Divider } from "@chakra-ui/react";
-import BrochePastel from "../../assets/home/BrochePastel.png";
-import BrocheTransparente from "../../assets/home/BrocheTransparente.png";
-import Strap from "../../assets/home/Strap.png";
-import StrapNegro from "../../assets/home/StrapNegro.png";
+import { Button, Container, Divider } from "@chakra-ui/react";
+import Gorra from "../../assets/home/Gorra argollas.png";
+import Estrella from "../../assets/home/Estrellas.png";
+import Strass from "../../assets/home/Helix Strass.png";
+import Durazno from "../../assets/home/Durazno.png";
+import { Link } from "react-router-dom";
 
 export const Destacados = () => {
   return (
@@ -17,10 +18,26 @@ export const Destacados = () => {
         />
       </div>
       <div id="destacados">
-        <img src={BrocheTransparente} alt="BrocheTransparente" />
-        <img src={Strap} alt="Strap" />
-        <img src={BrochePastel} alt="BrochePastel" />
-        <img className="sinMargin" src={StrapNegro} alt="StrapNegro" />
+        <Link to={`/producto/pSlVW10RRGrC8uOhVTzG`} className="link">
+          <button>
+            <img src={Gorra} alt="Gorra argollas" />
+          </button>
+        </Link>
+        <Link to={`/producto/wlOOCOHdgTwGB9hR3tQU`} className="link">
+          <button>
+            <img src={Estrella} alt="Body chain Estrellas" />
+          </button>
+        </Link>
+        <Link to={`/producto/jUWXpyWxVluLuMNZgy5o`} className="link">
+          <button>
+            <img src={Strass} alt="Helix Strass" />
+          </button>
+        </Link>
+        <Link to={`/producto/5CRyl44dxclPMwBW6PRB`}>
+          <button className="sinMargin">
+            <img src={Durazno} alt="Llavero duraznos" />
+          </button>
+        </Link>
       </div>
     </Container>
   );
