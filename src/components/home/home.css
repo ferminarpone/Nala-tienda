@@ -121,7 +121,7 @@
   #destacados {
     margin-top: 30px;
   }
-  #destacados img {
+  #destacados button{
     width: 190px;
   }
   .dividerDestacados {
