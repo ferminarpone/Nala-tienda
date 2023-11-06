@@ -16,14 +16,14 @@ export const Categorias = () => {
       case "/productos/llaveros":
         return "llaveros";
         break;
-      case "/productos/scrunchies":
-        return "scrunchies";
+      case "/productos/novedades":
+        return "novedades";
         break;
       case "/productos/anillos":
         return "anillos";
         break;
-      case "/productos/vinchas":
-        return "vinchas";
+      case "/productos/cabello":
+        return "cabello";
         break;
       case "/productos/body%20chain":
         return "body chain";
@@ -31,20 +31,25 @@ export const Categorias = () => {
       case "/productos/collares":
         return "collares";
         break;
-      case "/productos/gorras":
-        return "gorras";
+      case "/productos/escritorio":
+        return "escritorio";
         break;
       case "/productos":
         return "todo";
         break;
     }
   };
-
+  
   return (
     <Container id="categorias" maxWidth="80%">
       <Link to={`/productos`} className="link">
         <h5 className="productosTitle">Todos los productos</h5>
         {hrFunction() == "todo" ? <hr /> : ""}
+      </Link>
+      <Spacer />
+      <Link to={`/productos/${"novedades"}`} className="link">
+        <h5>Novedades</h5>
+        {hrFunction() == "novedades" ? <hr /> : ""}
       </Link>
       <Spacer />
       <Link to={`/productos/${"piercing"}`} className="link">
@@ -57,19 +62,14 @@ export const Categorias = () => {
         {hrFunction() == "llaveros" ? <hr /> : ""}
       </Link>
       <Spacer />
-      <Link to={`/productos/${"scrunchies"}`} className="link">
-        <h5>Scrunchies</h5>
-        {hrFunction() == "scrunchies" ? <hr /> : ""}
-      </Link>
-      <Spacer />
       <Link to={`/productos/${"anillos"}`} className="link">
         <h5>Anillos</h5>
         {hrFunction() == "anillos" ? <hr /> : ""}
       </Link>
       <Spacer />
-      <Link to={`/productos/${"vinchas"}`} className="link">
-        <h5>Vinchas</h5>
-        {hrFunction() == "vinchas" ? <hr /> : ""}
+      <Link to={`/productos/${"cabello"}`} className="link">
+        <h5>Cabello</h5>
+        {hrFunction() == "cabello" ? <hr /> : ""}
       </Link>
       <Spacer />
       <Link to={`/productos/${"body chain"}`} className="link">
@@ -82,9 +82,9 @@ export const Categorias = () => {
         {hrFunction() == "collares" ? <hr /> : ""}
       </Link>
       <Spacer />
-      <Link to={`/productos/${"gorras"}`} className="link">
-        <h5>Gorras</h5>
-        {hrFunction() == "gorras" ? <hr /> : ""}
+      <Link to={`/productos/${"escritorio"}`} className="link">
+        <h5>Escritorio</h5>
+        {hrFunction() == "escritorio" ? <hr /> : ""}
       </Link>
       <Spacer />
       <Link to={`/favoritos`}>

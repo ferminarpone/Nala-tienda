@@ -1,7 +1,7 @@
 import { Button, Container, Divider } from "@chakra-ui/react";
 import Gorra from "../../assets/home/Gorra argollas.png";
 import Estrella from "../../assets/home/Estrellas.png";
-import Strass from "../../assets/home/Helix Strass.png";
+import Strass from "../../assets/home/Ombligo strass.png";
 import Durazno from "../../assets/home/Durazno.png";
 import { Link } from "react-router-dom";
 
@@ -28,9 +28,9 @@ export const Destacados = () => {
             <img src={Estrella} alt="Body chain Estrellas" />
           </button>
         </Link>
-        <Link to={`/producto/jUWXpyWxVluLuMNZgy5o`} className="link">
+        <Link to={`/producto/uspK7nr8cMFgJVNT1Mie`} className="link">
           <button>
-            <img src={Strass} alt="Helix Strass" />
+            <img src={Strass} alt="Ombligo Strass" />
           </button>
         </Link>
         <Link to={`/producto/5CRyl44dxclPMwBW6PRB`}>
