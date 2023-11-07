@@ -4,7 +4,7 @@ import { Footer, NavBar, InfoContactanos, FormContactanos } from "../index";
 import Banner from "../../assets/contactanos/Imagen Contactanos.png"; 
 import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
-
+//Cambios
 export const Contactanos = () => {
   const { isOpen, setIsOpen } = useContext(FavoritoContext);
   return (
