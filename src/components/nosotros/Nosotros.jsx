@@ -1,4 +1,4 @@
-import "./nosotros.css";
+import "./styles/nosotros.css";
 import { Container, Grid, GridItem, Image } from "@chakra-ui/react";
 import { NavBar } from "../navbar/NavBar";
 import Banner from "../../assets/nosotros/ImgQueHacemos.png";

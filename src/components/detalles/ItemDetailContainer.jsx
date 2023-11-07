@@ -6,7 +6,7 @@ import { Footer } from "../../components/footer/Footer";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "./ItemDetail";
 import { Center, CircularProgress } from "@chakra-ui/react";
-import "./detalles.css";
+import "./styles/detalles.css";
 import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
 

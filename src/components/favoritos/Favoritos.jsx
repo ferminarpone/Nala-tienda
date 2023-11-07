@@ -7,7 +7,7 @@ import { FavItem } from "./FavItem";
 import { Link } from "react-router-dom";
 import { AiOutlineLeft } from "react-icons/ai";
 import { FormularioFav } from "./FormularioFav";
-import "./favoritos.css";
+import "./styles/favoritos.css";
 
 export const Favoritos = () => {
   const { fav, isOpen, setIsOpen } = useContext(FavoritoContext);

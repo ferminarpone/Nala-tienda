@@ -137,7 +137,7 @@
     display: flex;
   }
   .bgPersonalizados {
-    background-image: url(../../assets/personalizados/BannerMobile.png);
+    background-image: url(../../../assets/personalizados/BannerMobile.png);
     height: 350px;
     width: auto;
     background-position: center;

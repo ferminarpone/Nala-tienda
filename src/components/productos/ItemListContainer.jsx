@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { NavBar } from "../navbar/NavBar";
 import { Footer } from "../../components/footer/Footer";
 import { ItemList } from "./ItemList";
-import "./productos.css";
+import "./styles/productos.css";
 import { FavoritoContext } from "../../context/FavContext";
 
 export const ItemListContainer = () => {

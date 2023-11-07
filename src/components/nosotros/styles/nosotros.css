@@ -37,7 +37,7 @@
 @media (max-width: 502px) {
   /*Nosotros*/
   .mobile {
-    background-image: url(../../assets/nosotros/Banner.png) !important;
+    background-image: url(../../../assets/nosotros/Banner.png) !important;
     height: 350px;
     width: auto;
     background-position: center;

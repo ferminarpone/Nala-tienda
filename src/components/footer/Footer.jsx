@@ -6,7 +6,7 @@ import {
   GridItem,
   Image,
 } from "@chakra-ui/react";
-import "./footer.css";
+import "./styles/footer.css";
 import Instagram from "../../assets/footer/Instagram.png";
 import Tiktok from "../../assets/footer/tik-tok 1.png";
 import { Link } from "react-router-dom";

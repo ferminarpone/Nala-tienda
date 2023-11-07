@@ -3,7 +3,7 @@ import { NavBar } from "../navbar/NavBar";
 import { Formulario } from "./Formulario";
 import BannerPersonalizado from "../../assets/personalizados/BannerPersonalizado.png";
 import { Footer } from "../../components/footer/Footer";
-import "./personalizados.css";
+import "./styles/personalizados.css";
 import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
 import { HashRouter, Link, Route, Routes } from "react-router-dom";

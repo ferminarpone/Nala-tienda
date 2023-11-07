@@ -1,4 +1,4 @@
-import "./contactanos.css";
+import "./styles/contactanos.css";
 import { Container, Grid, GridItem, Image } from "@chakra-ui/react";
 import { Footer } from "../footer/Footer";
 import { NavBar } from "../navbar/NavBar";

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@250;300;350;380;450;700&display=swap");
 /*Home*/
 .homeImg {
-  background-image: url(../../assets/home/Banner.png);
+  background-image: url(../../../assets/home/Banner.png);
   height: 480px;
   width: auto;
   background-position: center;

@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import { Envio } from "./Envio";
 import { Pagos } from "./Pagos";
 import { NavBar } from "../navbar/NavBar";
-import "./info.css";
+import "./styles/info.css";
 import { FavoritoContext } from "../../context/FavContext";
 
 export const Informacion = () => {

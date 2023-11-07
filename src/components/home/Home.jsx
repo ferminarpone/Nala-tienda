@@ -1,4 +1,4 @@
-import "./home.css";
+import "./styles/home.css";
 import { Footer } from "../../components/footer/Footer";
 import { NavBar } from "../navbar/NavBar";
 import { Destacados } from "./Destacados";
