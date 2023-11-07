@@ -1,13 +1,6 @@
-import { Contactanos } from "./components/contactanos/Contactanos";
-import { ItemDetailContainer } from "./components/detalles/ItemDetailContainer";
-import { Home } from "./components/home/Home";
-import { Informacion } from "./components/info/Informacion";
-import { Nosotros } from "./components/nosotros/Nosotros";
-import { Personalizados } from "./components/personalizados/Personalizados";
-import { ItemListContainer } from "./components/productos/ItemListContainer";
 import { HashRouter, Routes, Route } from "react-router-dom";
+import { Contactanos, ItemDetailContainer, Home, Informacion, Nosotros, Personalizados, ItemListContainer, Favoritos } from "./components";
 import { FavContext } from "./context/FavContext";
-import { Favoritos } from "./components/favoritos/Favoritos";
 
 export const App = () => {
   return (

@@ -1,7 +1,6 @@
-import MediaQuery from "react-responsive";
-import { NavBarDesktop } from "./NavBarDesktop";
-import { NavBarMobile } from "./NavBarMobile";
 import "./styles/navBar.css";
+import MediaQuery from "react-responsive";
+import { NavBarDesktop, NavBarMobile } from "../index"
 
 export const NavBar = () => {
   return (

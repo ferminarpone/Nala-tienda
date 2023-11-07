@@ -1,13 +1,10 @@
-import { Footer } from "../../components/footer/Footer";
-import { NavBar } from "../navbar/NavBar";
-import { useContext, useEffect, useState } from "react";
-import { FavoritoContext } from "../../context/FavContext";
+import "./styles/favoritos.css";
 import { Button, Center, Container, Flex } from "@chakra-ui/react";
-import { FavItem } from "./FavItem";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineLeft } from "react-icons/ai";
-import { FormularioFav } from "./FormularioFav";
-import "./styles/favoritos.css";
+import { Footer, NavBar, FavItem, FormularioFav } from "../index";
+import { FavoritoContext } from "../../context/FavContext";
 
 export const Favoritos = () => {
   const { fav, isOpen, setIsOpen } = useContext(FavoritoContext);

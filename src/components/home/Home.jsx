@@ -1,8 +1,5 @@
 import "./styles/home.css";
-import { Footer } from "../../components/footer/Footer";
-import { NavBar } from "../navbar/NavBar";
-import { Destacados } from "./Destacados";
-import { Opiniones } from "./Opiniones";
+import { Footer, NavBar, Destacados, Opiniones } from "../index";
 import { FavoritoContext } from "../../context/FavContext";
 import { useContext } from "react";
 

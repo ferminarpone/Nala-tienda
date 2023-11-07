@@ -1,14 +1,10 @@
-import { useEffect, useState } from "react";
-// para las categorias import { useParams } from "react-router-dom";
-import { doc, getDoc, getFirestore } from "firebase/firestore";
-import { NavBar } from "../navbar/NavBar";
-import { Footer } from "../../components/footer/Footer";
-import { useParams } from "react-router-dom";
-import { ItemDetail } from "./ItemDetail";
-import { Center, CircularProgress } from "@chakra-ui/react";
 import "./styles/detalles.css";
-import { useContext } from "react";
+import { Center, CircularProgress } from "@chakra-ui/react";
+import { useEffect, useState, useContext } from "react";
+import { useParams } from "react-router-dom";
+import { NavBar, Footer, ItemDetail } from "../index";
 import { FavoritoContext } from "../../context/FavContext";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 export const ItemDetailContainer = () => {
   const [product, setProduct] = useState([]);

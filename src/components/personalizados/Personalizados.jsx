@@ -1,12 +1,9 @@
-import { Container, Grid, GridItem, Image } from "@chakra-ui/react";
-import { NavBar } from "../navbar/NavBar";
-import { Formulario } from "./Formulario";
-import BannerPersonalizado from "../../assets/personalizados/BannerPersonalizado.png";
-import { Footer } from "../../components/footer/Footer";
-import "./styles/personalizados.css";
 import { useContext } from "react";
+import "./styles/personalizados.css";
+import { Container, Grid, GridItem, Image } from "@chakra-ui/react";
+import { NavBar, Formulario, Footer } from "../index";
+import BannerPersonalizado from "../../assets/personalizados/BannerPersonalizado.png";
 import { FavoritoContext } from "../../context/FavContext";
-import { HashRouter, Link, Route, Routes } from "react-router-dom";
 
 export const Personalizados = () => {
   const { isOpen, setIsOpen } = useContext(FavoritoContext);

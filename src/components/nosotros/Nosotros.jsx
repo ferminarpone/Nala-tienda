@@ -1,11 +1,8 @@
+import { useContext } from "react";
 import "./styles/nosotros.css";
 import { Container, Grid, GridItem, Image } from "@chakra-ui/react";
-import { NavBar } from "../navbar/NavBar";
+import { NavBar, Historia, Terminos, Footer } from "../index";
 import Banner from "../../assets/nosotros/ImgQueHacemos.png";
-import { Historia } from "./Historia";
-import { Terminos } from "./Terminos";
-import { Footer } from "../../components/footer/Footer";
-import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
 
 export const Nosotros = () => {

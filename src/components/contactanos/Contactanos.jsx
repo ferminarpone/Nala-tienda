@@ -1,10 +1,7 @@
 import "./styles/contactanos.css";
 import { Container, Grid, GridItem, Image } from "@chakra-ui/react";
-import { Footer } from "../footer/Footer";
-import { NavBar } from "../navbar/NavBar";
-import { InfoContactanos } from "./InfoContactanos";
-import { FormContactanos } from "./FormContactanos";
 import Banner from "../../assets/contactanos/Imagen Contactanos.png";
+import { Footer, NavBar, InfoContactanos, FormContactanos } from "../index"; 
 import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
 
