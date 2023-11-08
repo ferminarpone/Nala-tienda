@@ -7,7 +7,7 @@ import { Footer, NavBar, FavItem, FormularioFav } from "../index";
 import { FavoritoContext } from "../../context/FavContext";
 
 export const Favoritos = () => {
-  const { fav, isOpen, setIsOpen } = useContext(FavoritoContext);
+  const { fav, isOpen, setIsOpen, itemFav } = useContext(FavoritoContext);
   //State para hacer aparecer el formulario
   const [form, setform] = useState(false);
   //Función que ciera el modal
@@ -16,8 +16,7 @@ export const Favoritos = () => {
       setform(!form);
     }
   };
-  //Función que devuelve true si hay productos en favoritos.
-  const itemFav = () => (fav.length > 0 ? true : false);
+
   useEffect(() => {
     window.scroll(0, 0);
   }, [form]);
