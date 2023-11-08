@@ -1,25 +1,27 @@
 import "./styles/favoritos.css";
-import { Button, Center, Container, Flex } from "@chakra-ui/react";
+import { Button, Center, Container, Flex} from "@chakra-ui/react";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineLeft } from "react-icons/ai";
 import { Footer, NavBar, FavItem, FormularioFav } from "../index";
 import { FavoritoContext } from "../../context/FavContext";
+import { useModal } from "../../hooks/useModal";
 
 export const Favoritos = () => {
   const { fav, isOpen, setIsOpen, itemFav } = useContext(FavoritoContext);
-  //State para hacer aparecer el formulario
+  const { form, setForm, modalClosed } = useModal();
+/*   //State para hacer aparecer el formulario
   const [form, setform] = useState(false);
-  //Función que ciera el modal
+  //Función que cierra el modal
   const modalClosed = () => {
     if (form) {
       setform(!form);
     }
   };
-
   useEffect(() => {
     window.scroll(0, 0);
   }, [form]);
+   */
   return (
     <>
       <div className={form ? "mediaOpen" : ""}>
@@ -59,13 +61,13 @@ export const Favoritos = () => {
                   ))}
                   {!form ? (
                     <Button
-                      onClick={() => setform(!form)}
+                      onClick={()=>setForm(!form)}
                       className="comprarWsp"
                     >
                       COMPRAR POR WHATSAPP
                     </Button>
                   ) : (
-                    ""
+                     <div className="espacio">.</div> 
                   )}
                 </div>
               ) : (

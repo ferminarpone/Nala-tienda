@@ -5,14 +5,7 @@ import { FavoritoContext } from "../../context/FavContext";
 import { Link } from "react-router-dom";
 
 export const FavItem = ({ id, nombre, img }) => {
-  const { fav, setFav } = useContext(FavoritoContext);
-  console.log(id);
-  //Función que elimina un producto de favoritos.
-  const removeItem = () => {
-    const newFav = fav.filter((item) => item.id !== id);
-    setFav(newFav);
-  };
-
+  const { removeItem } = useContext(FavoritoContext);
   return (
     <>
       <Grid
@@ -39,7 +32,11 @@ export const FavItem = ({ id, nombre, img }) => {
           alignItems="center"
         ></GridItem>
         <GridItem colSpan={1} display="flex" alignItems="center">
-          <Button variant="solid" className="favHeart" onClick={removeItem}>
+          <Button
+            variant="solid"
+            className="favHeart"
+            onClick={() => removeItem(id)}
+          >
             <RxCross2 className="cross" />
           </Button>
         </GridItem>
