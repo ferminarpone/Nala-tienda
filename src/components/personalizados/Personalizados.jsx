@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import "./styles/personalizados.css";
 import { Container, Grid, GridItem, Image } from "@chakra-ui/react";
 import { NavBar, Formulario, Footer } from "../index";
@@ -6,13 +6,23 @@ import BannerPersonalizado from "../../assets/personalizados/BannerPersonalizado
 import { FavoritoContext } from "../../context/FavContext";
 
 export const Personalizados = () => {
-  const { isOpen, setIsOpen } = useContext(FavoritoContext);
+  const { isOpen, navExtend } = useContext(FavoritoContext);
   const sheinOpen = () => {
     window.open(
       "https://es.shein.com/?url_from=esgooglebrandshein_srsa_Shein01_20221011&cid=18569136939&setid=143075703795&adid=627556790592&pf=GOOGLE&gclid=Cj0KCQjwuNemBhCBARIsADp74QRjiuUE0FiDAH3TdzzJAWYOTm_vsQM_SLXOkPFflv7FWTBydcHKdu4aAknZEALw_wcB",
       "_blank"
     );
   };
+  const [foco, setFoco] = useState(false);
+  const makeFocus = () =>{
+    window.scroll(0, 604);
+    setFoco(true);
+    setTimeout(
+      ()=>{setFoco(false)
+      }, "1"
+    )
+  };
+  
   return (
     <>
       <div className="bgPersonalizadosDesktop">
@@ -60,7 +70,7 @@ export const Personalizados = () => {
                 </button>
                 <button
                   className="personalizadosButtonB"
-                  onClick={() => window.scroll(0, 604)}
+                  onClick={makeFocus}
                 >
                   DEJA TUS DATOS
                 </button>
@@ -78,9 +88,9 @@ export const Personalizados = () => {
           </Container>
         </div>
       </div>
-      <div onClick={() => isOpen && setIsOpen(!isOpen)}>
+      <div onClick={navExtend}>
         <div id="formularioPer" className={isOpen ? "openFormularioPer" : ""}>
-          <Formulario />
+          <Formulario foco={foco}/>
         </div>
         <Footer />
       </div>
