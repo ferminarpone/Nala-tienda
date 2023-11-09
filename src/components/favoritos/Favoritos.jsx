@@ -8,15 +8,15 @@ import { FavoritoContext } from "../../context/FavContext";
 import { useModal } from "../../hooks/useModal";
 
 export const Favoritos = () => {
-  const { fav, isOpen, setIsOpen, itemFav } = useContext(FavoritoContext);
+  const { fav, isOpen, itemFav, navExtend } = useContext(FavoritoContext);
   const { form, setForm, modalClosed } = useModal();
   return (
     <>
       <div className={form ? "mediaOpen" : ""}>
-        {form ? <FormularioFav modalClosed={modalClosed} /> : ""}
-        <div onClick={modalClosed}>
+        {form ? <FormularioFav  modalClosed={ modalClosed }/> : ""}
+        <div onClick={ modalClosed }>
           <NavBar />
-          <div onClick={() => isOpen && setIsOpen(!isOpen)}>
+          <div onClick={navExtend}>
             <Container
               className={`containerFav ${isOpen ? "openNavFavoritos" : ""}`}
             >

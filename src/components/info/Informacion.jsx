@@ -4,7 +4,7 @@ import { Envio, Pagos, NavBar } from "../index";
 import { FavoritoContext } from "../../context/FavContext";
 
 export const Informacion = () => {
-  const { isOpen, setIsOpen } = useContext(FavoritoContext);
+  const { navExtend } = useContext(FavoritoContext);
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -13,7 +13,7 @@ export const Informacion = () => {
       <div className="informacionImg">
         <NavBar />
       </div>
-      <div onClick={() => isOpen && setIsOpen(!isOpen)}>
+      <div onClick={navExtend}>
         <Pagos />
         <Envio />
       </div>

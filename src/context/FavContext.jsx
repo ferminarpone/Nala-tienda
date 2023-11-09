@@ -14,6 +14,9 @@ export const FavContext = ({ children }) => {
   //UseState para el manejo del NavBar
   const [isOpen, setIsOpen] = useState(false);
 
+  //Función que abre o cierra el navBar
+  const navExtend = ()=> isOpen && setIsOpen(!isOpen);
+
   //Función que devuelve true si el elemento se enfuentra en Favoritos.
   const idFound = (id) => {
     const idFind = fav.find((item) => item.id === id);
@@ -56,6 +59,7 @@ export const FavContext = ({ children }) => {
         addToFav,
         itemFav,
         removeItem,
+        navExtend
       }}
     >
       {children}

@@ -6,7 +6,7 @@ import Banner from "../../assets/nosotros/ImgQueHacemos.png";
 import { FavoritoContext } from "../../context/FavContext";
 
 export const Nosotros = () => {
-  const { isOpen, setIsOpen } = useContext(FavoritoContext);
+  const { navExtend } = useContext(FavoritoContext);
   return (
     <>
       <div id="bgNosotros">
@@ -48,7 +48,7 @@ export const Nosotros = () => {
             </Grid>
           </Container>
         </div>
-        <div onClick={() => isOpen && setIsOpen(!isOpen)}>
+        <div onClick={navExtend}>
           <div id="nosotrosMobile">
             <Container
               maxW="85%"

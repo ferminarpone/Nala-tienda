@@ -7,11 +7,11 @@ import { useDocument } from "../../hooks/useDocument";
 
 export const ItemDetailContainer = () => {
   const { product } = useDocument();
-  const { isOpen, setIsOpen } = useContext(FavoritoContext);
+  const { isOpen, navExtend } = useContext(FavoritoContext);
   return (
     <>
       <NavBar />
-      <div onClick={() => isOpen && setIsOpen(!isOpen)}>
+      <div onClick={navExtend}>
         {product == "" ? (
           <Center minH="400px">
             <CircularProgress isIndeterminate color="#7cbfba" />

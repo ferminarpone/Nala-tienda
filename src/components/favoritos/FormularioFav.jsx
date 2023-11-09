@@ -14,6 +14,7 @@ import { useContext } from "react";
 export const FormularioFav = ({ modalClosed }) => {
   const { register, handleSubmit, reset } = useForm();
   const { fav, setFav } = useContext(FavoritoContext);
+
   // variable + función que genera el listado de productos elegidos.
   const productList = fav.map((e) => ` ${JSON.stringify(e.nombre)}`);
   //Funcion... recibe los datos del formulario(data)
@@ -24,6 +25,7 @@ export const FormularioFav = ({ modalClosed }) => {
     modalClosed();
     setFav([]);
   };
+
   return (
     <>
       <div id="formularioFavorito">

@@ -7,23 +7,22 @@ import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
 
 export const NavBarMobile = () => {
-  const { isOpen, setIsOpen, fav } = useContext(FavoritoContext);
+  const { isOpen, setIsOpen, fav, navExtend } = useContext(FavoritoContext);
   return (
     <nav id="navMobile">
       <div className="navTop">
         <button className="menu" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <RxCross2 /> : <RxHamburgerMenu />}
         </button>
-        <Link to={`/`} onClick={() => isOpen && setIsOpen(!isOpen)}>
+        <Link to={`/`} onClick={navExtend}>
           <Image src={icono} alt="Logo Nala Tienda" w="80%" ml="6%" />
         </Link>
-        <Link to={`/favoritos`} onClick={() => isOpen && setIsOpen(!isOpen)}>
-
-        {fav.length > 0 ? (
-          <FaHeart className="heartNavBar" />
-        ) : (
-          <FaRegHeart className="heartNavBar" />
-        )}
+        <Link to={`/favoritos`} onClick={navExtend}>
+          {fav.length > 0 ? (
+            <FaHeart className="heartNavBar" />
+          ) : (
+            <FaRegHeart className="heartNavBar" />
+          )}
         </Link>
       </div>
       <hr className="divider" />

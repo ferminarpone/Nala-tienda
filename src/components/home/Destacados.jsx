@@ -1,4 +1,4 @@
-import { Button, Container, Divider } from "@chakra-ui/react";
+import { Container, Divider } from "@chakra-ui/react";
 import Gorra from "../../assets/home/Gorra argollas.png";
 import Estrella from "../../assets/home/Estrellas.png";
 import Strass from "../../assets/home/Ombligo strass.png";

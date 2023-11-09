@@ -1,7 +1,4 @@
-import {
-  Container,
-  Divider,
-} from "@chakra-ui/react";
+import { Container, Divider } from "@chakra-ui/react";
 
 export const Opiniones = () => {
   return (
