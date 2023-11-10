@@ -18,7 +18,7 @@ import {
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
-import { useExtend } from "../../hooks/useExtend";
+import { useExtend } from "../../hooks";
 import { sendWsp } from "./helper/sendWsp";
 
 export const ItemDetail = ({ id, nombre, img, precio, descripcion }) => {

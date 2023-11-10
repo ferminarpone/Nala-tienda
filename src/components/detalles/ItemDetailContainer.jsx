@@ -3,7 +3,7 @@ import { Center, CircularProgress } from "@chakra-ui/react";
 import { useContext } from "react";
 import { NavBar, Footer, ItemDetail } from "../index";
 import { FavoritoContext } from "../../context/FavContext";
-import { useDocument } from "../../hooks/useDocument";
+import { useDocument } from "../../hooks";
 
 export const ItemDetailContainer = () => {
   const { product } = useDocument();

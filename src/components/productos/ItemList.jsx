@@ -1,12 +1,8 @@
+import React from "react";
 import { Center, CircularProgress, Container, Grid } from "@chakra-ui/react";
-import React, { useEffect } from "react";
 import { Item } from "./Item";
 import { Categorias } from "./Categorias";
-
 export const ItemList = React.memo(({ product }) => {
-  useEffect(() => {
-    window.scroll(0, 0);
-  }, []);
   return (
     <>
       {product == "" ? (

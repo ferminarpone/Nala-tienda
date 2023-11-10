@@ -4,9 +4,11 @@ import { Container, Grid, GridItem, Image } from "@chakra-ui/react";
 import { NavBar, Historia, Terminos, Footer } from "../index";
 import Banner from "../../assets/nosotros/ImgQueHacemos.png";
 import { FavoritoContext } from "../../context/FavContext";
+import { useScroll } from "../../hooks";
 
 export const Nosotros = () => {
   const { navExtend } = useContext(FavoritoContext);
+  useScroll();
   return (
     <>
       <div id="bgNosotros">

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { AiOutlineLeft } from "react-icons/ai";
 import { Footer, NavBar, FavItem, FormularioFav } from "../index";
 import { FavoritoContext } from "../../context/FavContext";
-import { useModal } from "../../hooks/useModal";
+import { useModal } from "../../hooks";
 
 export const Favoritos = () => {
   const { fav, isOpen, itemFav, navExtend } = useContext(FavoritoContext);

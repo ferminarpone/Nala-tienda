@@ -2,9 +2,11 @@ import "./styles/home.css";
 import { Footer, NavBar, Destacados, Opiniones } from "../index";
 import { FavoritoContext } from "../../context/FavContext";
 import { useContext } from "react";
+import { useScroll } from "../../hooks";
 
 export const Home = () => {
   const { isOpen, navExtend } = useContext(FavoritoContext);
+  useScroll();
   return (
     <>
       <div className="homeImg">

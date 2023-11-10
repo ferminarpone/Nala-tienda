@@ -6,17 +6,11 @@ import {
   GridItem,
   Input,
 } from "@chakra-ui/react";
-import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-
-export const Formulario = ( {foco} ) => {
-  console.log(foco)
+export const Formulario = ({ foco }) => {
   const { register, handleSubmit, reset, setFocus } = useForm();
-
-  useEffect(()=>{
-     foco && setFocus("nombre");
-  },[foco]) 
-
+  const focalization = () => foco && setFocus("nombre");
+  focalization();
   //Funcion... recibe los datos del formulario(data)
   const onSubmit = (data) => {
     const url = `https://wa.me/543513902114?text=%0A%2ANala%20tienda%2A%0AConsulta%20de%20producto%20personalizado%0A%0A%2AUrl%20del%20producto%3A%2A ${data.url}%0A%0A%2ADatos%20cliente%2A%0ANombre%3A%20${data.nombre} ${data.apellido}%0AEmail%3A%20${data.email}%0ATel%C3%A9fono%3A${data.telefono}`;
