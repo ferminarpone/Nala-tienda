@@ -2,10 +2,11 @@ import "./styles/home.css";
 import { Footer, NavBar, Destacados, Opiniones } from "../index";
 import { FavoritoContext } from "../../context/FavContext";
 import { useContext } from "react";
+import { useScroll } from "../../hooks";
 
 export const Home = () => {
-  const { isOpen, setIsOpen } = useContext(FavoritoContext);
-
+  const { isOpen, navExtend } = useContext(FavoritoContext);
+  useScroll();
   return (
     <>
       <div className="homeImg">
@@ -13,13 +14,13 @@ export const Home = () => {
         <div
           id="homeMobile"
           className={isOpen ? "open" : ""}
-          onClick={() => isOpen && setIsOpen(!isOpen)}
+          onClick={navExtend}
         >
           <h1>Compra</h1>
           <p>Tus productos favoritos de Shein </p>
         </div>
       </div>
-      <div onClick={() => isOpen && setIsOpen(!isOpen)}>
+      <div onClick={navExtend}>
         <Destacados />
         <Opiniones />
         <Footer />

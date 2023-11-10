@@ -16,20 +16,15 @@ import {
   AiOutlineUp,
 } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
+import { useExtend } from "../../hooks";
+import { sendWsp } from "./helper/sendWsp";
 
 export const ItemDetail = ({ id, nombre, img, precio, descripcion }) => {
   const { isOpen, idFound, addToFav } = useContext(FavoritoContext);
   const currentUrl = window.location.href;
-  const [show, setShow] = useState(false);
-  const handleToggle = () => setShow(!show);
-  //Función que envia el producto en cuestion por wsp.
-  const sendWsp = () => {
-    const url = `https://wa.me/543513902114?text=%0A%2ANala%20tienda%2A%0AConsulta%20disponibilidad%20de%20producto%0A%0A%2AProducto%3A%2A ${nombre}%0A%0A%2AId%3A%2A%${id}%0A%0A ${currentUrl}`;
-    window.open(url, "_blank");
-  };
-
+  const { show, handleToggle } = useExtend();
   return (
     <Container
       maxWidth="80%"
@@ -155,7 +150,10 @@ export const ItemDetail = ({ id, nombre, img, precio, descripcion }) => {
           )}
         </Stack>
         <div id="butonWsp">
-          <Button className="pedidoWsp" onClick={sendWsp}>
+          <Button
+            className="pedidoWsp"
+            onClick={() => sendWsp(nombre, currentUrl)}
+          >
             HACER PEDIDO POR WHATSAPP
           </Button>
         </div>

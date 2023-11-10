@@ -1,33 +1,22 @@
 import "./styles/favoritos.css";
-import { Button, Center, Container, Flex } from "@chakra-ui/react";
-import { useContext, useEffect, useState } from "react";
+import { Button, Center, Container, Flex} from "@chakra-ui/react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineLeft } from "react-icons/ai";
 import { Footer, NavBar, FavItem, FormularioFav } from "../index";
 import { FavoritoContext } from "../../context/FavContext";
+import { useModal } from "../../hooks";
 
 export const Favoritos = () => {
-  const { fav, isOpen, setIsOpen } = useContext(FavoritoContext);
-  //State para hacer aparecer el formulario
-  const [form, setform] = useState(false);
-  //Función que ciera el modal
-  const modalClosed = () => {
-    if (form) {
-      setform(!form);
-    }
-  };
-  //Función que devuelve true si hay productos en favoritos.
-  const itemFav = () => (fav.length > 0 ? true : false);
-  useEffect(() => {
-    window.scroll(0, 0);
-  }, [form]);
+  const { fav, isOpen, itemFav, navExtend } = useContext(FavoritoContext);
+  const { form, setForm, modalClosed } = useModal();
   return (
     <>
       <div className={form ? "mediaOpen" : ""}>
-        {form ? <FormularioFav modalClosed={modalClosed} /> : ""}
-        <div onClick={modalClosed}>
+        {form ? <FormularioFav  modalClosed={ modalClosed }/> : ""}
+        <div onClick={ modalClosed }>
           <NavBar />
-          <div onClick={() => isOpen && setIsOpen(!isOpen)}>
+          <div onClick={navExtend}>
             <Container
               className={`containerFav ${isOpen ? "openNavFavoritos" : ""}`}
             >
@@ -60,13 +49,13 @@ export const Favoritos = () => {
                   ))}
                   {!form ? (
                     <Button
-                      onClick={() => setform(!form)}
+                      onClick={()=>setForm(!form)}
                       className="comprarWsp"
                     >
                       COMPRAR POR WHATSAPP
                     </Button>
                   ) : (
-                    ""
+                     <div className="espacio">.</div> 
                   )}
                 </div>
               ) : (

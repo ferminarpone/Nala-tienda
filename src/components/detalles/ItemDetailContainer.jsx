@@ -1,32 +1,17 @@
 import "./styles/detalles.css";
 import { Center, CircularProgress } from "@chakra-ui/react";
-import { useEffect, useState, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useContext } from "react";
 import { NavBar, Footer, ItemDetail } from "../index";
 import { FavoritoContext } from "../../context/FavContext";
-import { doc, getDoc, getFirestore } from "firebase/firestore";
+import { useDocument } from "../../hooks";
 
 export const ItemDetailContainer = () => {
-  const [product, setProduct] = useState([]);
-  const { id } = useParams();
-  const { isOpen, setIsOpen } = useContext(FavoritoContext);
-  //Llamado a la DB.
-  useEffect(() => {
-    window.scroll(0, 0);
-    const dataBase = getFirestore();
-    const item = doc(dataBase, "productos Shein", `${id}`);
-    getDoc(item).then((snapShot) => {
-      if (snapShot.exists()) {
-        const doc = { id: snapShot.id, ...snapShot.data() };
-        setProduct(doc);
-      }
-    });
-  }, []);
-
+  const { product } = useDocument();
+  const { isOpen, navExtend } = useContext(FavoritoContext);
   return (
     <>
       <NavBar />
-      <div onClick={() => isOpen && setIsOpen(!isOpen)}>
+      <div onClick={navExtend}>
         {product == "" ? (
           <Center minH="400px">
             <CircularProgress isIndeterminate color="#7cbfba" />

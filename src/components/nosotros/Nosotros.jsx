@@ -4,9 +4,11 @@ import { Container, Grid, GridItem, Image } from "@chakra-ui/react";
 import { NavBar, Historia, Terminos, Footer } from "../index";
 import Banner from "../../assets/nosotros/ImgQueHacemos.png";
 import { FavoritoContext } from "../../context/FavContext";
+import { useScroll } from "../../hooks";
 
 export const Nosotros = () => {
-  const { isOpen, setIsOpen } = useContext(FavoritoContext);
+  const { navExtend } = useContext(FavoritoContext);
+  useScroll();
   return (
     <>
       <div id="bgNosotros">
@@ -48,7 +50,7 @@ export const Nosotros = () => {
             </Grid>
           </Container>
         </div>
-        <div onClick={() => isOpen && setIsOpen(!isOpen)}>
+        <div onClick={navExtend}>
           <div id="nosotrosMobile">
             <Container
               maxW="85%"

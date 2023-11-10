@@ -2,27 +2,15 @@ import icono from "../../assets/navBar/Icono.png";
 import icono1 from "../../assets/navBar/Icono1.png";
 import { Grid, GridItem, Box, Divider } from "@chakra-ui/react";
 import { Link, useLocation } from "react-router-dom";
+import { validation } from "./helper/validation";
 
 export const NavBarDesktop = () => {
   const locationOne = useLocation();
-  //Validación para estilos condicionales.
-  let validacion;
-  const validation = () => {
-    if (locationOne.pathname == "/") {
-      return (validacion = true);
-    } else if (locationOne.pathname == "/personalizados") {
-      return (validacion = true);
-    } else if (locationOne.pathname == "/informacion") {
-      return (validacion = true);
-    } else {
-      return (validacion = false);
-    }
-  };
   return (
     <Box mr="10" ml="10" pt="6">
       <Grid
         id="navBar"
-        className={validation() ? "navBar" : "navBar1"}
+        className={validation(locationOne) ? "navBar" : "navBar1"}
         templateRows="repeat(2, 1fr)"
         templateColumns="repeat(5, 1fr)"
       >
@@ -38,7 +26,7 @@ export const NavBarDesktop = () => {
         </GridItem>
         <GridItem display="flex" justifyContent="center" className="logoSize">
           <Link to={"/"}>
-            {validation() ? (
+            {validation(locationOne) ? (
               <img src={icono} alt="Logo Nala Tienda" className="logoSize" />
             ) : (
               <img src={icono1} alt="Logo Nala Tienda" className="logoSize" />

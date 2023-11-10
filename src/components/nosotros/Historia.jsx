@@ -1,5 +1,5 @@
 import { Box, Container, Grid, GridItem, Image } from "@chakra-ui/react";
-import Banner from "../../assets/nosotros/historia.png"; 
+import Banner from "../../assets/nosotros/historia.png";
 
 export const Historia = () => {
   return (
