@@ -2,7 +2,7 @@ import { Container, Grid, GridItem, Image } from "@chakra-ui/react";
 import Banner from "../../assets/contactanos/Imagen Contactanos.png";
 import { InfoContactanos } from "./InfoContactanos";
 import { FormContactanos } from "./FormContactanos";
-export const ContactanosMobile = () => {
+export const ContactanosDesktop = () => {
   return (
     <Container maxWidth="90%" mt="25px">
       <Grid

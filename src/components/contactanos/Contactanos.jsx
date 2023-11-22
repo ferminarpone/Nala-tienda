@@ -3,7 +3,7 @@ import { Footer, NavBar, InfoContactanos, FormContactanos } from "../index";
 import { useContext } from "react";
 import { FavoritoContext } from "../../context/FavContext";
 import { useScroll } from "../../hooks";
-import { ContactanosMobile } from "./ContactanosMobile";
+import { ContactanosDesktop } from "./ContactanosDesktop";
 
 export const Contactanos = () => {
   const { isOpen, navExtend } = useContext(FavoritoContext);
@@ -12,7 +12,7 @@ export const Contactanos = () => {
     <>
       <NavBar />
       <div id="contactanosDesktop">
-        <ContactanosMobile/>
+        <ContactanosDesktop/>
       </div>
       <div onClick={navExtend}>
         <div id="contactanosMobile" className={isOpen ? "open" : ""}>
